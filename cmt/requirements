@@ -1,6 +1,6 @@
 package sane
 
-version v1r1
+version v1r2
 
 author T. Burnett <tburnett@u.washington.edu>
 use STpolicy *
