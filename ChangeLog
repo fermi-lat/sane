@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: jchiang  Sun Oct 10 22:47:31 PDT 2004
+sane/python
+
+Modified Files:
+	Likelihood_tests.py default_tests.py setPaths.py 
+Added Files:
+	BinnedLikelihood_test.py getApp.py 
+Log Message:
+add system tests for binned likelihood
+    *
+------------------------------------------------------------
+User: jchiang  Sun Oct 10 22:47:31 PDT 2004
 sane/data
 
 Modified Files:
