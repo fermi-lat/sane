@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Mar 29 06:37:20 PST 2005
+sane/python
+
+Modified Files:
+	pil.py 
+Log Message:
+skip parameters with null entries
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r3p4, operation: add
 Package: sane
