@@ -5,6 +5,7 @@
 $Id$
 @verbatim
 
+29-Oct-04  v2r2p1 JC   add orbSim.par
 29-Oct-04  v2r2   JC   add orbSim to tests; pass return code to test main
 25-Oct-04  v2r1p3 JC   ensure likelihood.par is written by GtApp object
 22-Oct-04  v2r1p2 JC   use fdot in stpsearch
