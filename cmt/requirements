@@ -3,7 +3,7 @@ package sane
 author T. Burnett <tburnett@u.washington.edu>
 use STpolicy *
 
-#use Likelihood *
+use Likelihood *
 #use dataSubselector *
 #use observationSim *
 

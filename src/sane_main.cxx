@@ -2,7 +2,9 @@
 
 
 */
+#ifdef WIN32
 #include <process.h>
+#endif
 #include <sstream>
 #include "st_app/IApp.h"
 
