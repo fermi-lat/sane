@@ -9,10 +9,9 @@ Generate test data with obsSim.
 #
 
 from setPaths import *
+from getApp import GtApp
 
-obsSimRoot = os.environ["OBSERVATIONSIMROOT"]
-obsSimApp = os.path.join(obsSimRoot, bindir, 'obsSim.exe')
-obsSimPar = os.path.join(sysData, 'obsSim.par')
+obsSim = GtApp('obsSim', 'observationSim')
 
 def sourceNamesDat(filename='source_names.dat',
                    srcList=('anticenter-32mev', 'diffuse-20mev')):
@@ -23,15 +22,11 @@ def sourceNamesDat(filename='source_names.dat',
 
 def run(clean=False):
     sourceNamesDat()
-#    sourceNamesDat(srcList=('anticenter', 'diffuse-100mev'))
-    pars = Pil(obsSimPar)
-    pars['XML_source_file'] = 'xmlFiles.dat'
-    pars['Source_list'] = 'source_names.dat'
-    pars['Output_file_prefix'] = 'test'
-    pars['Response_functions'] = irfs
-    command = obsSimApp + pars()
-    print command
-    os.system(command)
+    obsSim['XML_source_file'] = 'xmlFiles.dat'
+    obsSim['Source_list'] = 'source_names.dat'
+    obsSim['Output_file_prefix'] = 'test'
+    obsSim['Response_functions'] = irfs
+    obsSim.run()
     if clean:
         cleanUp()
 
@@ -42,13 +37,10 @@ def cleanUp():
 
 def compareFit(clean=False):
     sourceNamesDat(srcList=['all_in_flux_model.xml'])
-    pars = Pil(obsSimPar)
-    pars['XML_source_file'] = 'flux_model.xml'
-    pars['Output_file_prefix'] = 'fit_comparison'
-    pars['Response_functions'] = irfs
-    command = obsSimApp + pars()
-    print command
-    os.system(command)
+    obsSim['XML_source_file'] = 'flux_model.xml'
+    obsSim['Output_file_prefix'] = 'fit_comparison'
+    obsSim['Response_functions'] = irfs
+    obsSim.run()
     if clean:
         cleanUp()
 

@@ -5,6 +5,7 @@
 $Id$
 @verbatim
 
+22-Oct-04  v2     JC   use likeGui and its Python scripts
 11-Oct-04  v1r5p1 JC   small fix for makeExposureCube.par
 10-Oct-04  v1r5   JC   changes for likelihood.par
 26-Aug-04  v1r4p3 JC   add exposure_cube_file parameter to likelihood for

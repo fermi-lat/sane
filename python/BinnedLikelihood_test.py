@@ -8,42 +8,37 @@ Binned likelihood tests.
 #
 
 from setPaths import *
-from getApp import getApp
+from getApp import GtApp, getApp
 from obsSim_tests import sourceNamesDat
 
 def generateData():
-    (obsSim, pars) = getApp('obsSim', 'observationSim')
+    obsSim = GtApp('obsSim', 'observationSim')
     sourceNamesDat(srcList=('anticenter-32mev',))
-    pars["Output_file_prefix"] = "ptsrcs"
-    pars["Response_functions"] = irfs
-    command = obsSim + pars()
-    os.system(command)
+    obsSim["Output_file_prefix"] = "ptsrcs"
+    obsSim["Response_functions"] = irfs
+    obsSim.run()
 
 def makeCountsMap():
-    (counts_map, pars) = getApp('gtcntsmap', 'Likelihood')
-    command = counts_map + pars()
-    os.system(command)
+    counts_map = GtApp('gtcntsmap', 'Likelihood')
+    counts_map.run()
 
 def makeExposureCube():
-    (makeCube, pars) = getApp('makeExposureCube', 'Likelihood')
-    pars['Spacecraft_file'] = 'ptsrcs_scData_0000.fits'
-    pars['Output_file'] = 'expcube_1_day.fits'
-    command = makeCube + pars()
-    os.system(command)
+    makeCube = GtApp('makeExposureCube', 'Likelihood')
+    makeCube['Spacecraft_file'] = 'ptsrcs_scData_0000.fits'
+    makeCube['Output_file'] = 'expcube_1_day.fits'
+    makeCube.run()
     
 def makeSourceMaps():
-    (srcMaps, pars) = getApp('gtsrcmaps', 'Likelihood')
-    pars["Response_functions"] = irfs
-    command = srcMaps + pars()
-    os.system(command)
+    srcMaps = GtApp('gtsrcmaps', 'Likelihood')
+    srcMaps["Response_functions"] = irfs
+    srcMaps.run()
 
 def runLikelihood():
-    (likelihood, pars) = getApp('likelihood', 'Likelihood')
-    pars['Statistic'] = 'BINNED'
-    pars['Source_model_file'] = 'ptsrcModel.xml'
-    pars["Response_functions"] = irfs
-    command = likelihood + pars()
-    os.system(command)
+    likelihood = GtApp('likelihood', 'Likelihood')
+    likelihood['Statistic'] = 'BINNED'
+    likelihood['Source_model_file'] = 'ptsrcModel.xml'
+    likelihood["Response_functions"] = irfs
+    likelihood.run()
 
 def run():
     generateData()
