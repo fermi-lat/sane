@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Mon May  3 10:32:46 PDT 2004
+sane/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+added -no_auto_imports to all uses; tagging
+    *
+------------------------------------------------------------
+User: burnett  Mon May  3 10:32:46 PDT 2004
 sane/cmt
 
 Modified Files:
