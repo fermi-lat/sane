@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Jun  9 12:52:28 PDT 2004
+sane/data
+
+Modified Files:
+	expMap.par likelihood.par makeExposureCube.par 
+Log Message:
+update tests; add dataSubselector
+    *
+------------------------------------------------------------
 User: jchiang  Wed Jun  9 12:52:27 PDT 2004
 sane/cmt
 
