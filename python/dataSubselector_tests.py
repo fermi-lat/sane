@@ -19,9 +19,9 @@ def run(clean=False):
     pars = Pil(dataSubselectorPar)
     pars['input_file'] = 'test_events_0000.fits'
     pars['output_file'] = 'filtered_events_0000.fits'
-    pars['ra'] = 86
-    pars['dec'] = 29
-    pars['rad'] = 20
+    pars['ra'] = 86.4
+    pars['dec'] = 28.9
+    pars['rad'] = 30
     command = dataSubselectorApp + pars()
     print command
     os.system(command)
