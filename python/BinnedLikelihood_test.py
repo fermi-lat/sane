@@ -39,7 +39,6 @@ def runLikelihood():
     likelihood['Statistic'] = 'BINNED'
     likelihood['Source_model_file'] = 'ptsrcModel.xml'
     likelihood["Response_functions"] = irfs
-    likelihood.pars.write()
     likelihood.run()
 
 def run():

@@ -12,6 +12,7 @@ from setPaths import *
 from getApp import GtApp
 
 obsSim = GtApp('obsSim', 'observationSim')
+orbSim = GtApp('orbSim', 'observationSim')
 
 def sourceNamesDat(filename='source_names.dat',
                    srcList=('anticenter-32mev', 'diffuse-20mev')):
@@ -21,11 +22,17 @@ def sourceNamesDat(filename='source_names.dat',
     file.close()
 
 def run(clean=False):
+    orbSim.run()
     sourceNamesDat()
+    xmlFiles = open("xmlFiles.dat", "w")
+    xmlFiles.write("$(OBSERVATIONSIMROOT)/xml/obsSim_source_library.xml\n")
+    xmlFiles.write("anticenter_sources.xml\n")
+    xmlFiles.close()
     obsSim['XML_source_file'] = 'xmlFiles.dat'
     obsSim['Source_list'] = 'source_names.dat'
     obsSim['Output_file_prefix'] = 'test'
     obsSim['Response_functions'] = irfs
+    obsSim['Pointing_history_file'] = "orbSim_scData_0000.fits"
     obsSim.run()
     if clean:
         cleanUp()
