@@ -13,7 +13,11 @@ class RunProgram:
         if sys.platform[:3] == 'win':
             os.system( 'start ' + '"' + self.name + '" /BELOWNORMAL cmd /k ' + self.command )
         else:
-            pass
+            pid = os.fork()
+            if pid==0 :
+                os.execl(self.command, "")
+            else: print "started child id ", pid
+                
             
 def runLauncher(tools, title):
     # put up a simple launcher bar for later use
