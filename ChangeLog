@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Fri Oct 29 19:52:19 PDT 2004
+sane/python
+
+Modified Files:
+	BinnedLikelihood_test.py Likelihood_tests.py getApp.py 
+	obsSim_tests.py 
+Log Message:
+add orbSim to tests; catch top-level exceptions in Python and pass return code to main
+    *
+------------------------------------------------------------
 User: jchiang  Mon Oct 25 19:43:24 PDT 2004
 sane/doc
 
