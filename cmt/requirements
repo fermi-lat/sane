@@ -1,0 +1,30 @@
+package sane
+
+use Likelihood *
+use dataSubselector *
+use observationSim *
+use map_tools *
+use st_app *
+
+use python * IExternal
+
+path_append PYTHONPATH "$(LIKEROOT)/python"
+include_path NONE
+
+set likelihood_app "%LIKELIHOODROOT%\%BINDIR%\LikelihoodApp.exe" 
+set expmap_app     "%LIKELIHOODROOT%\%BINDIR%\expMap.exe"
+set tsmap_app      "%LIKELIHOODROOT%\%BINDIR%\TsMap.exe"
+
+set datasubselector_app "%DATASUBSELECTORROOT%\%BINDIR%\dataSubselector.exe"
+set observationsim_app  "%OBSERVATIONSIMROOT%\%BINDIR%\observationSim.exe"
+
+# don't need this
+macro python_linkopts ""
+setup_script like
+
+application like *.h *.cxx
+
+#any package using this one will make a local executable
+
+pattern -global user_package \
+   application <package> "$(LIKEROOT)/src/like.cxx" 
