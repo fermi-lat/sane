@@ -9,16 +9,11 @@ Exercise rspgen.
 #
 
 from setPaths import *
-
-rspgenRoot = os.environ["RSPGENROOT"]
-rspgen = os.path.join(rspgenRoot, bindir, 'rspgen.exe')
-rspgenPar = os.path.join(sysData, 'rspgen.par')
+from getApp import GtApp
 
 def run():
-    pars = Pil(rspgenPar)
-    command = rspgen + pars()
-    print command
-    os.system(command)
+    rspgen = GtApp('rspgen')
+    rspgen.run()
 
 if __name__ == "__main__":
     run()

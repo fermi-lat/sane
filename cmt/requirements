@@ -1,11 +1,12 @@
 package sane
 
-version v1r5p1
+version v2
 
 author T. Burnett <tburnett@u.washington.edu>
 # $Id$
 
 use STpolicy *
+use likeGui * -no_auto_imports
 use dataSubselector * -no_auto_imports
 use Likelihood * -no_auto_imports
 use observationSim * -no_auto_imports

@@ -8,24 +8,18 @@ Use Likelihood applications to analyze obsSim data.
 #
 
 from setPaths import *
-
-likeRoot = os.environ["LIKELIHOODROOT"]
+from getApp import GtApp
 
 def run_LikelihoodApp(appName, pars=None):
-    likeApp = os.path.join(likeRoot, bindir, appName + '.exe')
-    if pars == None:
-        pars = Pil(os.path.join(sysData, appName + '.par'),
-                   raiseKeyErrors=False)
-        pars['Source_model_file'] = 'srcModel.xml'
-        pars['Statistic'] = 'UNBINNED'
-        pars['ROI_file'] = 'RoiCuts.xml'
-        pars['ROI_cuts_file'] = 'RoiCuts.xml'
-        pars['Spacecraft_file'] = 'test_scData_0000.fits'
-        pars['event_file'] = 'filtered_events_0000.fits'
-        pars['Response_functions'] = irfs
-    command = likeApp + pars()
-    print command
-    os.system(command)
+    likeApp = GtApp(appName, 'Likelihood', raiseKeyErrors=False)
+    likeApp['Source_model_file'] = 'srcModel.xml'
+    likeApp['Statistic'] = 'UNBINNED'
+    likeApp['ROI_file'] = 'RoiCuts.xml'
+    likeApp['ROI_cuts_file'] = 'RoiCuts.xml'
+    likeApp['Spacecraft_file'] = 'test_scData_0000.fits'
+    likeApp['event_file'] = 'filtered_events_0000.fits'
+    likeApp['Response_functions'] = irfs
+    likeApp.run()
 
 def cleanUp():
     removeFile('flux_model.xml')
@@ -37,9 +31,9 @@ def run(clean=False):
     run_LikelihoodApp('expMap')
     run_LikelihoodApp('diffuseResponses')
     run_LikelihoodApp('likelihood')
-#    pars = Pil(os.path.join(sysData, 'TsMap.par'), raiseKeyErrors=False)
-#    pars['Source_model_file'] = 'Ts_srcModel.xml'
-#    run_LikelihoodApp('TsMap', pars)
+#    TsMap = GtApp('TsMap', 'Likelihood', raiseKeyErrors=False)
+#    TsMap['Source_model_file'] = 'Ts_srcModel.xml'
+#    TsMap.run()
     if clean:
         cleanUp()
 

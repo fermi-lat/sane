@@ -11,8 +11,6 @@ import os
 import sys
 import glob
 
-sys.path.append(os.path.join(os.environ["SANEROOT"], "python"))
-
 bindir = os.environ['BINDIR']
 
 sysData = os.path.join(os.environ["SANEROOT"], 'data')
