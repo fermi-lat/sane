@@ -11,25 +11,32 @@ from setPaths import *
 
 likeRoot = os.environ["LIKELIHOODROOT"]
 
-def run_LikelihoodApp(appName):
+def run_LikelihoodApp(appName, pars=None):
     likeApp = os.path.join(likeRoot, bindir, appName + '.exe')
-    pars = Pil(os.path.join(sysData, appName + '.par'), raiseKeyErrors=False)
-    pars['Source_model_file'] = os.path.join(sysData, 'srcModel.xml')
-    pars['ROI_file'] = os.path.join(sysData, 'RoiCuts.xml')
-    pars['ROI_cuts_file'] = os.path.join(sysData, 'RoiCuts.xml')
+    if pars == None:
+        pars = Pil(os.path.join(sysData, appName + '.par'),
+                   raiseKeyErrors=False)
+        pars['Source_model_file'] = 'srcModel.xml'
+        pars['ROI_file'] = 'RoiCuts.xml'
+        pars['ROI_cuts_file'] = 'RoiCuts.xml'
+        pars['event_file'] = 'filtered_events_0000.fits'
     command = likeApp + pars()
     print command
     os.system(command)
 
 def cleanUp():
-    os.remove('flux_model.xml')
-    os.remove('expcube_1_day.fits')
-    os.remove('expMap.fits')
+    removeFile('flux_model.xml')
+    removeFile('exp*.fits')
+    removeFile('TsMap.fits')
 
 def run(clean=False):
     run_LikelihoodApp('makeExposureCube')
     run_LikelihoodApp('expMap')
+    run_LikelihoodApp('diffuseResponses')
     run_LikelihoodApp('likelihood')
+#    pars = Pil(os.path.join(sysData, 'TsMap.par'), raiseKeyErrors=False)
+#    pars['Source_model_file'] = 'Ts_srcModel.xml'
+#    run_LikelihoodApp('TsMap', pars)
     if clean:
         cleanUp()
 
