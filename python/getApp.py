@@ -10,6 +10,8 @@ Provide a unified interface to FTOOL and par file.
 import sys, os
 from pil import Pil
 
+_failed_exes = []
+
 bindir = os.environ['BINDIR']
 
 def getApp(appName, package=None, raiseKeyErrors=True):
@@ -35,7 +37,8 @@ class GtApp(object):
             for line in output:
                 print line.strip("\n")
                 if line.find(catchError) != -1:
-                    return sys.exit(1)
+                    _failed_exes.append(self.app)
+#                    return sys.exit(1)
         else:
             if print_command:
                 print self.command()

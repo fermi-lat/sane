@@ -7,12 +7,16 @@ Generate test data with obsSim.
 #
 # $Header$
 #
+import random
 
 from setPaths import *
 from getApp import GtApp
 
 obsSim = GtApp('obsSim', 'observationSim')
 orbSim = GtApp('orbSim', 'observationSim')
+
+def random_int(scale=1e5):
+    return int(random.random()*scale)
 
 def sourceNamesDat(filename='source_names.dat',
                    srcList=('anticenter-32mev', 'diffuse-20mev')):
@@ -50,7 +54,7 @@ def run(clean=False):
     obsSim['emin'] = 32
     obsSim['emax'] = 2e5
     obsSim['rspfunc'] = irfs
-    obsSim['random_seed'] = 293049
+    obsSim['random_seed'] = random_int()
     obsSim.run()
     if clean:
         cleanUp()

@@ -9,7 +9,7 @@ Binned likelihood tests.
 
 from setPaths import *
 from getApp import GtApp, getApp
-from obsSim_tests import sourceNamesDat
+from obsSim_tests import sourceNamesDat, random_int
 
 obsSim = GtApp('obsSim', 'observationSim')
 counts_map = GtApp('gtcntsmap', 'Likelihood')
@@ -22,6 +22,7 @@ def generateData():
     obsSim["outfile_prefix"] = "ptsrcs"
     obsSim['scfile'] = "none"
     obsSim["rspfunc"] = irfs
+    obsSim["random_seed"] = random_int()
     obsSim.run()
 
 def makeCountsMap():
@@ -46,7 +47,6 @@ def makeSourceMaps():
 
 def runLikelihood():
     likelihood = GtApp('likelihood', 'Likelihood')
-    likelihood['ROI_file'] = 'RoiCuts.xml'
     likelihood['scfile'] = 'ptsrcs_scData_0000.fits'
     likelihood['statistic'] = 'BINNED'
     likelihood['source_model_file'] = 'ptsrcModel.xml'
