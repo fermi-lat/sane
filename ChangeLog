@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: jchiang  Sat Nov 27 07:50:15 PST 2004
+sane/data
+
+Removed Files:
+	count_map.par dataSubselector.par diffuseResponses.par 
+	evtbin.par expMap.par gtcntsmap.par gtsrcmaps.par 
+	likelihood.par makeExposureCube.par obsSim.par orbSim.par 
+	pulsePhase.par rspgen.par stpsearch.par 
+Log Message:
+copy current par files from packages; disable work arounds for broken applications
+    *
+------------------------------------------------------------
 TAG
 Tag name: v2r3, operation: add
 Package: sane
