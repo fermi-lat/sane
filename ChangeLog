@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Sun Nov 28 13:11:31 PST 2004
+sane/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+discard use of '!'-syntax
+    *
+------------------------------------------------------------
+User: jchiang  Sun Nov 28 13:11:31 PST 2004
 sane/cmt
 
 Modified Files:
