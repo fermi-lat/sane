@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jchiang  Tue Dec  7 22:10:15 PST 2004
+sane/python
+
+Modified Files:
+	BinnedLikelihood_test.py Pulsar_tests.py 
+	dataSubselector_tests.py default_tests.py evtbin_tests.py 
+	getApp.py map_tools_tests.py obsSim_tests.py rspgen_tests.py 
+Log Message:
+toggle work arounds for misbehaving apps
+    *
+------------------------------------------------------------
 User: jchiang  Tue Dec  7 16:41:55 PST 2004
 sane/python
 
