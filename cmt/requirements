@@ -1,21 +1,22 @@
 package sane
 
-version v1r2
+version v1r2p1
 
 author T. Burnett <tburnett@u.washington.edu>
+# $Id$
+
 use STpolicy *
-
-use Likelihood *
-#use dataSubselector *
-use observationSim *
-
-use map_tools *
-
+#use dataSubselector * -no_auto_imports
+use Likelihood * -no_auto_imports
+use observationSim * -no_auto_imports
+use map_tools * -no_auto_imports
 use python * IExternal -no_auto_imports
+use st_app *
 
 application test_sane test/main.cxx
 
 path_append PYTHONPATH "$(SANEROOT)/python"
+
 #any package using this one will make a local executable
 
 pattern -global user_package \
@@ -26,6 +27,6 @@ private
 #------------------------------------------------------------------------
 
 
-macro sane_extra "" WIN32 " -s=..\cmt\ sane.bat -s=..\python *.py "
+macro sane_extra "" WIN32 " -s=..\python *.py "
 
 
