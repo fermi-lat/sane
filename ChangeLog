@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jchiang  Fri Oct 22 16:29:23 PDT 2004
+sane/python
+
+Modified Files:
+	default_tests.py 
+Added Files:
+	Pulsar_tests.py 
+Log Message:
+Pulsar tool tests; tagging v2r1
+    *
+------------------------------------------------------------
 User: jchiang  Fri Oct 22 16:29:22 PDT 2004
 sane/doc
 
