@@ -20,6 +20,8 @@ def generateData():
     obsSim["outfile_prefix"] = "ptsrcs"
     obsSim['scfile'] = "none"
     obsSim["rspfunc"] = irfs
+    obsSim["emin"] = 32
+    obsSim["emax"] = 2e5
     obsSim["random_seed"] = random_int()
     obsSim.run()
 
@@ -27,6 +29,8 @@ def makeCountsMap():
     counts_map['evfile'] = 'ptsrcs_events_0000.fits'
     counts_map['scfile'] = 'ptsrcs_scData_0000.fits'
     counts_map['outfile'] = 'countsMap.fits'
+    counts_map["emin"] = 32
+    counts_map["emax"] = 2e5
     counts_map.run()
 
 def makeExposureCube():
