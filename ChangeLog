@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Oct 22 20:54:37 PDT 2004
+sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+allow for conditional read of likelihood params; tagging v2r1p2
+    *
+------------------------------------------------------------
 User: jchiang  Fri Oct 22 18:37:22 PDT 2004
 sane/doc
 
