@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Thu Aug 19 14:47:02 PDT 2004
+sane/data
+
+Modified Files:
+	diffuseResponses.par expMap.par likelihood.par 
+	makeExposureCube.par 
+Log Message:
+fix parfiles; tagging v1r4p2
+    *
+------------------------------------------------------------
 User: jchiang  Thu Aug 19 14:47:00 PDT 2004
 sane/cmt
 
