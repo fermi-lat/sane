@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Aug 19 11:56:14 PDT 2004
+sane/src/test
+
+Modified Files:
+	main.cxx 
+Log Message:
+correct pil.py; test for env variable
+    *
+------------------------------------------------------------
 User: jchiang  Thu Aug 19 11:56:13 PDT 2004
 sane/python
 
