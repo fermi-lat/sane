@@ -19,6 +19,8 @@ import obsSim_tests as obsSim
 import map_tools_tests as map_tools
 import dataSubselector_tests as dataSubselector
 import Likelihood_tests as like
+import evtbin_tests as evtbin
+import rspgen_tests as rspgen
 
 if __name__ == "__main__":
     cleanUp = False
@@ -28,3 +30,5 @@ if __name__ == "__main__":
     dataSubselector.run(cleanUp)
     like.run(cleanUp)
     #obsSim.compareFit(cleanUp)
+    evtbin.run()
+    rspgen.run()

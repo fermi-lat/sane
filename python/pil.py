@@ -20,8 +20,7 @@ def fields(line):
     return [item.strip() for item in line.split(',')[1:]]
 
 class Pil(object):
-    def __init__(self, parfile, raiseKeyErrors=True):
-        self.raiseKeyErrors = raiseKeyErrors
+    def __init__(self, parfile):
         self.params = {}
         self.names = []
         file = open(parfile, 'r')
@@ -34,26 +33,19 @@ class Pil(object):
     def __getitem__(self, name):
         return (self.params[name][2]).strip('"').strip("'")
     def __setitem__(self, name, value):
-        if name in self.names:
-            self.params[name][2] = `value`
-        elif self.raiseKeyErrors:
-            raise KeyError, name
+        self.params[name][2] = `value`
     def __call__(self):
         args = ''
         for name in self.keys():
-            args += ' ' + self.__getitem__(name)
+            args += ' ' + ''.join(('', name, '=', self.__getitem__(name)))
         return args
 
 if __name__ == '__main__':
-    pars = Pil('../data/likelihood.par')
+    pars = Pil('likelihood.par')
     print pars['event_file']
     print pars['Spacecraft_file_hdu']
     pars['Spacecraft_file_hdu'] = 3
     pars['event_file'] = 'foo'
     print pars['Spacecraft_file_hdu']
-    try:
-        pars['wrong_parameter'] = 0
-    except KeyError, name:
-        print "KeyError exception raised for", name
     print pars()
 

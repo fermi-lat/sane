@@ -10,6 +10,8 @@ use dataSubselector * -no_auto_imports
 use Likelihood * -no_auto_imports
 use observationSim * -no_auto_imports
 use map_tools * -no_auto_imports
+use evtbin * -no_auto_imports
+use rspgen * -no_auto_imports
 use python * IExternal -no_auto_imports
 use st_app *
 
