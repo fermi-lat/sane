@@ -3,7 +3,7 @@ Source_list,f,ql,"source_names.dat",,,"File containing source names"
 Number_of_events,r,ql,86400,1,4e7,Number of events (or simulation time in seconds)
 Use_as_sim_time,b,ql,yes,,,Use number of events as simulation time?
 Response_functions,s,ql,"FRONT/BACK",FRONT/BACK|TEST|TESTFRONT|TESTBACK|GLAST25,,"Response functions to use"
-Output_file_prefix,s,ql,"Crab",,,"Prefix for output files"
+Output_file_prefix,s,ql,"ptsrcs",,,"Prefix for output files"
 Maximum_effective_area,r,hl,1.21,,,Maximum effective area value
 Start_time,r,hl,0,,,Simulation start time (seconds)
 Pointing_history_file,f,ql,"none",,,"Pointing history file"

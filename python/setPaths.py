@@ -22,9 +22,6 @@ os.chdir(sysData)
 # ensure the desired .par files are used.
 os.environ['PFILES'] = sysData
 
-# set the response functions to use
-irfs = 'TEST'
-
 from pil import Pil
 
 # set the response functions to be used in all tests:

@@ -17,6 +17,7 @@ def run_LikelihoodApp(appName, pars=None):
         pars = Pil(os.path.join(sysData, appName + '.par'),
                    raiseKeyErrors=False)
         pars['Source_model_file'] = 'srcModel.xml'
+        pars['Statistic'] = 'UNBINNED'
         pars['ROI_file'] = 'RoiCuts.xml'
         pars['ROI_cuts_file'] = 'RoiCuts.xml'
         pars['event_file'] = 'filtered_events_0000.fits'
