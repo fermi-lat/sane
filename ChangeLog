@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Jun  9 12:52:27 PDT 2004
+sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+update tests; add dataSubselector
+    *
+------------------------------------------------------------
 User: burnett  Mon May  3 10:32:46 PDT 2004
 sane/doc
 
