@@ -1,6 +1,6 @@
 package sane
 
-version v2
+version v2r1
 
 author T. Burnett <tburnett@u.washington.edu>
 # $Id$
@@ -13,6 +13,8 @@ use observationSim * -no_auto_imports
 use map_tools * -no_auto_imports
 use evtbin * -no_auto_imports
 use rspgen * -no_auto_imports
+use pulsePhase * -no_auto_imports
+use stpsearch * -no_auto_imports
 use python * IExternal -no_auto_imports
 use st_app *
 
