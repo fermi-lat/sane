@@ -1,4 +1,30 @@
 ------------------------------------------------------------
+User: burnett  Sat Apr  3 06:51:57 PST 2004
+users/burnett/sane
+
+Log Message:
+importing
+
+Status:
+
+Vendor Tag:	THB
+Release Tags:	v0
+		
+U users/burnett/sane/.cvsignore
+C users/burnett/sane/ChangeLog
+U users/burnett/sane/cmt/requirements
+N users/burnett/sane/doc/release.notes
+U users/burnett/sane/python/.cvsignore
+N users/burnett/sane/python/menu.py
+N users/burnett/sane/src/sane_main.cxx
+
+1 conflicts created by this import.
+Use the following command to help the merge:
+
+	cvs checkout -jTHB:yesterday -jTHB users/burnett/sane
+
+    *
+------------------------------------------------------------
 User: burnett  Fri Apr  2 06:06:04 PST 2004
 users/burnett/sane
 
