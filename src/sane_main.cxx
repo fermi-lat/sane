@@ -12,9 +12,10 @@ std::string pyname("python ");
 std::string pyname("python2.3 ");
 #endif
 
-#include "st_app/IApp.h"
+#include "st_app/StApp.h"
+#include "st_app/StAppFactory.h"
 
-class LikeApp : public st_app::IApp {
+class SaneApp : public st_app::StApp {
 
     void run()
     {
@@ -26,4 +27,7 @@ class LikeApp : public st_app::IApp {
         system(cmd.str().c_str());
     }
  
-} app;
+};
+
+// Factory which can create an instance of the class above.
+st_app::StAppFactory<SaneApp> g_factory;
