@@ -43,6 +43,12 @@ def run(clean=False):
     obsSim['scfile'] = 'orbSim_scData_0000.fits'
     obsSim['outfile_prefix'] = 'test'
     obsSim['simulation_time'] = 86400.0
+    obsSim['use_acceptance_cone'] = 'yes'
+    obsSim['ra'] = 86.4
+    obsSim['dec'] = 28.9
+    obsSim['radius'] = 20
+    obsSim['emin'] = 32
+    obsSim['emax'] = 2e5
     obsSim['rspfunc'] = irfs
     obsSim['random_seed'] = 293049
     obsSim.run()
