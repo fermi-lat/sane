@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Apr  4 11:23:47 PDT 2004
+users/burnett/sane/src
+
+Modified Files:
+	sane_main.cxx 
+Log Message:
+fix for unix
+    *
+------------------------------------------------------------
 User: burnett  Sun Apr  4 11:23:46 PDT 2004
 users/burnett/sane/cmt
 
