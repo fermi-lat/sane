@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jchiang  Tue Dec  7 16:41:54 PST 2004
+sane/data
+
+Modified Files:
+	ptsrcModel.xml srcModel.xml 
+Removed Files:
+	RoiCuts.xml xmlFiles.dat 
+Log Message:
+stop using ROI xml file in scripts
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r0p2, operation: add
 Package: sane
