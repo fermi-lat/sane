@@ -23,11 +23,14 @@ class GtApp(object):
     def run(self, print_command=True, catchError="at the top level:"):
         if print_command:
             print self.command()
-        input, output = self.runWithOutput()
-        for line in output:
-            print line.strip("\n")
-            if line.find(catchError) != -1:
-                return sys.exit(1)
+        if catchError is not None:
+            input, output = self.runWithOutput()
+            for line in output:
+                print line.strip("\n")
+                if line.find(catchError) != -1:
+                    return sys.exit(1)
+        else:
+            os.system(self.command())
     def runWithOutput(self):
         if os.name == 'posix':
             input, output = os.popen4(self.command())
