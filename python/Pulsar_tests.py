@@ -14,14 +14,14 @@ from obsSim_tests import sourceNamesDat
 #
 # Geminga parameters
 #
-period = 0.2371
-pdot = 1.14e-14
+#period = 0.2371
+#pdot = 1.14e-14
 
 #
 # Vela-like parameters
 #
-#period = 0.089
-#pdot = 1e-10
+period = 0.089
+pdot = 1e-10
 
 freq = 1./period
 fdot = -pdot/period**2
@@ -69,6 +69,8 @@ def run():
     psearch['f0'] = freq
     psearch['fstep'] = 1e-5
     psearch['numtrials'] = 200
+    psearch['correctfdot'] = 'yes'
+    psearch['f1'] = fdot
     psearch['plot'] = 'no'
     input, output = psearch.runWithOutput()
     for line in output:
