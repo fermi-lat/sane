@@ -20,12 +20,20 @@ class GtApp(object):
         self.pars[key] = value
     def __getitem__(self, key):
         return self.pars[key]
-    def run(self, print_command=True):
+    def run(self, print_command=True, catchError="at the top level:"):
         if print_command:
             print self.command()
-        os.system(self.command())
+        input, output = self.runWithOutput()
+        for line in output:
+            print line.strip("\n")
+            if line.find(catchError) != -1:
+                return sys.exit(1)
     def runWithOutput(self):
-        input, output = os.popen2(self.command())
+        if os.name == 'posix':
+            input, output = os.popen4(self.command())
+        else:
+            import win32pipe
+            output, input = win32pipe.popen4(self.command())
         return input, output
     def command(self):
         return self.app + self.pars()
