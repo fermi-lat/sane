@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Fri Oct 22 20:54:38 PDT 2004
+sane/python
+
+Modified Files:
+	Likelihood_tests.py Pulsar_tests.py 
+Log Message:
+allow for conditional read of likelihood params; tagging v2r1p2
+    *
+------------------------------------------------------------
+User: jchiang  Fri Oct 22 20:54:38 PDT 2004
 sane/doc
 
 Modified Files:
