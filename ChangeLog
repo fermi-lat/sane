@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Dec  7 16:41:55 PST 2004
+sane/python
+
+Modified Files:
+	Likelihood_tests.py obsSim_tests.py 
+Log Message:
+stop using ROI xml file in scripts
+    *
+------------------------------------------------------------
 User: jchiang  Tue Dec  7 16:41:54 PST 2004
 sane/data
 
