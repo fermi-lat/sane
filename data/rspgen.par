@@ -1,0 +1,35 @@
+#-------------------------------------------------------------------------------
+# General parameters.
+respalg,s,a,"GRB",[GRB PS],,"Response calculation method (GRB, PS)"
+specfile,f,a,"Crab.pha",,,"Name of the input spectrum file"
+scfile,f,a,"Crab_scData_0000.fits",,,"Name of the input spacecraft data file"
+outfile,f,a,"Crab.rsp",,,"Name of the output file"
+ra,r,a,83.57,,,True RA of point source (degrees)
+dec,r,a,22.01,,,True DEC of point source (degrees)
+psfradius,r,a,20,,,Radius of circle for PSF integration (degrees)
+resptype,      s, h, "Glast25::Front", , , "Name of the type of response function to use"
+resptpl,       f, h, "DEFAULT", , , "Name of the template file to use to create output file"
+mode,          s, h, "ql", , ,"Behavior for automatic parameters"
+#-------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------------
+# GRB-specific parameters.
+time,r,a,1000,,,Time of GRB (s)
+#-------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------------
+# GRB-specific parameters.
+thetacut,r,a,70,,,Cutoff angle for binning SC pointings (degrees)
+thetabinsize,r,a,1,,,Size of bins for binning SC pointings (degrees)
+#-------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------------
+# Energy binning parameters.
+energybinalg,s,a,"LOG",,,"Algorithm for defining energy bins (FILE, LIN, LOG)"
+energyfield,   s, h, "ENERGY", , ,"Name of energy field to bin"
+emin,r,a,30,,,Start value for first energy bin
+emax,r,a,200000,,,Stop value for last energy bin
+enumbins,i,a,20,,,Number of logarithmically uniform energy bins
+deltaenergy,r,a,0,,,Width of linearly uniform energy bins
+energybinfile,s,a,,,,"Name of the file containing the energy bin definition"
+#-------------------------------------------------------------------------------

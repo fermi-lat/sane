@@ -2,10 +2,10 @@ XML_source_file,f,ql,"xmlFiles.dat",,,"File of flux-style source definitions"
 Source_list,f,ql,"source_names.dat",,,"File containing source names"
 Number_of_events,r,ql,86400,1,4e7,Number of events (or simulation time in seconds)
 Use_as_sim_time,b,ql,yes,,,Use number of events as simulation time?
-Response_functions,s,ql,"GLAST25",FRONT/BACK|DC2|GLAST25,,"Response functions to use"
-Output_file_prefix,s,ql,"test",,,"Prefix for output files"
+Response_functions,s,ql,"GLAST25",FRONT/BACK|TEST|TESTFRONT|TESTBACK|GLAST25,,"Response functions to use"
+Output_file_prefix,s,ql,"Crab",,,"Prefix for output files"
 Maximum_effective_area,r,hl,1.21,,,Maximum effective area value
 Start_time,r,hl,0,,,Simulation start time (seconds)
 Pointing_history_file,f,ql,"none",,,"Pointing history file"
 Maximum_number_of_rows,i,hl,200000,,,Maximum number of rows in FITS files
-Random_seed,i,ql,430201,,,Random number seed
+Random_seed,i,ql,1801786,,,Random number seed
