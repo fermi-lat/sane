@@ -1,4 +1,36 @@
 ------------------------------------------------------------
+TAG
+Tag name: v3r0p1, operation: add
+Package: sane
+User: jchiang  Sat Nov 27 23:02:57 2004
+Files:
+  sane/.cvsignore  1.1.1.1
+  sane/ChangeLog  1.112
+  sane/cmt/requirements  1.30
+  sane/data/ptsrcModel.xml  1.1
+  sane/data/anticenter_sources.xml  1.1
+  sane/data/srcModel.xml  1.3
+  sane/data/xmlFiles.dat  1.1
+  sane/data/RoiCuts.xml  1.2
+  sane/doc/release.notes  1.26
+  sane/python/Pulsar_tests.py  1.5
+  sane/python/default_tests.py  1.9
+  sane/python/Likelihood_tests.py  1.11
+  sane/python/evtbin_tests.py  1.5
+  sane/python/menu.py  1.4
+  sane/python/getApp.py  1.7
+  sane/python/map_tools_tests.py  1.4
+  sane/python/BinnedLikelihood_test.py  1.8
+  sane/python/setPaths.py  1.8
+  sane/python/rspgen_tests.py  1.4
+  sane/python/.cvsignore  1.1.1.1
+  sane/python/dataSubselector_tests.py  1.4
+  sane/python/obsSim_tests.py  1.9
+  sane/src/sane_main.cxx  1.4
+  sane/src/test/main.cxx  1.4
+
+    *
+------------------------------------------------------------
 User: jchiang  Sat Nov 27 23:02:32 PST 2004
 sane/python
 
