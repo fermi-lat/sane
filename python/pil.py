@@ -66,7 +66,10 @@ class Pil(object):
     def __call__(self):
         args = ''
         for name in self.keys():
-            args += ' ' + ''.join(('', name, '=%s' % self.__getitem__(name)))
+            try:
+                args += ' ' + ''.join(('', name, '=%s' % self[name]))
+            except ValueError:
+                pass
         return args
     def write(self, filename=None):
         if filename is None:
