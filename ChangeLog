@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Mar  7 20:24:04 PST 2005
+sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+update app names; tagging v3r3p2
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r3p1, operation: add
 Package: sane
