@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Mon Mar  7 20:24:04 PST 2005
+sane/python/tests
+
+Modified Files:
+	default_tests.py setPaths.py 
+Log Message:
+update app names; tagging v3r3p2
+    *
+------------------------------------------------------------
+User: jchiang  Mon Mar  7 20:24:04 PST 2005
 sane/python
 
 Modified Files:
