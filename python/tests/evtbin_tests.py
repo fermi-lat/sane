@@ -9,12 +9,8 @@ Exercise evtbin PHA and CMAP using Crab-only obsSim data.
 #
 
 from setPaths import *
-from getApp import GtApp
 from obsSim_tests import sourceNamesDat, xmlFilesDat, random_int
-
-obsSim = GtApp('obsSim', 'observationSim')
-filter = GtApp('dataSubselector')               
-evtbin = GtApp('evtbin')
+from gt_apps import obsSim, filter, evtbin
 
 def Crab_only():
     sourceNamesDat(srcList=('_3EG_J0534p2200-32mev',))

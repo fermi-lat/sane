@@ -8,8 +8,9 @@ Tests of Pulsar source and pulsar-related tools.
 #
 
 from setPaths import *
-from getApp import GtApp
 from obsSim_tests import sourceNamesDat, xmlFilesDat, random_int
+
+from gt_apps import obsSim, pulsePhase, psearch
 
 #
 # Geminga parameters
@@ -47,14 +48,12 @@ def preparePulsarSource():
 def run(useWorkAround=False):
     preparePulsarSource()
 
-    obsSim = GtApp('obsSim', 'observationSim')
     obsSim['xml_source_file'] = 'xmlFiles.dat'
     obsSim['outfile_prefix'] = 'Geminga'
     obsSim['scfile'] = 'none'
     obsSim['random_seed'] = random_int()
     obsSim.run()
 
-    pulsePhase = GtApp('pulsePhase')
     pulsePhase['evfile'] = 'Geminga_events_0000.fits'
     pulsePhase['ephstyle'] = "FREQ"
     pulsePhase['epoch'] = 0
@@ -69,7 +68,6 @@ def run(useWorkAround=False):
         pulsePhase.pars.write()
     pulsePhase.run()
 
-    psearch = GtApp('stpsearch')
     psearch['evfile'] = pulsePhase['evfile']
     psearch['ephstyle'] = 'FREQ'
     psearch['f0'] = freq

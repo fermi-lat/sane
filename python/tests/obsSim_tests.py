@@ -10,10 +10,7 @@ Generate test data with obsSim.
 import random
 
 from setPaths import *
-from getApp import GtApp
-
-obsSim = GtApp('obsSim', 'observationSim')
-orbSim = GtApp('orbSim', 'observationSim')
+from gt_apps import obsSim, orbSim
 
 def random_int(scale=1e5):
     return int(random.random()*scale)

@@ -8,12 +8,7 @@ Use Likelihood applications to analyze obsSim data.
 #
 
 from setPaths import *
-from getApp import GtApp
-
-expCube = GtApp('makeExposureCube', 'Likelihood')
-expMap = GtApp('expMap', 'Likelihood')
-diffResps = GtApp('diffuseResponses', 'Likelihood')
-like = GtApp('likelihood')
+from gt_apps import expCube, expMap, diffResps, like, TsMap
 
 def cleanUp():
     removeFile('flux_model.xml')
@@ -54,7 +49,6 @@ def run(clean=False):
     diffResps.run()
     like.run()
     
-#    TsMap = GtApp('TsMap', 'Likelihood', raiseKeyErrors=False)
 #    TsMap['Source_model_file'] = 'Ts_srcModel.xml'
 #    TsMap.run()
     if clean:

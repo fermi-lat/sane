@@ -8,13 +8,11 @@ Binned likelihood tests.
 #
 
 from setPaths import *
-from getApp import GtApp, getApp
 from obsSim_tests import sourceNamesDat, random_int
+from gt_apps import obsSim, counts_map, expCube, srcMaps, like
 
-obsSim = GtApp('obsSim', 'observationSim')
-counts_map = GtApp('gtcntsmap', 'Likelihood')
-makeCube = GtApp('makeExposureCube', 'Likelihood')
-srcMaps = GtApp('gtsrcmaps', 'Likelihood')
+makeCube = expCube
+likelihood = like
 
 def generateData():
     sourceNamesDat(srcList=('anticenter-32mev',))
@@ -46,7 +44,6 @@ def makeSourceMaps():
     srcMaps.run()
 
 def runLikelihood():
-    likelihood = GtApp('likelihood', 'Likelihood')
     likelihood['scfile'] = 'ptsrcs_scData_0000.fits'
     likelihood['statistic'] = 'BINNED'
     likelihood['source_model_file'] = 'ptsrcModel.xml'

@@ -9,9 +9,7 @@ Generate test data with dataSubselector.
 #
 
 from setPaths import *
-from getApp import GtApp
-
-filter = GtApp('dataSubselector')
+from gt_apps import filter
 
 def run(clean=False):
     filter['input_file'] = 'test_events_0000.fits'

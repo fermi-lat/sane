@@ -9,10 +9,9 @@ Exercise rspgen.
 #
 
 from setPaths import *
-from getApp import GtApp
+from gt_apps import rspgen
 
 def run():
-    rspgen = GtApp('rspgen')
     rspgen['respalg'] = 'PS'
     rspgen['specfile'] = 'Crab.pha'
     rspgen['scfile'] = 'Crab_scData_0000.fits'

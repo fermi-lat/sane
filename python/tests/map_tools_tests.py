@@ -8,10 +8,9 @@ Exercise the map_tools applications.
 #
 
 from setPaths import *
-from getApp import GtApp
+from gt_apps import count_map
 
 def run(useWorkAround=False):
-    count_map = GtApp('count_map', 'map_tools')
     count_map['clobber'] = 'yes'
     count_map['chatter'] = 5
     count_map['mode'] = 'h'
