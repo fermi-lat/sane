@@ -10,14 +10,9 @@ import os, sys, glob
 import tempfile
 from xml.dom import minidom
 import celgal
-from getApp import GtApp
 from makeSrcList import SourceList
 
-diffResp = GtApp('diffuseResponses', 'Likelihood')
-filter = GtApp('dataSubselector')
-expCube = GtApp('makeExposureCube', 'Likelihood')
-expMap = GtApp('expMap', 'Likelihood')
-like = GtApp('likelihood')
+from gt_apps import diffResp, filter, expCube, expMap, like
 
 def haveFile(filename):
     try:
