@@ -19,6 +19,7 @@ def run_LikelihoodApp(appName, pars=None):
     likeApp['Spacecraft_file'] = 'test_scData_0000.fits'
     likeApp['event_file'] = 'filtered_events_0000.fits'
     likeApp['Response_functions'] = irfs
+    likeApp.pars.write()
     likeApp.run()
 
 def cleanUp():

@@ -5,6 +5,7 @@
 $Id$
 @verbatim
 
+22-Oct-04  v2r1p2 JC   use fdot in stpsearch
 22-Oct-04  v2r1p1 JC   add pulsePhase.par, stpsearch.par
 22-Oct-04  v2r1   JC   add Pulsar_tests.py exercising pulsePhase and
                        stpsearch
