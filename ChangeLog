@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jchiang  Wed Aug 18 21:01:59 PDT 2004
+sane/python
+
+Modified Files:
+	default_tests.py pil.py 
+Added Files:
+	evtbin_tests.py rspgen_tests.py 
+Log Message:
+add tests for evtbin and rspgen
+    *
+------------------------------------------------------------
 User: jchiang  Wed Aug 18 21:01:58 PDT 2004
 sane/data
 
