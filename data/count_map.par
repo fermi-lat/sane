@@ -10,7 +10,7 @@ mode,     s, a,  "h",   , ,""
 #---------------------------------------------------------------------------------------
 #
 infile,f,a,"test_events_0000.fits",,,"Name of the Event Data File:"
-table_name,s,a,"EVENTS",,,"name of the extension or ROOT tree"
+table,s,a,"EVENTS",,,"name of the extension or ROOT tree"
 filter,s,a,,,,"filter expression:"
 outfile,f,a,"count_map.fits",,,"Name of the output file:"
 #
