@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Fri Oct 29 19:52:19 PDT 2004
+sane/src/test
+
+Modified Files:
+	main.cxx 
+Log Message:
+add orbSim to tests; catch top-level exceptions in Python and pass return code to main
+    *
+------------------------------------------------------------
+User: jchiang  Fri Oct 29 19:52:19 PDT 2004
 sane/python
 
 Modified Files:
