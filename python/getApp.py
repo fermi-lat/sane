@@ -20,18 +20,24 @@ class GtApp(object):
         self.pars[key] = value
     def __getitem__(self, key):
         return self.pars[key]
+    def keys(self):
+        return self.pars.keys()
+    def prompt(self, item):
+        self.pars.prompt(item)
     def run(self, print_command=True, catchError="at the top level:"):
-        if print_command:
-            print self.command()
         if catchError is not None:
-            input, output = self.runWithOutput()
+            input, output = self.runWithOutput(print_command)
             for line in output:
                 print line.strip("\n")
                 if line.find(catchError) != -1:
                     return sys.exit(1)
         else:
+            if print_command:
+                print self.command()
             os.system(self.command())
-    def runWithOutput(self):
+    def runWithOutput(self, print_command=True):
+        if print_command:
+            print self.command()
         if os.name == 'posix':
             input, output = os.popen4(self.command())
         else:
