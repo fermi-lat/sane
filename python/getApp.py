@@ -22,13 +22,13 @@ class GtApp(object):
         return self.pars[key]
     def run(self, print_command=True):
         if print_command:
-            self.printCommand()
-        os.system(self.app + self.pars())
+            print self.command()
+        os.system(self.command())
     def runWithOutput(self):
-        input, output = os.popen2(self.app + self.pars())
+        input, output = os.popen2(self.command())
         return input, output
-    def printCommand(self):
-        print self.app + self.pars()
+    def command(self):
+        return self.app + self.pars()
 
 if __name__ == '__main__':
     orbSim = GtApp('orbSim', 'observationSim')
