@@ -5,6 +5,8 @@
 $Id$
 @verbatim
 
+26-Aug-04  v1r4p3 JC   add exposure_cube_file parameter to likelihood for
+                       count spectra and map; use TEST irfs instead GLAST25
 19-Aug-04  v1r4p2 JC   fix par files
 19-Aug-04  v1r4p1 JC   test for env. variable in test main
 18-Aug-04  v1r4   JC   add evtbin and rspgen tests
