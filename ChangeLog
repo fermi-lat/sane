@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Jan 31 15:52:07 PST 2005
+sane/python
+
+Added Files:
+	gt_apps.py 
+Log Message:
+import GtApp objects from gt_apps.py
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r2p2, operation: add
 Package: sane
