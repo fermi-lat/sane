@@ -1,4 +1,20 @@
 ------------------------------------------------------------
+User: jchiang  Fri Jan 14 21:51:12 PST 2005
+sane/python
+
+Modified Files:
+	getApp.py menu.py 
+Added Files:
+	cleanXml.py makeSrcList.py pfilesPath.py pil.py 
+	source_analysis.py xmlSrcLib.py 
+Removed Files:
+	BinnedLikelihood_test.py Likelihood_tests.py Pulsar_tests.py 
+	dataSubselector_tests.py default_tests.py evtbin_tests.py 
+	map_tools_tests.py obsSim_tests.py rspgen_tests.py setPaths.py 
+Log Message:
+reorganize scripts from various packages; tagging v3r2
+    *
+------------------------------------------------------------
 User: jchiang  Fri Jan 14 21:51:11 PST 2005
 sane/doc
 
