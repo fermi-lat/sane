@@ -56,11 +56,15 @@ def run(useWorkAround=False):
     pulsePhase = GtApp('pulsePhase')
     pulsePhase['evfile'] = 'Geminga_events_0000.fits'
     pulsePhase['ephstyle'] = "FREQ"
+    pulsePhase['epoch'] = 0
+    pulsePhase['phi0'] = 0
     pulsePhase['f0'] = freq
     pulsePhase['f1'] = fdot
+    pulsePhase['f2'] = 0
     if useWorkAround:
         pulsePhase['p0'] = period
         pulsePhase['p1'] = pdot
+        pulsePhase['p2'] = 0
         pulsePhase.pars.write()
     pulsePhase.run()
 
@@ -88,4 +92,4 @@ def run(useWorkAround=False):
             print line.strip()
 
 if __name__ == '__main__':
-    run()
+    run(True)
