@@ -42,7 +42,10 @@ class GtApp(object):
         else:
             if print_command:
                 print self.command()
-            os.system(self.command())
+            retcode = os.system(self.command())
+            if retcode != 0:
+                _failed_exes.append(self.app)
+#                return sys.exit(1)
     def runWithOutput(self, print_command=True):
         if print_command:
             print self.command()

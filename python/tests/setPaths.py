@@ -38,6 +38,9 @@ def copy_par_files():
         for file in pfiles:
             if file.find('.par') != -1 and file.find('~') == -1:
                 pars = Pil(os.path.join(pfile_path, file))
+                for par in pars.params:
+                    if pars.params[par][0] == "fr":
+                        pars.params[par][0] = "f"
                 pars.write(file)
 
 copy_par_files()
