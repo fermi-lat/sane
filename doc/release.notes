@@ -5,6 +5,7 @@
 $Id$
 @verbatim
 
+31-Jan-05  v3r3p1 JC   ensure energy bands match for binned tests
 31-Jan-05  v3r3   JC   import all GtApp objects from gt_apps.py
 15-Jan-05  v3r2p2 JC   set mode in menu-driven apps;
                        readXml copied from likeGui
