@@ -5,6 +5,9 @@
 $Id$
 @verbatim
 
+14-Jan-04  v3r2   JC   reorganize, consolidating general use scripts from
+                       likeGui and catalogAnalysis packages; move test
+                       scripts to tests subdir
 09-Dec-04  v3r1p1 JC   remove vestigial reference to ROI_file
 08-Dec-04  v3r1   JC   Use workarounds until next ST release
 28-Nov-04  v3r0p2 JC   Likelihood_test.py patch

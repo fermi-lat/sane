@@ -19,7 +19,7 @@ int main(int iargc, char *argv[]) {
       std::exit(-1);
    }
    std::string rootPath(root_path);
-   std::string pythonDir = rootPath + "/python";
+   std::string pythonDir = rootPath + "/python/tests";
    if (iargc == 1) {
       command = std::string("python ") + pythonDir 
          + std::string("/default_tests.py");
