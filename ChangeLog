@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Sun Oct 10 20:04:15 PDT 2004
+sane/data
+
+Modified Files:
+	diffuseResponses.par expMap.par likelihood.par 
+	makeExposureCube.par obsSim.par srcModel.xml 
+Log Message:
+account for likelihood param refactoring
+    *
+------------------------------------------------------------
 User: jchiang  Thu Aug 26 09:31:25 PDT 2004
 sane/doc
 
