@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Dec  9 11:07:06 PST 2004
+sane/python
+
+Modified Files:
+	Likelihood_tests.py 
+Log Message:
+remove reference to ROI_file
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r1, operation: add
 Package: sane
