@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Aug 18 21:01:58 PDT 2004
+sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+add tests for evtbin and rspgen
+    *
+------------------------------------------------------------
 User: jchiang  Fri Aug 13 13:26:13 PDT 2004
 sane/doc
 
