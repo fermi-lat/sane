@@ -25,8 +25,6 @@ import evtbin_tests as evtbin
 import rspgen_tests as rspgen
 import Pulsar_tests as pulsars
 
-from pil import Pil
-
 if __name__ == "__main__":
     cleanUp = False
     useWorkAround = True

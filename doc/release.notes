@@ -1,10 +1,12 @@
-** @file release.notes
+/** @file release.notes
     @brief sane definition
     @author Toby Burnett
 
 $Id$
 @verbatim
 
+07-Mar-05  v3r3p2 JC   use application names gtbin, gtrspgen, gtpsearch;
+                       import periodSearch instead of stpsearch
 31-Jan-05  v3r3p1 JC   ensure energy bands match for binned tests
 31-Jan-05  v3r3   JC   import all GtApp objects from gt_apps.py
 15-Jan-05  v3r2p2 JC   set mode in menu-driven apps;
@@ -46,6 +48,5 @@ $Id$
 04-apr-04  v1    THB Ready for Linux and Windows
 
 @endverbatim
-
 
 */

@@ -31,7 +31,7 @@ def removeFile(file):
 
 def copy_par_files():
     packages = ['observationSim', 'map_tools', 'dataSubselector',
-                'Likelihood', 'evtbin', 'rspgen', 'pulsePhase', 'stpsearch']
+                'Likelihood', 'evtbin', 'rspgen', 'pulsePhase', 'periodSearch']
     for package in packages:
         pfile_path = os.path.join(os.environ[package.upper()+'ROOT'], 'pfiles')
         pfiles = os.listdir(pfile_path)
