@@ -24,15 +24,18 @@ import evtbin_tests as evtbin
 import rspgen_tests as rspgen
 import Pulsar_tests as pulsars
 
+from pil import Pil
+
 if __name__ == "__main__":
     cleanUp = False
-
-    obsSim.run(cleanUp)
-    map_tools.run(cleanUp)
-    dataSubselector.run(cleanUp)
-    like.run(cleanUp)
-    binned_test.run()
-    #obsSim.compareFit(cleanUp)
-    evtbin.run()
-    rspgen.run()
-    pulsars.run()
+    try:
+        obsSim.run(cleanUp)
+        dataSubselector.run(cleanUp)
+        like.run(cleanUp)
+        binned_test.run()
+        evtbin.run()
+        rspgen.run()
+        pulsars.run()
+        map_tools.run(cleanUp)
+    except:
+        sys.exit(1)

@@ -1,5 +1,12 @@
 #!/usr/bin/env python
+"""
+Provide a unified interface to FTOOL and par file.
 
+@author J. Chiang <jchiang@slac.stanford.edu>
+"""
+#
+# $Header$
+#
 import sys, os
 from pil import Pil
 
@@ -20,10 +27,8 @@ class GtApp(object):
         self.pars[key] = value
     def __getitem__(self, key):
         return self.pars[key]
-    def keys(self):
-        return self.pars.keys()
-    def prompt(self, item):
-        self.pars.prompt(item)
+    def __getattr__(self, attrname):
+        return getattr(self.pars, attrname)
     def run(self, print_command=True, catchError="at the top level:"):
         if catchError is not None:
             input, output = self.runWithOutput(print_command)
