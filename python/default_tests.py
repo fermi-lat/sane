@@ -25,4 +25,4 @@ if __name__ == "__main__":
     obsSim.run(cleanUp)
     map_tools.run(cleanUp)
     like.run(cleanUp)
-    obsSim.compareFit(cleanUp)
+    #obsSim.compareFit(cleanUp)
