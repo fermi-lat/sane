@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: jchiang  Wed Jun  9 12:52:29 PDT 2004
+sane/python
+
+Modified Files:
+	Likelihood_tests.py default_tests.py map_tools_tests.py 
+	obsSim_tests.py setPaths.py 
+Added Files:
+	dataSubselector_tests.py 
+Log Message:
+update tests; add dataSubselector
+    *
+------------------------------------------------------------
 User: jchiang  Wed Jun  9 12:52:28 PDT 2004
 sane/data
 
