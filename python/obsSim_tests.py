@@ -31,15 +31,20 @@ def xmlFilesDat(filename='xmlFiles.dat',
     xmlFiles.close()
 
 def run(clean=False):
-    orbSim['Output_file_prefix'] = 'orbSim'
+    orbSim['outfile_prefix'] = 'orbSim'
+    orbSim['pointing_strategy'] = 'ONEPERORBIT'
+    orbSim['rocking_angle'] = 35.0
+    orbSim['simulation_time'] = 86400.0
     orbSim.run()
     sourceNamesDat()
     xmlFilesDat()
-    obsSim['XML_source_file'] = 'xmlFiles.dat'
-    obsSim['Source_list'] = 'source_names.dat'
-    obsSim['Output_file_prefix'] = 'test'
-    obsSim['Response_functions'] = irfs
-    obsSim['Pointing_history_file'] = "orbSim_scData_0000.fits"
+    obsSim['xml_source_file'] = 'xmlFiles.dat'
+    obsSim['source_list'] = 'source_names.dat'
+    obsSim['scfile'] = 'orbSim_scData_0000.fits'
+    obsSim['outfile_prefix'] = 'test'
+    obsSim['simulation_time'] = 86400.0
+    obsSim['rspfunc'] = irfs
+    obsSim['random_seed'] = 293049
     obsSim.run()
     if clean:
         cleanUp()
@@ -51,9 +56,9 @@ def cleanUp():
 
 def compareFit(clean=False):
     sourceNamesDat(srcList=['all_in_flux_model.xml'])
-    obsSim['XML_source_file'] = 'flux_model.xml'
-    obsSim['Output_file_prefix'] = 'fit_comparison'
-    obsSim['Response_functions'] = irfs
+    obsSim['xml_source_file'] = 'flux_model.xml'
+    obsSim['outfile_prefix'] = 'fit_comparison'
+    obsSim['rspfunc'] = irfs
     obsSim.run()
     if clean:
         cleanUp()

@@ -48,22 +48,22 @@ def run():
     preparePulsarSource()
 
     obsSim = GtApp('obsSim', 'observationSim')
-    obsSim['XML_source_file'] = 'xmlFiles.dat'
-    obsSim['Output_file_prefix'] = 'Geminga'
+    obsSim['xml_source_file'] = 'xmlFiles.dat'
+    obsSim['outfile_prefix'] = 'Geminga'
     obsSim.run()
 
     pulsePhase = GtApp('pulsePhase')
+    pulsePhase['evfile'] = 'Geminga_events_0000.fits'
     pulsePhase['ephstyle'] = "FREQ"
     pulsePhase['f0'] = freq
     pulsePhase['f1'] = fdot
-#    pulsePhase['ephstyle'] = "PER"
-    pulsePhase['p0'] = period
-    pulsePhase['p1'] = pdot
-    pulsePhase.pars.write()
+#    pulsePhase['p0'] = period
+#    pulsePhase['p1'] = pdot
+#    pulsePhase.pars.write()
     pulsePhase.run()
 
     psearch = GtApp('stpsearch')
-    psearch['evfile'] = 'Geminga_events_0000.fits'
+    psearch['evfile'] = pulsePhase['evfile']
     psearch['ephstyle'] = 'FREQ'
     psearch['f0'] = freq
     psearch['f1'] = fdot
@@ -74,7 +74,7 @@ def run():
     psearch['correctpdot'] = 'yes'
     psearch['plot'] = 'no'
     psearch['chatter'] = 0
-    psearch.pars.write()
+#    psearch.pars.write()
     input, output = psearch.runWithOutput()
     for line in output:
         if line.find('Maximum at') != -1:
