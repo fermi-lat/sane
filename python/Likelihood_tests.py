@@ -20,6 +20,7 @@ def run_LikelihoodApp(appName, pars=None):
         pars['ROI_file'] = 'RoiCuts.xml'
         pars['ROI_cuts_file'] = 'RoiCuts.xml'
         pars['event_file'] = 'filtered_events_0000.fits'
+        pars['Response_functions'] = irfs
     command = likeApp + pars()
     print command
     os.system(command)
