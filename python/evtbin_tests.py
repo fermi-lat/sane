@@ -22,6 +22,7 @@ def Crab_only():
     pars['XML_source_file'] = 'xmlFiles.dat'
     pars['Source_list'] = 'source_names.dat'
     pars['Output_file_prefix'] = 'Crab'
+    pars['Response_functions'] = irfs
     command = obsSimApp + pars()
     print command
     os.system(command)    

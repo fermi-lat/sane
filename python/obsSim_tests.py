@@ -27,6 +27,7 @@ def run(clean=False):
     pars['XML_source_file'] = 'xmlFiles.dat'
     pars['Source_list'] = 'source_names.dat'
     pars['Output_file_prefix'] = 'test'
+    pars['Response_functions'] = irfs
     command = obsSimApp + pars()
     print command
     os.system(command)
@@ -43,6 +44,7 @@ def compareFit(clean=False):
     pars = Pil(obsSimPar)
     pars['XML_source_file'] = 'flux_model.xml'
     pars['Output_file_prefix'] = 'fit_comparison'
+    pars['Response_functions'] = irfs
     command = obsSimApp + pars()
     print command
     os.system(command)

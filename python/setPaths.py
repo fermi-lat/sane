@@ -24,6 +24,10 @@ os.environ['PFILES'] = sysData
 
 from pil import Pil
 
+# set the response functions to be used in all tests:
+#irfs = 'GLAST25'
+irfs = 'TEST'
+
 def removeFile(file):
     files = glob.glob(file)
     for file in files:
