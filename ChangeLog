@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Oct 22 14:15:38 PDT 2004
+sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+use GtApp class from likeGui; tagging v2
+    *
+------------------------------------------------------------
 User: jchiang  Mon Oct 11 16:21:35 PDT 2004
 sane/doc
 
