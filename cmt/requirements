@@ -7,17 +7,19 @@ use STpolicy *
 
 use Likelihood *
 #use dataSubselector *
-#use observationSim *
+use observationSim *
 
 use map_tools *
 
 use python * IExternal -no_auto_imports
 
-path_append PYTHONPATH "$(Sane_root)/python"
+application test_sane test/main.cxx
+
+path_append PYTHONPATH "$(SANEROOT)/python"
 #any package using this one will make a local executable
 
 pattern -global user_package \
-   application <package> "$(sane_root)/src/sane_main.cxx $(sane_extra)" 
+   application <package> "$(SANEROOT)/src/sane_main.cxx $(sane_extra)" 
 
 
 private

@@ -1,0 +1,29 @@
+# $Header$
+#---------------------------------------------------------------------------------------
+clobber,b,a,yes,,,Overwrite existing output file?:
+chatter,i,a,5,,,
+mode,     s, a,  "h",   , ,""
+# uncomment the following for interactive/replacement mode
+#mode,s,a,"ql",,,
+
+#
+#---------------------------------------------------------------------------------------
+#
+infile,f,a,"test_events_0000.fits",,,"Name of the Event Data File:"
+table_name,s,a,"EVENTS",,,"name of the extension or ROOT tree"
+filter,s,a,,,,"filter expression:"
+outfile,f,a,"count_map.fits",,,"Name of the output file:"
+#
+ra_name,s,a,"RA",,,"name of the RA field"
+dec_name,s,a,"DEC",,,"name of the DEC field"
+#---------------------------------------------------------------------------------------
+#Parameter for Spatial binning
+#
+npix,i,a,80,,,Total pixel size of the image in each axis:
+npixy,i,a,80,,,Total pixel size of the image in y axis:
+pixelsize,r,a,0.5,,,Image size [degrees/pixel]
+xref,r,a,89,,,RA at the image center:
+yref,r,a,16,,,DEC at the image center:
+rot,r,a,0,,,Rotation angle of Y-axis relative to the physical coordinate:
+projtype,s,a,"CAR",,,"Projection Method  (CAR, SIN, TAN, ARC, NCP, GLS, MER, AIT, STG):"
+uselb,b,a,no,,,"use l, b instead of ra,dec"
