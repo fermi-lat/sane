@@ -1,0 +1,11 @@
+XML_source_file,f,ql,"/a/sulky05/g.glast.u04/jchiang/ST_new/sane/v1r1/data/flux_model.xml",,,"File of flux-style source definitions"
+Source_list,f,ql,"source_names.dat",,,"File containing source names"
+Number_of_events,r,ql,86400,1,4e7,Number of events (or simulation time in seconds)
+Use_as_sim_time,b,ql,yes,,,Use number of events as simulation time?
+Response_functions,s,ql,"FRONT/BACK",FRONT/BACK|FRONT|BACK|NO_EDISP|GLAST25,,"Response functions to use"
+Output_file_prefix,s,ql,"fit_comparison",,,"Prefix for output files"
+Maximum_effective_area,r,hl,1.21,,,Maximum effective area value
+Start_time,r,hl,0,,,Simulation start time (seconds)
+Pointing_history_file,f,ql,"none",,,"Pointing history file"
+Maximum_number_of_rows,i,hl,200000,,,Maximum number of rows in FITS files
+Random_seed,i,ql,430201,,,Random number seed
