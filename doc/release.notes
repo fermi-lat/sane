@@ -5,6 +5,8 @@
 $Id$
 @verbatim
 
+13-jul-04  v1r3p2 JC   extend energy range tested; update par files;
+                       use GLAST25 responses in tests
 01-jul-04  v1r3p1 JC   update dataSubselector.par
 10-jun-04  v1r3   JC   add dataSubselector and diffuseResponses
 29-apr-04  v1r2p1 THB  clean up req file a bit
