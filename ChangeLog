@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: jchiang  Sat Oct 30 08:57:06 PDT 2004
+sane/src/test
+
+Modified Files:
+	main.cxx 
+Log Message:
+write out xmlFiles.dat explicitly; extend evtbin tests; set return code in
+test/main.cxx
+
+    *
+------------------------------------------------------------
+User: jchiang  Sat Oct 30 08:57:06 PDT 2004
 sane/python
 
 Modified Files:
