@@ -1,4 +1,5 @@
 #!/bin/env python
+# $Header$
 
 import sys, time, os
 from Tkinter import *
@@ -14,10 +15,8 @@ class RunProgram:
             os.system( 'start ' + '"' + self.name + '" /BELOWNORMAL cmd /k ' + self.command )
         else:
             pid = os.fork()
-            if pid==0 :
-                os.execl(self.command, "")
+            if pid==0 : os.execl(self.command, "")
             else: print "started child id ", pid
-                
             
 def runLauncher(tools, title):
     # put up a simple launcher bar for later use
@@ -30,14 +29,11 @@ def runLauncher(tools, title):
     root.mainloop()
 
 def get_tools(env):
-    if sys.platform[:3] == 'win': char=";" 
-    else: char=":"
-    applist = os.environ[env].split(char);
+    applist = os.environ[env].split(os.pathsep);
     tools = []
     for app_entry in applist:
         tools.append(app_entry.split( '='))
     return tools
     
-title = "Science Tools"
 #showinfo(title, 'starting')
-runLauncher( get_tools('ST_apps'), title)
+runLauncher( tools=get_tools('ST_apps'), title="Science Tools")
