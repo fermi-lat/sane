@@ -8,11 +8,17 @@
  */
 
 #include <cstdlib>
+#include <iostream>
 #include <string>
 
 int main(int iargc, char *argv[]) {
    std::string command;
-   std::string rootPath = std::getenv("SANEROOT");
+   char * root_path = std::getenv("SANEROOT");
+   if (!root_path) {
+      std::cerr << "SANEROOT not set" << std::endl;
+      std::exit(-1);
+   }
+   std::string rootPath(root_path);
    std::string pythonDir = rootPath + "/python";
    if (iargc == 1) {
       command = std::string("python ") + pythonDir 

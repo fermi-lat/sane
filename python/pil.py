@@ -20,7 +20,8 @@ def fields(line):
     return [item.strip() for item in line.split(',')[1:]]
 
 class Pil(object):
-    def __init__(self, parfile):
+    def __init__(self, parfile, raiseKeyErrors=True):
+        self.raiseKeyErrors = raiseKeyErrors
         self.params = {}
         self.names = []
         file = open(parfile, 'r')
@@ -33,7 +34,10 @@ class Pil(object):
     def __getitem__(self, name):
         return (self.params[name][2]).strip('"').strip("'")
     def __setitem__(self, name, value):
-        self.params[name][2] = `value`
+        if name in self.names:
+            self.params[name][2] = `value`
+        elif self.raiseKeyErrors:
+            raise KeyError, name
     def __call__(self):
         args = ''
         for name in self.keys():
