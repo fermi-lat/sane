@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: jchiang  Thu Aug 26 09:27:34 PDT 2004
+sane/python
+
+Modified Files:
+	Likelihood_tests.py evtbin_tests.py obsSim_tests.py 
+	setPaths.py 
+Log Message:
+update parfiles; use TEST irfs
+    *
+------------------------------------------------------------
+User: jchiang  Thu Aug 26 09:27:34 PDT 2004
 sane/data
 
 Modified Files:
