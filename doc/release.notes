@@ -5,6 +5,7 @@
 $Id$
 @verbatim
 
+19-Aug-04  v1r4p2 JC   fix par files
 19-Aug-04  v1r4p1 JC   test for env. variable in test main
 18-Aug-04  v1r4   JC   add evtbin and rspgen tests
 13-Aug-04  v1r3p2 JC   extend energy range tested; update par files;
