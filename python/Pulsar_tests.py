@@ -50,6 +50,7 @@ def run(useWorkAround=False):
     obsSim = GtApp('obsSim', 'observationSim')
     obsSim['xml_source_file'] = 'xmlFiles.dat'
     obsSim['outfile_prefix'] = 'Geminga'
+    obsSim['scfile'] = 'none'
     obsSim['random_seed'] = random_int()
     obsSim.run()
 
