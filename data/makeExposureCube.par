@@ -1,5 +1,5 @@
-Spacecraft file,f,ql,"test_scData_0000.fits",,,"Spacecraft data file"
-Output file,f,ql,"!expcube_1_day.fits",,,"Output file"
-cos_theta step,r,ql,0.025,0.,1.,Step size in cos(theta)
-pixel size,r,ql,1,,,Pixel size (degrees)
+Spacecraft_file,f,ql,"test_scData_0000.fits",,,"Spacecraft data file"
+Output_file,f,ql,"!expcube_1_day.fits",,,"Output file"
+cos_theta_step,r,ql,0.025,0.,1.,Step size in cos(theta)
+pixel_size,r,ql,1,,,Pixel size (degrees)
 ROI_file,f,ql,"RoiCuts.xml",,,"ROI file"
