@@ -42,3 +42,4 @@ if __name__ == "__main__":
         print "The following executables failed: "
         for exe in getApp._failed_exes:
             print exe
+        sys.exit(1)
