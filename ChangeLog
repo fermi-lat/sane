@@ -1,4 +1,17 @@
 ------------------------------------------------------------
+User: jchiang  Fri Oct 22 14:15:41 PDT 2004
+sane/python
+
+Modified Files:
+	BinnedLikelihood_test.py Likelihood_tests.py 
+	dataSubselector_tests.py evtbin_tests.py getApp.py 
+	map_tools_tests.py obsSim_tests.py rspgen_tests.py setPaths.py 
+Removed Files:
+	pil.py 
+Log Message:
+use GtApp class from likeGui; tagging v2
+    *
+------------------------------------------------------------
 User: jchiang  Fri Oct 22 14:15:39 PDT 2004
 sane/doc
 
