@@ -15,7 +15,7 @@ obsSimApp = os.path.join(obsSimRoot, bindir, 'obsSim.exe')
 obsSimPar = os.path.join(sysData, 'obsSim.par')
 
 def sourceNamesDat(filename='source_names.dat',
-                   srcList=('anticenter', 'diffuse-100mev')):
+                   srcList=('anticenter-32mev', 'diffuse-20mev')):
     file = open(filename, 'w')
     for src in srcList:
         file.write(src + '\n')
@@ -24,7 +24,7 @@ def sourceNamesDat(filename='source_names.dat',
 def run(clean=False):
     sourceNamesDat()
     pars = Pil(obsSimPar)
-    pars['XML_source_file'] = 'none'
+    pars['XML_source_file'] = 'xmlFiles.dat'
     pars['Source_list'] = 'source_names.dat'
     pars['Output_file_prefix'] = 'test'
     command = obsSimApp + pars()

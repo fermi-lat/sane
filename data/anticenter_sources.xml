@@ -1,0 +1,38 @@
+<source_library>
+<!-- 3EG J0530+1323, also known as
+     2EG J0531+1324 GEV J0530+1340 0528+134 -->
+<source name="_3EG_J0530p1323-32mev" flux="0.0493506233377">
+   <spectrum escale="MeV">
+       <particle name="gamma">
+           <power_law emin="32" emax="100000." gamma="2.46"/>
+       </particle>
+       <celestial_dir ra="82.74" dec="13.38"/>
+   </spectrum>
+</source>
+<!-- 3EG J0534+2200, also known as
+     2EG J0534+2158 GEV J0534+2159 PSR B0531+21 Crab pulsar -->
+<source name="_3EG_J0534p2200-32mev" flux="0.0877736435029">
+   <spectrum escale="MeV">
+       <particle name="gamma">
+           <power_law emin="32" emax="100000." gamma="2.19"/>
+       </particle>
+       <celestial_dir ra="83.57" dec="22.01"/>
+   </spectrum>
+</source>
+<!-- 3EG J0633+1751, also known as
+     2EG J0633+1745 GEV J0634+1746 PSR J0633+1746 Geminga pulsar -->
+<source name="_3EG_J0633p1751-32mev" flux="0.0748604912416">
+   <spectrum escale="MeV">
+       <particle name="gamma">
+           <power_law emin="32" emax="100000." gamma="1.66"/>
+       </particle>
+       <celestial_dir ra="98.49" dec="17.86"/>
+   </spectrum>
+</source>
+    <!-- Strong point sources in the Galactic anticenter region -->
+    <source name = "anticenter-32mev">
+        <nestedSource sourceRef="_3EG_J0530p1323-32mev" />
+        <nestedSource sourceRef="_3EG_J0534p2200-32mev" />
+        <nestedSource sourceRef="_3EG_J0633p1751-32mev" />
+    </source>
+</source_library>
