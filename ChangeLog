@@ -1,5 +1,17 @@
 ------------------------------------------------------------
 User: jchiang  Wed Aug 18 21:01:58 PDT 2004
+sane/data
+
+Modified Files:
+	dataSubselector.par diffuseResponses.par expMap.par 
+	likelihood.par obsSim.par 
+Added Files:
+	evtbin.par rspgen.par 
+Log Message:
+add tests for evtbin and rspgen
+    *
+------------------------------------------------------------
+User: jchiang  Wed Aug 18 21:01:58 PDT 2004
 sane/cmt
 
 Modified Files:
