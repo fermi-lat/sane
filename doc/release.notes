@@ -5,6 +5,7 @@
 $Id$
 @verbatim
 
+28-Nov-04  v3r0p2 JC   Likelihood_test.py patch
 27-Nov-04  v3r0p1 JC   Likelihood par file changes
 27-Nov-04  v3     JC   copy current par files from packages
 26-Nov-04  v2r3   JC   stpsearch changes
