@@ -35,7 +35,7 @@ def Crab_filter():
 
 def Crab_cmap(useWorkAround=False):
     evtbin['algorithm'] = 'CMAP'
-    evtbin['eventfile'] = 'Crab_events_filtered.fits'
+    evtbin['evfile'] = 'Crab_events_filtered.fits'
     evtbin['outfile'] = 'Crab.fits'
     evtbin['scfile'] = 'Crab_scData_0000.fits'
     evtbin['timebinalg'] = 'LIN'
@@ -57,6 +57,9 @@ def Crab_cmap(useWorkAround=False):
     evtbin['deltaenergy'] = 0.0
     evtbin['proj'] = 'CAR'
     evtbin['uselb'] = 'no'
+    evtbin['snratio'] = 1
+    evtbin['lcemin'] = 0
+    evtbin['lcemax'] = 0
     if useWorkAround:
         evtbin.write()
     evtbin.run()
