@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Fri Nov 26 09:17:02 PST 2004
+sane/python
+
+Modified Files:
+	Pulsar_tests.py getApp.py 
+Log Message:
+update for stpsearch v0r2p1
+    *
+------------------------------------------------------------
+User: jchiang  Fri Nov 26 09:17:02 PST 2004
 sane/data
 
 Modified Files:
