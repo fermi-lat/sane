@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon May  3 10:32:46 PDT 2004
+sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+added -no_auto_imports to all uses; tagging
+    *
+------------------------------------------------------------
 User: jchiang  Thu Apr 29 22:16:34 PDT 2004
 sane/doc
 
