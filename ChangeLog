@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: jchiang  Thu Apr 29 21:58:55 PDT 2004
+sane/data
+
+Added Files:
+	RoiCuts.xml count_map.par expMap.par likelihood.par 
+	makeExposureCube.par obsSim.par srcModel.xml 
+Log Message:
+add system tests for ScienceTools
+    *
+------------------------------------------------------------
+User: jchiang  Thu Apr 29 21:58:55 PDT 2004
 sane/cmt
 
 Modified Files:
