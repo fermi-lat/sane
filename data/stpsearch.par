@@ -1,0 +1,15 @@
+algorithm,s,a,"Chi2",,,"Type of statistical test to perform (Chi2 - Chi squared, Z2n - Z2n/Rayleigh test, H - H test)"
+eventfile,f,a,"Geminga_events_0000.fits",,,"Name of file containing events"
+eventextension, s, h, "EVENTS", , , "Name of extension containing events"
+f0,r,a,4.21762969211303,,,Central frequency for the scan
+fstep,r,a,1e-05,,,Size of frequency steps for trials
+correctfdot,    b, h, no, , , "Perform fdot correction"
+f1,r,a,0,,,Value of frequency first derivative at scan center
+f2,r,a,0,,,Value of frequency second derivative at scan center
+numtrials,i,a,200,,,Number of trials
+epoch,r,a,0,,,Epoch (time origin)
+numbins,i,a,20,,,Number of bins used in the computation of each trial (Rayleigh test is Z2n with 1 bin)
+timecol,        s, h, "TIME", , , "Name of column containing times of events"
+plot,           b, h, yes, , , "Display plot of results"
+title,          s, h, "DEFAULT", , , "Title of plot"
+mode,           s, h, "ql", , , "Behavior of automatic parameters"
