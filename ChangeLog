@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Thu Apr 29 14:31:58 PDT 2004
+sane/src
+
+Modified Files:
+	sane_main.cxx 
+Log Message:
+convert to StApp; tag v1r1
+    *
+------------------------------------------------------------
+User: burnett  Thu Apr 29 14:31:58 PDT 2004
 sane/doc
 
 Modified Files:
