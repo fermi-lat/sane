@@ -67,6 +67,7 @@ def Crab_cmap(useWorkAround=False):
 def Crab_pha():
     evtbin['algorithm'] = 'PHA1'
     evtbin['outfile'] = 'Crab.pha'
+    evtbin.write()
     evtbin.run()
 
 def Crab_lc():
@@ -75,6 +76,7 @@ def Crab_lc():
     evtbin['tstart'] = 0
     evtbin['tstop'] = 8.64e4
     evtbin['deltatime'] = 1e3
+    evtbin.write()
     evtbin.run()
 
 def run(useWorkAround=False):
