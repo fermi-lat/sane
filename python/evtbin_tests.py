@@ -22,6 +22,7 @@ def Crab_only():
     obsSim['xml_source_file'] = 'xmlFiles.dat'
     obsSim['source_list'] = 'source_names.dat'
     obsSim['outfile_prefix'] = 'Crab'
+    obsSim['scfile'] = 'none'
     obsSim['rspfunc'] = irfs
     obsSim['random_seed'] = random_int()
     obsSim.run()
