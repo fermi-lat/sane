@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Sat Nov 27 23:02:32 PST 2004
+sane/python
+
+Modified Files:
+	BinnedLikelihood_test.py Likelihood_tests.py default_tests.py 
+Log Message:
+Likelihood par file changes
+    *
+------------------------------------------------------------
+User: jchiang  Sat Nov 27 23:02:32 PST 2004
 sane/doc
 
 Modified Files:
