@@ -48,7 +48,7 @@ def runLikelihood():
 def run():
     generateData()
     makeCountsMap()
-    makeExposureCube()
+#    makeExposureCube()
     makeSourceMaps()
     runLikelihood()
 

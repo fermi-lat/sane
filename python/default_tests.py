@@ -19,7 +19,7 @@ import obsSim_tests as obsSim
 import map_tools_tests as map_tools
 import dataSubselector_tests as dataSubselector
 import Likelihood_tests as like
-import BinnedLikelihood_tests as binned_tests
+import BinnedLikelihood_test as binned_test
 import evtbin_tests as evtbin
 import rspgen_tests as rspgen
 
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     map_tools.run(cleanUp)
     dataSubselector.run(cleanUp)
     like.run(cleanUp)
-    binned_tests.run()
+    binned_test.run()
     #obsSim.compareFit(cleanUp)
     evtbin.run()
     rspgen.run()
