@@ -29,11 +29,11 @@ from pil import Pil
 
 if __name__ == "__main__":
     cleanUp = False
+    useWorkAround = True
     obsSim.run(cleanUp)
     dataSubselector.run(cleanUp)
     like.run(cleanUp)
     binned_test.run()
-    useWorkAround = False
     evtbin.run(useWorkAround)
     rspgen.run()
     pulsars.run(useWorkAround)
