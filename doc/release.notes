@@ -5,6 +5,7 @@
 $Id$
 @verbatim
 
+15-Mar-05  v3r3p4 JC   accomodate gtbin par file changes
 08-Mar-05  v3r3p3 JC   accomodate gtbin par file changes
 07-Mar-05  v3r3p2 JC   use application names gtbin, gtrspgen, gtpsearch;
                        import periodSearch instead of stpsearch
