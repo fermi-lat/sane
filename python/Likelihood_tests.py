@@ -16,7 +16,7 @@ def run_LikelihoodApp(appName, pars=None):
     likeApp['Statistic'] = 'UNBINNED'
     likeApp['ROI_file'] = 'RoiCuts.xml'
     likeApp['ROI_cuts_file'] = 'RoiCuts.xml'
-    likeApp['Spacecraft_file'] = 'test_scData_0000.fits'
+    likeApp['Spacecraft_file'] = 'orbSim_scData_0000.fits'
     likeApp['event_file'] = 'filtered_events_0000.fits'
     likeApp['Response_functions'] = irfs
     likeApp.run()

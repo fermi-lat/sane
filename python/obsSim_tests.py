@@ -21,13 +21,20 @@ def sourceNamesDat(filename='source_names.dat',
         file.write(src + '\n')
     file.close()
 
+def xmlFilesDat(filename='xmlFiles.dat',
+                fileList=('anticenter_sources.xml',
+                          '$(OBSERVATIONSIMROOT)/xml/' +
+                          'obsSim_source_library.xml')):
+    xmlFiles = open(filename, "w")
+    for file in fileList:
+        xmlFiles.write(file + "\n")
+    xmlFiles.close()
+
 def run(clean=False):
+    orbSim['Output_file_prefix'] = 'orbSim'
     orbSim.run()
     sourceNamesDat()
-    xmlFiles = open("xmlFiles.dat", "w")
-    xmlFiles.write("$(OBSERVATIONSIMROOT)/xml/obsSim_source_library.xml\n")
-    xmlFiles.write("anticenter_sources.xml\n")
-    xmlFiles.close()
+    xmlFilesDat()
     obsSim['XML_source_file'] = 'xmlFiles.dat'
     obsSim['Source_list'] = 'source_names.dat'
     obsSim['Output_file_prefix'] = 'test'
