@@ -17,6 +17,7 @@ from setPaths import *
 
 import obsSim_tests as obsSim
 import map_tools_tests as map_tools
+import dataSubselector_tests as dataSubselector
 import Likelihood_tests as like
 
 if __name__ == "__main__":
@@ -24,5 +25,6 @@ if __name__ == "__main__":
 
     obsSim.run(cleanUp)
     map_tools.run(cleanUp)
+    dataSubselector.run(cleanUp)
     like.run(cleanUp)
     #obsSim.compareFit(cleanUp)

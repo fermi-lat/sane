@@ -6,7 +6,7 @@ author T. Burnett <tburnett@u.washington.edu>
 # $Id$
 
 use STpolicy *
-#use dataSubselector * -no_auto_imports
+use dataSubselector * -no_auto_imports
 use Likelihood * -no_auto_imports
 use observationSim * -no_auto_imports
 use map_tools * -no_auto_imports

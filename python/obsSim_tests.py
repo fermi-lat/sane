@@ -24,9 +24,9 @@ def sourceNamesDat(filename='source_names.dat',
 def run(clean=False):
     sourceNamesDat()
     pars = Pil(obsSimPar)
-    pars['XML_source_file'] = '"none"'
-    pars['Source_list'] = '"source_names.dat"'
-    pars['Output_file_prefix'] = '"test"'
+    pars['XML_source_file'] = 'none'
+    pars['Source_list'] = 'source_names.dat'
+    pars['Output_file_prefix'] = 'test'
     command = obsSimApp + pars()
     print command
     os.system(command)
@@ -41,7 +41,7 @@ def cleanUp():
 def compareFit(clean=False):
     sourceNamesDat(srcList=['all_in_flux_model.xml'])
     pars = Pil(obsSimPar)
-    pars['XML_source_file'] = os.path.join(sysData, 'flux_model.xml')
+    pars['XML_source_file'] = 'flux_model.xml'
     pars['Output_file_prefix'] = 'fit_comparison'
     command = obsSimApp + pars()
     print command

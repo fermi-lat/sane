@@ -15,8 +15,7 @@ sys.path.append(os.path.join(os.environ["SANEROOT"], "python"))
 
 bindir = os.environ['BINDIR']
 
-stTestsPath = os.environ["SANEROOT"]
-sysData = os.path.join(stTestsPath, 'data')
+sysData = os.path.join(os.environ["SANEROOT"], 'data')
 
 os.chdir(sysData)
 

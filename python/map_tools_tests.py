@@ -13,8 +13,9 @@ map_toolsRoot = os.environ["MAP_TOOLSROOT"]
 
 def run_count_map(clean=False):
     count_mapApp = os.path.join(map_toolsRoot, bindir, 'count_map.exe')
-    count_mapPar = os.path.join(sysData, 'count_map.par')
-    command = count_mapApp
+    pars = Pil(os.path.join(sysData, 'count_map.par'))
+    pars['filter'] = '""'
+    command = count_mapApp + pars()
     print command
     os.system(command)
     if clean:
@@ -24,7 +25,7 @@ def run(clean=False):
     run_count_map(clean)
 
 def cleanUp():
-    os.remove('count_map.fits')
+    removeFile('count_map.fits')
 
 if __name__ == "__main__":
     run()
