@@ -32,6 +32,11 @@ class GtApp(object):
     def __getattr__(self, attrname):
         return getattr(self.pars, attrname)
     def run(self, print_command=True, catchError="at the top level:"):
+        if os.name == 'nt':
+            try:
+                import win32pipe
+            except ImportError:
+                catchError = None
         if catchError is not None:
             input, output = self.runWithOutput(print_command)
             for line in output:
