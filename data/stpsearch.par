@@ -1,15 +1,24 @@
-algorithm,s,a,"Chi2",,,"Type of statistical test to perform (Chi2 - Chi squared, Z2n - Z2n/Rayleigh test, H - H test)"
-eventfile,f,a,"Geminga_events_0000.fits",,,"Name of file containing events"
-eventextension, s, h, "EVENTS", , , "Name of extension containing events"
-f0,r,a,4.21762969211303,,,Central frequency for the scan
-fstep,r,a,1e-05,,,Size of frequency steps for trials
-correctfdot,    b, h, no, , , "Perform fdot correction"
-f1,r,a,0,,,Value of frequency first derivative at scan center
+algorithm,s,a,"Chi2",,,"Type of statistical test to perform (Chi2 - Chi squared,Z2n - Z2n/Rayleigh test,H - H test)"
+evfile,f,a,"Geminga_events_0000.fits",,,"Name of file containing events"
+evtable,s,h,"EVENTS",,,"Name of extension containing events"
+ephstyle,s,a,"FREQ",FREQ|PER|FILE,,"How will timing model be specified?"
+f0,r,a,11.2359550561798,0.,,Central frequency for the scan
+p0,r,a,0.089,0.,,Value of pulse period at scan center
+scanstep,r,a,0.5,0.,,Size of steps for trials
+correctpdot,b,h,'yes',,,"Perform correction for period/frequency change"
+f1,r,a,-1.26246686024492e-08,,,Value of frequency first derivative at scan center
 f2,r,a,0,,,Value of frequency second derivative at scan center
+p1,r,a,1e-10,,,Value of first time derivative of pulse period (pdot) at scan center
+p2,r,a,0,,,Value of second time derivative of pulse period (p2dot) at scan center
+psrdbfile,f,a,"NONE",,,"Name of input pulsar ephemerides database file"
+psrname,s,a,"any",,,"Pulsar name"
 numtrials,i,a,200,,,Number of trials
 epoch,r,a,0,,,Epoch (time origin)
-numbins,i,a,20,,,Number of bins used in the computation of each trial (Rayleigh test is Z2n with 1 bin)
-timecol,        s, h, "TIME", , , "Name of column containing times of events"
-plot,           b, h, yes, , , "Display plot of results"
-title,          s, h, "DEFAULT", , , "Title of plot"
-mode,           s, h, "ql", , , "Behavior of automatic parameters"
+numbins,i,a,10,,,Number of bins used in the computation of each trial (Rayleigh test is Z2n with 1 bin)
+timecol,s,h,"TIME",,,"Name of column containing times of events"
+plot,b,h,'no',,,"Display plot of results"
+title,s,h,"DEFAULT",,,"Title of plot"
+chatter,i,h,0,0,4,"Chattiness of output"
+clobber,b,h,yes,,,"Overwrite existing output files with new output files"
+debug,b,h,no,,,"Debugging mode activated"
+mode,s,h,"ql",,,"Mode of automatic parameters"

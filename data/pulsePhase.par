@@ -2,11 +2,11 @@ eventfile,s,a,"Geminga_events_0000.fits",,,"Name of the input file"
 ephstyle,s,a,"FREQ",,,"How will timing model be specified? (FREQ,PER)"
 epoch,r,a,0,,,Enter value of epoch of timing model
 phi0,r,a,0,,,Enter base value of phase at this epoch
-f0,r,a,4.21762969211303,,,Enter pulse frequency at this epoch
-f1,r,a,-2.02787762505646e-13,,,Enter first time derivative of pulse frequency (fdot) at this epoch
+f0,r,a,11.2359550561798,,,Enter pulse frequency at this epoch
+f1,r,a,-1.26246686024492e-08,,,Enter first time derivative of pulse frequency (fdot) at this epoch
 f2,r,a,0,,,Enter second time derivative of pulse frequency (f2dot) at this epoch
-p0,r,a,0.2371,,,Enter pulse period at this epoch
-p1,r,a,1.14e-14,,,Enter first time derivative of pulse period (pdot) at this epoch
+p0,r,a,0.089,,,Enter pulse period at this epoch
+p1,r,a,1e-10,,,Enter first time derivative of pulse period (pdot) at this epoch
 p2,r,a,0,,,Enter second time derivative of pulse period (p2dot) at this epoch
 timefield,s,h,"TIME",,,"Name of time field in input file"
 mode,s,h,"ql",,,"Behavior for automatic parameters"

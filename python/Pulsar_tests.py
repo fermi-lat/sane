@@ -63,19 +63,26 @@ def run():
     pulsePhase.run()
 
     psearch = GtApp('stpsearch')
-    psearch['eventfile'] = 'Geminga_events_0000.fits'
+    psearch['evfile'] = 'Geminga_events_0000.fits'
+    psearch['ephstyle'] = 'FREQ'
     psearch['f0'] = freq
-    psearch['fstep'] = 1e-5
-    psearch['numtrials'] = 200
-    psearch['correctfdot'] = 'yes'
     psearch['f1'] = fdot
+    psearch['p0'] = period
+    psearch['p1'] = pdot
+    psearch['scanstep'] = 0.5
+    psearch['numtrials'] = 200
+    psearch['correctpdot'] = 'yes'
     psearch['plot'] = 'no'
+    psearch['chatter'] = 0
+    psearch.pars.write()
     input, output = psearch.runWithOutput()
     for line in output:
         if line.find('Maximum at') != -1:
             print line.strip()
         if line.find('Statistic:') != -1:
-            print line.split("Chance probability:")[0]
+            print line.strip()
+        if line.find('Chance probability') != -1:
+            print line.strip()
 
 if __name__ == '__main__':
     run()
