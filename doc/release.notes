@@ -5,10 +5,11 @@
 $Id$
 @verbatim
 
-15-Jan-04  v3r2p2 JC   set mode in menu-driven apps;
+31-Jan-05  v3r3   JC   import all GtApp objects from gt_apps.py
+15-Jan-05  v3r2p2 JC   set mode in menu-driven apps;
                        readXml copied from likeGui
-15-Jan-04  v3r2p1 JC   return error code in driver test script
-14-Jan-04  v3r2   JC   reorganize, consolidating general use scripts from
+15-Jan-05  v3r2p1 JC   return error code in driver test script
+14-Jan-05  v3r2   JC   reorganize, consolidating general use scripts from
                        likeGui and catalogAnalysis packages; move test
                        scripts to tests subdir; refactor sane app
 09-Dec-04  v3r1p1 JC   remove vestigial reference to ROI_file
