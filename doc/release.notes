@@ -5,6 +5,7 @@
 $Id$
 @verbatim
 
+10-Oct-04  v1r5   JC   changes for likelihood.par
 26-Aug-04  v1r4p3 JC   add exposure_cube_file parameter to likelihood for
                        count spectra and map; use TEST irfs instead GLAST25
 19-Aug-04  v1r4p2 JC   fix par files
