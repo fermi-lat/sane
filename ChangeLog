@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Jan 14 21:51:11 PST 2005
+sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+reorganize scripts from various packages; tagging v3r2
+    *
+------------------------------------------------------------
 User: jchiang  Fri Jan 14 21:39:27 PST 2005
 sane/python/tests
 
