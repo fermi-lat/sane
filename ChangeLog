@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Thu Apr 29 21:58:56 PDT 2004
+sane/python
+
+Added Files:
+	Likelihood_tests.py default_tests.py map_tools_tests.py 
+	obsSim_tests.py pil.py setPaths.py 
+Log Message:
+add system tests for ScienceTools
+    *
+------------------------------------------------------------
 User: jchiang  Thu Apr 29 21:58:55 PDT 2004
 sane/data
 
