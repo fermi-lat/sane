@@ -23,6 +23,7 @@ def sourceNamesDat(filename='source_names.dat',
 
 def run(clean=False):
     sourceNamesDat()
+#    sourceNamesDat(srcList=('anticenter', 'diffuse-100mev'))
     pars = Pil(obsSimPar)
     pars['XML_source_file'] = 'xmlFiles.dat'
     pars['Source_list'] = 'source_names.dat'
