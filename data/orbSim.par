@@ -1,0 +1,8 @@
+simulation_time,r,ql,86400,1,4e7,Simulation time (seconds)
+Start_time,r,hl,0,,,Simulation start time (seconds)
+Pointing_strategy,s,ql,"ONEPERORBIT",NONE|UPDOWN|SLEWING|ONEPERORBIT|EXPLICIT|POINT,,"Pointing strategy"
+Rocking_angle,r,ql,35,0,90,Rocking angle (degrees)
+ra,r,ql,0,0,360,Right ascension of z-axis direction for pointing (J2000 degrees)
+dec,r,ql,0,0,360,Declination of z-axis direction for pointing (J2000 degrees)
+Output_file_prefix,s,ql,"test",,,"Prefix for output files"
+Maximum_number_of_rows,i,hl,200000,,,Maximum number of rows in FITS files

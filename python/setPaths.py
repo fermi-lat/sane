@@ -12,15 +12,11 @@ import sys
 import glob
 
 bindir = os.environ['BINDIR']
-
 sysData = os.path.join(os.environ["SANEROOT"], 'data')
-
 os.chdir(sysData)
 
 # ensure the desired .par files are used.
 os.environ['PFILES'] = sysData
-
-from pil import Pil
 
 # set the response functions to be used in all tests:
 #irfs = 'GLAST25'
