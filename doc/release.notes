@@ -5,6 +5,7 @@
 $Id$
 @verbatim
 
+09-Dec-04  v3r1p1 JC   remove vestigial reference to ROI_file
 08-Dec-04  v3r1   JC   Use workarounds until next ST release
 28-Nov-04  v3r0p2 JC   Likelihood_test.py patch
 27-Nov-04  v3r0p1 JC   Likelihood par file changes
