@@ -1,19 +1,19 @@
 package sane
 
-version v3r3p1
+version v3r3p2
 
 author T. Burnett <tburnett@u.washington.edu>
 # $Id$
 
 use STpolicy *
 use dataSubselector * -no_auto_imports
-use Likelihood * -no_auto_imports
+use Likelihood * 
 use observationSim * -no_auto_imports
 use map_tools * -no_auto_imports
 use evtbin * -no_auto_imports
 use rspgen * -no_auto_imports
 use pulsePhase * -no_auto_imports
-use stpsearch * -no_auto_imports
+use periodSearch * -no_auto_imports
 use python * IExternal -no_auto_imports
 use st_app *
 

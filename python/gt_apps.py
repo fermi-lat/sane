@@ -30,7 +30,7 @@ filter = GtApp('gtselect', 'dataSubselector')
 # Pulsar-related
 #
 pulsePhase = GtApp('pulsePhase')
-psearch = GtApp('stpsearch')
+psearch = GtApp('gtpsearch', 'periodSearch')
 
 #
 # map_tools
@@ -40,8 +40,8 @@ count_map = GtApp('count_map', 'map_tools')
 #
 # others
 #
-evtbin = GtApp('evtbin')
-rspgen = GtApp('rspgen')
+evtbin = GtApp('gtbin', 'evtbin')
+rspgen = GtApp('gtrspgen', 'rspgen')
 
 
 
