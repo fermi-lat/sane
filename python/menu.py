@@ -68,6 +68,7 @@ def getTools(env):
 def parse_entry(entry):
     bindir = os.path.sep + os.environ["BINDIR"]
     app, exe = entry.split("=")
+    exe += ' mode=ql'
     package = exe.split(bindir)[0].split(os.path.sep)[-2]
     return package, app, exe
 
