@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sat Jan 15 07:29:49 PST 2005
+sane/python/tests
+
+Modified Files:
+	default_tests.py 
+Log Message:
+return error code
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r2, operation: add
 Package: sane
