@@ -26,5 +26,7 @@ int main(int iargc, char *argv[]) {
    } else if (iargc == 2) {
       command = std::string("python ") + argv[1];
    }
-   return std::system(command.c_str());
+   if (std::system(command.c_str()) != 0) {
+      return 1;
+   }
 }

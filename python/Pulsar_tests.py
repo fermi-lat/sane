@@ -9,7 +9,7 @@ Tests of Pulsar source and pulsar-related tools.
 
 from setPaths import *
 from getApp import GtApp
-from obsSim_tests import sourceNamesDat
+from obsSim_tests import sourceNamesDat, xmlFilesDat
 
 #
 # Geminga parameters
@@ -38,9 +38,7 @@ pulsar_source = "\n".join(('<source_library>',
                            '</source_library>'))
 
 def preparePulsarSource():
-    xmlFiles = open("xmlFiles.dat", "w")
-    xmlFiles.write("my_pulsar.xml")
-    xmlFiles.close()
+    xmlFilesDat(fileList=('my_pulsar.xml',))
     pulsarFile = open('my_pulsar.xml', 'w')
     pulsarFile.write(pulsar_source % (period, pdot))
     pulsarFile.close()

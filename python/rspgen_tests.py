@@ -13,6 +13,8 @@ from getApp import GtApp
 
 def run():
     rspgen = GtApp('rspgen')
+    rspgen['respalg'] = 'PS'
+    rspgen['resptype'] = 'DC1::Front'
     rspgen.run()
 
 if __name__ == "__main__":

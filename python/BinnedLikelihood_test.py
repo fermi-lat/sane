@@ -16,6 +16,7 @@ def generateData():
     sourceNamesDat(srcList=('anticenter-32mev',))
     obsSim["XML_source_file"] = "anticenter_sources.xml"
     obsSim["Output_file_prefix"] = "ptsrcs"
+    obsSim['Pointing_history_file'] = "none"
     obsSim["Response_functions"] = irfs
     obsSim.run()
 
