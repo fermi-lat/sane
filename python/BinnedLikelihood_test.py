@@ -14,6 +14,7 @@ from obsSim_tests import sourceNamesDat
 def generateData():
     obsSim = GtApp('obsSim', 'observationSim')
     sourceNamesDat(srcList=('anticenter-32mev',))
+    obsSim["XML_source_file"] = "anticenter_sources.xml"
     obsSim["Output_file_prefix"] = "ptsrcs"
     obsSim["Response_functions"] = irfs
     obsSim.run()
@@ -38,6 +39,7 @@ def runLikelihood():
     likelihood['Statistic'] = 'BINNED'
     likelihood['Source_model_file'] = 'ptsrcModel.xml'
     likelihood["Response_functions"] = irfs
+    likelihood.pars.write()
     likelihood.run()
 
 def run():
