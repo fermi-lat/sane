@@ -9,7 +9,7 @@ Tests of Pulsar source and pulsar-related tools.
 
 from setPaths import *
 from getApp import GtApp
-from obsSim_tests import sourceNamesDat, xmlFilesDat
+from obsSim_tests import sourceNamesDat, xmlFilesDat, random_int
 
 #
 # Geminga parameters
@@ -44,12 +44,13 @@ def preparePulsarSource():
     pulsarFile.close()
     sourceNamesDat(srcList=('Geminga_Pulsar', ))
 
-def run():
+def run(useWorkAround=False):
     preparePulsarSource()
 
     obsSim = GtApp('obsSim', 'observationSim')
     obsSim['xml_source_file'] = 'xmlFiles.dat'
     obsSim['outfile_prefix'] = 'Geminga'
+    obsSim['random_seed'] = random_int()
     obsSim.run()
 
     pulsePhase = GtApp('pulsePhase')
@@ -57,9 +58,10 @@ def run():
     pulsePhase['ephstyle'] = "FREQ"
     pulsePhase['f0'] = freq
     pulsePhase['f1'] = fdot
-#    pulsePhase['p0'] = period
-#    pulsePhase['p1'] = pdot
-#    pulsePhase.pars.write()
+    if useWorkAround:
+        pulsePhase['p0'] = period
+        pulsePhase['p1'] = pdot
+        pulsePhase.pars.write()
     pulsePhase.run()
 
     psearch = GtApp('stpsearch')
@@ -74,7 +76,8 @@ def run():
     psearch['correctpdot'] = 'yes'
     psearch['plot'] = 'no'
     psearch['chatter'] = 0
-#    psearch.pars.write()
+    if useWorkAround:
+        psearch.pars.write()
     input, output = psearch.runWithOutput()
     for line in output:
         if line.find('Maximum at') != -1:

@@ -28,7 +28,6 @@ def run():
     rspgen['emax'] = 200000.0
     rspgen['enumbins'] = 20
     rspgen['deltaenergy'] = 0.0
-    rspgen['energybinfile'] = ''
     rspgen['resptype'] = 'DC1F'
     rspgen.run()
 

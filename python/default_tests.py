@@ -14,6 +14,7 @@ import sys
 sys.path.append(os.path.join(os.environ["SANEROOT"], "python"))
 
 from setPaths import *
+import getApp
 
 import obsSim_tests as obsSim
 import map_tools_tests as map_tools
@@ -32,8 +33,12 @@ if __name__ == "__main__":
     dataSubselector.run(cleanUp)
     like.run(cleanUp)
     binned_test.run()
-    evtbin.run()
+    useWorkAround = False
+    evtbin.run(useWorkAround)
     rspgen.run()
-    pulsars.run()
-    map_tools.run(cleanUp)
-        
+    pulsars.run(useWorkAround)
+#    map_tools.run(useWorkAround)
+    if getApp._failed_exes:
+        print "The following executables failed: "
+        for exe in getApp._failed_exes:
+            print exe

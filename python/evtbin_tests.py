@@ -10,7 +10,7 @@ Exercise evtbin PHA and CMAP using Crab-only obsSim data.
 
 from setPaths import *
 from getApp import GtApp
-from obsSim_tests import sourceNamesDat, xmlFilesDat
+from obsSim_tests import sourceNamesDat, xmlFilesDat, random_int
 
 obsSim = GtApp('obsSim', 'observationSim')
 filter = GtApp('dataSubselector')               
@@ -23,6 +23,7 @@ def Crab_only():
     obsSim['source_list'] = 'source_names.dat'
     obsSim['outfile_prefix'] = 'Crab'
     obsSim['rspfunc'] = irfs
+    obsSim['random_seed'] = random_int()
     obsSim.run()
 
 def Crab_filter():
@@ -35,7 +36,7 @@ def Crab_filter():
     filter['convLayerMax'] = 11
     filter.run()
 
-def Crab_cmap():
+def Crab_cmap(useWorkAround=False):
     evtbin['algorithm'] = 'CMAP'
     evtbin['eventfile'] = 'Crab_events_filtered.fits'
     evtbin['outfile'] = 'Crab.fits'
@@ -57,11 +58,10 @@ def Crab_cmap():
     evtbin['emax'] = 200000.0
     evtbin['enumbins'] = 20
     evtbin['deltaenergy'] = 0.0
-#    evtbin.pars.params['energybinfile'][0] = 's'
-    evtbin['energybinfile'] = ''
     evtbin['proj'] = 'CAR'
     evtbin['uselb'] = 'no'
-#    evtbin.write()
+    if useWorkAround:
+        evtbin.write()
     evtbin.run()
 
 def Crab_pha():
@@ -77,10 +77,10 @@ def Crab_lc():
     evtbin['deltatime'] = 1e3
     evtbin.run()
 
-def run():
+def run(useWorkAround=False):
     Crab_only()
     Crab_filter()
-    Crab_cmap()
+    Crab_cmap(useWorkAround)
     Crab_pha()
     Crab_lc()
 

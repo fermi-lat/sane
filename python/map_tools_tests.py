@@ -10,14 +10,15 @@ Exercise the map_tools applications.
 from setPaths import *
 from getApp import GtApp
 
-def run(clean=False):
+def run(useWorkAround=False):
     count_map = GtApp('count_map', 'map_tools')
     count_map['clobber'] = 'yes'
     count_map['chatter'] = 5
     count_map['mode'] = 'h'
     count_map['infile'] = 'test_events_0000.fits'
     count_map['table'] = 'EVENTS'
-#    count_map['filter'] = 'TIME>0'
+    if useWorkAround:
+        count_map['filter'] = 'TIME>0'
     count_map['outfile'] = 'count_map.fits'
     count_map['ra_name'] = 'RA'
     count_map['dec_name'] = 'DEC'
@@ -30,8 +31,6 @@ def run(clean=False):
     count_map['projtype'] = 'CAR'
     count_map['uselb'] = 'no'
     count_map.run(catchError=None)
-    if clean:
-        removeFile('count_map.fits')
 
 if __name__ == "__main__":
     run()
