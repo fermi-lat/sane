@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Sun Oct 10 20:04:15 PDT 2004
+sane/python
+
+Modified Files:
+	obsSim_tests.py setPaths.py 
+Log Message:
+account for likelihood param refactoring
+    *
+------------------------------------------------------------
+User: jchiang  Sun Oct 10 20:04:15 PDT 2004
 sane/data
 
 Modified Files:
