@@ -3,14 +3,13 @@
 #
 Response_functions,s,ql,"FRONT/BACK",FRONT/BACK|FRONT|BACK|GLAST25,,"Response functions to use"
 use_energy_dispersion,b,ql,no,,,Use energy dispersion?
-Source_model_file,f,ql,"srcModel.xml",,,"Source model file"
+Source_model_file,f,ql,"ptsrcModel.xml",,,"Source model file"
 Source_model_output_file,f,ql,"none",,,"Source model output file"
 flux_style_model_file,f,ql,"flux_model.xml",,,"flux-style output file name"
-number,r,ql,0,,,a number
 #
 # choice of objective function and optimizer
 #
-Statistic,s,ql,"UNBINNED",BINNED|UNBINNED|OPTEM,,"Statistic to use"
+Statistic,s,ql,"BINNED",BINNED|UNBINNED|OPTEM,,"Statistic to use"
 optimizer,s,ql,"MINUIT",LBFGS|MINUIT|DRMNGB,,"Optimizer"
 fit_verbosity,i,ql,1,,,Optimizer verbosity
 fit_tolerance,r,ql,0.0001,,,Fit tolerance
@@ -25,5 +24,5 @@ Exposure_map_file,f,ql,"expMap.fits",,,"Exposure file"
 #
 # binned
 #
-counts_map_file,f,ql,"dataMap_week.fits",,,"Counts map file"
-exposure_cube_file,f,ql,"expcube_1_week.fits",,,"Exposure hypercube file"
+counts_map_file,f,ql,"sourceMaps.fits",,,"Counts map file"
+exposure_cube_file,f,ql,"expcube_1_day.fits",,,"Exposure hypercube file"
