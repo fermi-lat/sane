@@ -25,31 +25,32 @@ def generateData():
     obsSim.run()
 
 def makeCountsMap():
-    counts_map['event_file'] = 'ptsrcs_events_0000.fits'
-    counts_map['spacecraft_file'] = 'ptsrcs_scData_0000.fits'
-    counts_map['output_file_name'] = 'countsMap.fits'
+    counts_map['evfile'] = 'ptsrcs_events_0000.fits'
+    counts_map['scfile'] = 'ptsrcs_scData_0000.fits'
+    counts_map['outfile'] = 'countsMap.fits'
     counts_map.run()
 
 def makeExposureCube():
-    makeCube['Spacecraft_file'] = 'ptsrcs_scData_0000.fits'
-    makeCube['Output_file'] = 'expcube_1_day.fits'
+    makeCube['scfile'] = 'ptsrcs_scData_0000.fits'
+    makeCube['outfile'] = 'expcube_1_day.fits'
     makeCube.run()
     
 def makeSourceMaps():
-    srcMaps["Spacecraft_file"] = 'ptsrcs_scData_0000.fits'
-    srcMaps['counts_map_file'] = counts_map['output_file_name']
+    srcMaps["scfile"] = 'ptsrcs_scData_0000.fits'
+    srcMaps['counts_map_file'] = counts_map['outfile']
     srcMaps['source_model_file'] = 'ptsrcModel.xml'
-    srcMaps['output_file'] = 'sourceMaps.fits'
+    srcMaps['outfile'] = 'sourceMaps.fits'
     srcMaps['binned_exposure_map'] = 'none'
-    srcMaps["Response_functions"] = irfs
+    srcMaps["rspfunc"] = irfs
     srcMaps.run()
 
 def runLikelihood():
     likelihood = GtApp('likelihood', 'Likelihood')
-    likelihood['Spacecraft_file'] = 'ptsrcs_scData_0000.fits'
-    likelihood['Statistic'] = 'BINNED'
-    likelihood['Source_model_file'] = 'ptsrcModel.xml'
-    likelihood["Response_functions"] = irfs
+    likelihood['ROI_file'] = 'RoiCuts.xml'
+    likelihood['scfile'] = 'ptsrcs_scData_0000.fits'
+    likelihood['statistic'] = 'BINNED'
+    likelihood['source_model_file'] = 'ptsrcModel.xml'
+    likelihood["rspfunc"] = irfs
     likelihood['counts_map_file'] = 'sourceMaps.fits'
     likelihood['exposure_cube_file'] = 'expcube_1_day.fits'
     likelihood['binned_exposure_map'] = 'none'

@@ -28,14 +28,12 @@ from pil import Pil
 
 if __name__ == "__main__":
     cleanUp = False
-    try:
-        obsSim.run(cleanUp)
-        dataSubselector.run(cleanUp)
-        like.run(cleanUp)
-        binned_test.run()
-        evtbin.run()
-        rspgen.run()
-        pulsars.run()
-        map_tools.run(cleanUp)
-    except:
-        sys.exit(1)
+    obsSim.run(cleanUp)
+    dataSubselector.run(cleanUp)
+    like.run(cleanUp)
+    binned_test.run()
+    evtbin.run()
+    rspgen.run()
+    pulsars.run()
+    map_tools.run(cleanUp)
+        

@@ -15,55 +15,45 @@ expMap = GtApp('expMap', 'Likelihood')
 diffResps = GtApp('diffuseResponses', 'Likelihood')
 like = GtApp('likelihood')
 
-def run_LikelihoodApp(appName, pars=None):
-    likeApp = GtApp(appName, 'Likelihood', raiseKeyErrors=False)
-    likeApp['Spacecraft_file'] = 'orbSim_scData_0000.fits'
-    likeApp['Source_model_file'] = 'srcModel.xml'
-    likeApp['Statistic'] = 'UNBINNED'
-    likeApp['ROI_file'] = 'RoiCuts.xml'
-    likeApp['ROI_cuts_file'] = 'RoiCuts.xml'
-    likeApp['event_file'] = 'filtered_events_0000.fits'
-    likeApp['Response_functions'] = irfs
-    likeApp.run()
-
 def cleanUp():
     removeFile('flux_model.xml')
     removeFile('exp*.fits')
     removeFile('TsMap.fits')
 
 def run(clean=False):
-    expCube['Spacecraft_file'] = 'orbSim_scData_0000.fits'
-    expCube['Output_file'] = '!expcube_1_day.fits'
+    expCube['scfile'] = 'orbSim_scData_0000.fits'
+    expCube['outfile'] = '!expcube_1_day.fits'
     expCube['cos_theta_step'] = 0.05
     expCube['pixel_size'] = 1
     expCube['ROI_file'] = 'RoiCuts.xml'
-    expCube.run()
     
     expMap.copy(expCube)
-    expMap['ROI_cuts_file'] = expCube['ROI_file']
-    expMap['Response_functions'] = irfs
-    expMap['Source_region_radius'] = 30
+    expMap['rspfunc'] = irfs
+    expMap['source_region_radius'] = 30
     expMap['number_of_longitude_points'] = 120
     expMap['number_of_latitude_points'] = 120
     expMap['number_of_energies'] = 20
     expMap['exposure_cube_file'] = 'expcube_1_day.fits'
-    expMap['Exposure_map_file'] = 'expMap.fits'
-    expMap.run()
+    expMap['outfile'] = 'expMap.fits'
 
     diffResps.copy(expMap)
-    diffResps['Source_model_file'] = 'srcModel.xml'
-    diffResps['event_file'] = 'filtered_events_0000.fits'
-    diffResps.run()
+    diffResps['source_model_file'] = 'srcModel.xml'
+    diffResps['evfile'] = 'filtered_events_0000.fits'
 
-    like.copy(expMap)
+    like.copy(expCube)
     like.copy(diffResps)
-    like['Statistic'] = 'UNBINNED'
+    like['exposure_map_file'] = expMap['outfile']
+    like['statistic'] = 'UNBINNED'
     like['optimizer'] = 'MINUIT'
-    like['fit_verbosity'] = 1
+    like['chatter'] = 2
     like['fit_tolerance'] = 1e-4
     like['query_for_refit'] = 'no'
-    like.run()
 
+    expCube.run()
+    expMap.run()
+    diffResps.run()
+    like.run()
+    
 #    TsMap = GtApp('TsMap', 'Likelihood', raiseKeyErrors=False)
 #    TsMap['Source_model_file'] = 'Ts_srcModel.xml'
 #    TsMap.run()
