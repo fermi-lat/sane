@@ -82,7 +82,15 @@ def run(useWorkAround=False):
     psearch['chatter'] = 0
     if useWorkAround:
         psearch.pars.write()
-    input, output = psearch.runWithOutput()
+    if os.name == 'nt':
+        try:
+            import win32pipe
+            input, output = psearch.runWithOutput()
+        except ImportError:
+            psearch.run()
+            output = []
+    else:
+        input, output = psearch.runWithOutput()
     for line in output:
         if line.find('Maximum at') != -1:
             print line.strip()
