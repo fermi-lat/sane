@@ -26,7 +26,6 @@ def run(clean=False):
     expCube['outfile'] = 'expcube_1_day.fits'
     expCube['cos_theta_step'] = 0.05
     expCube['pixel_size'] = 1
-    expCube['ROI_file'] = 'none'
     
     expMap.copy(expCube)
     expMap['rspfunc'] = irfs
