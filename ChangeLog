@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: jchiang  Sat Nov 27 07:50:16 PST 2004
+sane/python
+
+Modified Files:
+	BinnedLikelihood_test.py Likelihood_tests.py Pulsar_tests.py 
+	dataSubselector_tests.py default_tests.py evtbin_tests.py 
+	getApp.py map_tools_tests.py obsSim_tests.py rspgen_tests.py 
+	setPaths.py 
+Log Message:
+copy current par files from packages; disable work arounds for broken applications
+    *
+------------------------------------------------------------
 User: jchiang  Sat Nov 27 07:50:15 PST 2004
 sane/data
 
