@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Jan  4 13:17:26 PST 2005
+sane/python
+
+Modified Files:
+	Pulsar_tests.py getApp.py 
+Log Message:
+workarounds for windows installations of python that do not have win32pipe module
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r1p1, operation: add
 Package: sane
