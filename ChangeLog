@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Sun Oct 10 23:16:41 PDT 2004
+sane/python
+
+Modified Files:
+	BinnedLikelihood_test.py Likelihood_tests.py default_tests.py 
+Log Message:
+set scData files explicitly
+    *
+------------------------------------------------------------
+User: jchiang  Sun Oct 10 23:16:41 PDT 2004
 sane/data
 
 Modified Files:
