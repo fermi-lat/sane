@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Sat Jun  4 20:06:05 PDT 2005
+sane/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+use TEST irfs; tagging v3r4
+    *
+------------------------------------------------------------
+User: jchiang  Sat Jun  4 20:06:05 PDT 2005
 sane/cmt
 
 Modified Files:
