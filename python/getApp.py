@@ -38,14 +38,18 @@ class GtApp(object):
                 print line.strip("\n")
                 if line.find(catchError) != -1:
                     _failed_exes.append(self.app)
-#                    return sys.exit(1)
+                    input.close()
+                    output.close()
+                    raise RuntimeError, appName + " execution failed"
+            input.close()
+            output.close()
         else:
             if print_command:
                 print self.command()
             retcode = os.system(self.command())
             if retcode != 0:
                 _failed_exes.append(self.app)
-#                return sys.exit(1)
+                raise RuntimeError, appName + " execution failed"
     def runWithOutput(self, print_command=True):
         if print_command:
             print self.command()

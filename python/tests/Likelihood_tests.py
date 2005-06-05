@@ -38,6 +38,7 @@ def run(clean=False):
     like.copy(expCube)
     like.copy(diffResps)
     like['exposure_map_file'] = expMap['outfile']
+    like['exposure_cube_file'] = expCube['outfile']
     like['statistic'] = 'UNBINNED'
     like['optimizer'] = 'MINUIT'
     like['chatter'] = 2
