@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Sat Jun  4 20:06:05 PDT 2005
+sane/python/tests
+
+Modified Files:
+	Likelihood_tests.py setPaths.py 
+Log Message:
+use TEST irfs; tagging v3r4
+    *
+------------------------------------------------------------
+User: jchiang  Sat Jun  4 20:06:05 PDT 2005
 sane/python
 
 Modified Files:
