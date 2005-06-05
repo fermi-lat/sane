@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sat Jun  4 20:06:05 PDT 2005
+sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+use TEST irfs; tagging v3r4
+    *
+------------------------------------------------------------
 User: jchiang  Tue Mar 29 06:37:20 PST 2005
 sane/python
 
