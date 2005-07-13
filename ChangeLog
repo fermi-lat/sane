@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Wed Jul 13 14:43:51 PDT 2005
+sane/python/tests
+
+Modified Files:
+	dataSubselector_tests.py evtbin_tests.py 
+Log Message:
+update gtselect par names; tagging v3r4p1
+    *
+------------------------------------------------------------
+User: jchiang  Wed Jul 13 14:43:51 PDT 2005
 sane/doc
 
 Modified Files:
