@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Jul 13 14:43:50 PDT 2005
+sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+update gtselect par names; tagging v3r4p1
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r4, operation: add
 Package: sane
