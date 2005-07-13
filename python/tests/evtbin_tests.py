@@ -24,8 +24,8 @@ def Crab_only():
     obsSim.run()
 
 def Crab_filter():
-    filter['input_file'] = 'Crab_events_0000.fits'
-    filter['output_file'] = 'Crab_events_filtered.fits'
+    filter['infile'] = 'Crab_events_0000.fits'
+    filter['outfile'] = 'Crab_events_filtered.fits'
     filter['ra'] = 83.57
     filter['dec'] = 22.01
     filter['rad'] = 20

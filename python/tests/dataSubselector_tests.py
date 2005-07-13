@@ -12,8 +12,8 @@ from setPaths import *
 from gt_apps import filter
 
 def run(clean=False):
-    filter['input_file'] = 'test_events_0000.fits'
-    filter['output_file'] = 'filtered_events_0000.fits'
+    filter['infile'] = 'test_events_0000.fits'
+    filter['outfile'] = 'filtered_events_0000.fits'
     filter['ra'] = 86.4
     filter['dec'] = 28.9
     filter['rad'] = 20.0
