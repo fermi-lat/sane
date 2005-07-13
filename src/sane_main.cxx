@@ -9,7 +9,7 @@
 #include <process.h>
 std::string pyname("python ");
 #else
-std::string pyname("python2.3 ");
+std::string pyname("python ");
 #endif
 
 #include "st_app/StApp.h"
