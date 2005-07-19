@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Jul 19 09:13:28 PDT 2005
+sane/python
+
+Modified Files:
+	pfilesPath.py 
+Log Message:
+lex PFILES
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r4p1, operation: add
 Package: sane
