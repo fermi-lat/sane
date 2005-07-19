@@ -9,12 +9,13 @@ desired .par file.
 # $Header$
 #
 
-import os, sys
+import os, sys, re
 
 ParFileError = 'ParFileError'
 def pfilesPath(parfile):
     try:
-        paths = os.environ['PFILES'].split(os.pathsep)
+        paths = re.split(r"[;:]", os.environ['PFILES'])
+        paths = [path for path in paths if path != ""]
     except KeyError:
         print "Your PFILES environment variable is not set."
         raise KeyError
