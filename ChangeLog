@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Aug 22 08:42:55 PDT 2005
+sane/python
+
+Modified Files:
+	xmlSrcLib.py 
+Log Message:
+use nominal value for EG diffuse prefactor
+    *
+------------------------------------------------------------
 User: jchiang  Tue Jul 19 09:13:28 PDT 2005
 sane/python
 
