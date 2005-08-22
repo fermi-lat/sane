@@ -25,7 +25,7 @@ def EGDiffuse():
                + 'type="DiffuseSource">\n'
                + '    <spectrum type="PowerLaw">\n'
                + '      <parameter max="100" min="1e-05" free="1" '
-               + 'name="Prefactor" scale="1e-07" value="1.45" />\n'
+               + 'name="Prefactor" scale="1e-07" value="1.60" />\n'
                + '      <parameter max="-1" min="-3.5" free="0" '
                + 'name="Index" scale="1" value="-2.1" />\n'
                + '      <parameter max="200" min="50" free="0" '
