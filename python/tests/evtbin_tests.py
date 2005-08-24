@@ -41,7 +41,6 @@ def Crab_cmap(useWorkAround=False):
     evtbin['timebinalg'] = 'LIN'
     evtbin['tstart'] = 0.0
     evtbin['tstop'] = 86400.0
-    evtbin['tnumbins'] = 0
     evtbin['deltatime'] = 1000.0
     evtbin['timebinfile'] = 'numxpix=100'
     evtbin['numxpix'] = 100
