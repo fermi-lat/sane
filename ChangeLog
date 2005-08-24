@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Aug 24 16:11:34 PDT 2005
+sane/python/tests
+
+Modified Files:
+	Pulsar_tests.py evtbin_tests.py obsSim_tests.py 
+Log Message:
+adopt new app and parameter names
+    *
+------------------------------------------------------------
 User: jchiang  Wed Aug 24 16:11:33 PDT 2005
 sane/python
 
