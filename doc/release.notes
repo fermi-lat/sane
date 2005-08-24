@@ -5,6 +5,7 @@
 $Id$
 @verbatim
 
+24-Aug-05  v3r5   JC   update app and par names
 13-Jul-05  v3r4p1 JC   update par names for gtselect
 05-Jun-05  v3r4   JC   set exposure_cube_file
 15-Mar-05  v3r3p4 JC   accomodate gtbin par file changes
