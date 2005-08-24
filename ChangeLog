@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Aug 24 16:11:33 PDT 2005
+sane/python
+
+Modified Files:
+	gt_apps.py 
+Log Message:
+adopt new app and parameter names
+    *
+------------------------------------------------------------
 User: jchiang  Mon Aug 22 08:42:55 PDT 2005
 sane/python
 
