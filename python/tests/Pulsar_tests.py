@@ -76,7 +76,7 @@ def run(useWorkAround=False):
     psearch['p1'] = pdot
     psearch['scanstep'] = 0.5
     psearch['numtrials'] = 200
-    psearch['correctpdot'] = 'yes'
+    psearch['cancelpdot'] = 'yes'
     psearch['plot'] = 'no'
     psearch['chatter'] = 0
     if useWorkAround:

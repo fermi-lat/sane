@@ -16,7 +16,7 @@ def random_int(scale=1e5):
     return int(random.random()*scale)
 
 def sourceNamesDat(filename='source_names.dat',
-                   srcList=('anticenter-32mev', 'diffuse-20mev')):
+                   srcList=('anticenter-32mev', 'Extragalactic_diffuse')):
     file = open(filename, 'w')
     for src in srcList:
         file.write(src + '\n')

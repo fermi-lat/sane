@@ -29,7 +29,7 @@ filter = GtApp('gtselect', 'dataSubselector')
 #
 # Pulsar-related
 #
-pulsePhase = GtApp('pulsePhase')
+pulsePhase = GtApp('gtpphase', 'pulsePhase')
 psearch = GtApp('gtpsearch', 'periodSearch')
 
 #
