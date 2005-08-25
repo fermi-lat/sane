@@ -25,6 +25,7 @@ def getApp(appName, package=None, raiseKeyErrors=True):
 class GtApp(object):
     def __init__(self, appName, package=None, raiseKeyErrors=True):
         self.app, self.pars = getApp(appName, package, raiseKeyErrors)
+        self.appName = appName
     def __setitem__(self, key, value):
         self.pars[key] = value
     def __getitem__(self, key):
@@ -40,7 +41,7 @@ class GtApp(object):
                     _failed_exes.append(self.app)
                     input.close()
                     output.close()
-                    raise RuntimeError, appName + " execution failed"
+                    raise RuntimeError, self.appName + " execution failed"
             input.close()
             output.close()
         else:
@@ -49,7 +50,7 @@ class GtApp(object):
             retcode = os.system(self.command())
             if retcode != 0:
                 _failed_exes.append(self.app)
-                raise RuntimeError, appName + " execution failed"
+                raise RuntimeError, self.appName + " execution failed"
     def runWithOutput(self, print_command=True):
         if print_command:
             print self.command()
