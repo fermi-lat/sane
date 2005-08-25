@@ -14,8 +14,12 @@ import os, sys, re
 ParFileError = 'ParFileError'
 def pfilesPath(parfile):
     try:
-        paths = re.split(r"[;:]", os.environ['PFILES'])
-        paths = [path for path in paths if path != ""]
+        if os.name == 'posix':
+            pattern = re.compile(";*:*")
+        else:
+            pattern = re.compile("#*;*")
+        paths = re.split(pattern, os.environ['PFILES'])
+        paths = [path for path in paths if path != '']
     except KeyError:
         print "Your PFILES environment variable is not set."
         raise KeyError
