@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Aug 24 17:08:37 PDT 2005
+sane/python
+
+Modified Files:
+	getApp.py pfilesPath.py 
+Log Message:
+parse pfiles path on windows as well
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r5, operation: add
 Package: sane
