@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Thu Aug 25 13:29:15 PDT 2005
+sane/python/tests
+
+Modified Files:
+	BinnedLikelihood_test.py 
+Log Message:
+add gtmodelmap to binned tests
+    *
+------------------------------------------------------------
+User: jchiang  Thu Aug 25 13:29:15 PDT 2005
 sane/python
 
 Modified Files:
