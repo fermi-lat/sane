@@ -9,7 +9,7 @@ Binned likelihood tests.
 
 from setPaths import *
 from obsSim_tests import sourceNamesDat, random_int
-from gt_apps import obsSim, counts_map, expCube, srcMaps, like
+from gt_apps import obsSim, counts_map, expCube, srcMaps, like, model_map
 
 makeCube = expCube
 likelihood = like
@@ -34,6 +34,7 @@ def makeCountsMap():
     counts_map.run()
 
 def makeExposureCube():
+    makeCube['evfile'] = 'ptsrcs_events_0000.fits'
     makeCube['scfile'] = 'ptsrcs_scData_0000.fits'
     makeCube['outfile'] = 'expcube_1_day.fits'
     makeCube.run()
@@ -57,12 +58,19 @@ def runLikelihood():
     likelihood['binned_exposure_map'] = 'none'
     likelihood.run()
 
+def makeModelMap():
+    model_map['srcmaps'] = likelihood['counts_map_file']
+    model_map['source_model_file'] = likelihood['source_model_file']
+    model_map['outfile'] = 'model_map.fits'
+    model_map.run()
+
 def run():
     generateData()
     makeCountsMap()
 #    makeExposureCube()
     makeSourceMaps()
     runLikelihood()
+    makeModelMap()
 
 if __name__ == "__main__":
     run()

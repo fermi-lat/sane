@@ -14,6 +14,7 @@ TsMap = GtApp('gttsmap', 'Likelihood')
 
 counts_map = GtApp('gtcntsmap', 'Likelihood')
 srcMaps = GtApp('gtsrcmaps', 'Likelihood')
+model_map = GtApp('gtmodelmap', 'Likelihood')
 
 #
 # observationSim
