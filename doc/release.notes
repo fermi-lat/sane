@@ -5,6 +5,8 @@
 $Id$
 @verbatim
 
+24-Aug-05  v3r5p1 JC   try to parse PFILES correctly in pfilesPath.py 
+                       on Windows as well
 24-Aug-05  v3r5   JC   update app and par names
 13-Jul-05  v3r4p1 JC   update par names for gtselect
 05-Jun-05  v3r4   JC   set exposure_cube_file
