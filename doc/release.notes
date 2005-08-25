@@ -5,6 +5,7 @@
 $Id$
 @verbatim
 
+25-Aug-05  v3r5p2 JC   add gtmodelmap to binned likelihood tests
 24-Aug-05  v3r5p1 JC   try to parse PFILES correctly in pfilesPath.py 
                        on Windows as well
 24-Aug-05  v3r5   JC   update app and par names
