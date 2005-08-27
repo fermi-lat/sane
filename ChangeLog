@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sat Aug 27 09:50:04 PDT 2005
+sane/python
+
+Modified Files:
+	pfilesPath.py 
+Log Message:
+enable return of first dir in PFILES
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r5p2, operation: add
 Package: sane
