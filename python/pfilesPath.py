@@ -12,7 +12,7 @@ desired .par file.
 import os, sys, re
 
 ParFileError = 'ParFileError'
-def pfilesPath(parfile):
+def pfilesPath(parfile=None):
     try:
         if os.name == 'posix':
             pattern = re.compile(";*:*")
@@ -23,6 +23,8 @@ def pfilesPath(parfile):
     except KeyError:
         print "Your PFILES environment variable is not set."
         raise KeyError
+    if parfile is None:
+        return paths[0]
     for path in paths:
         try:
             if parfile in os.listdir(path):
