@@ -7,6 +7,7 @@ from getApp import GtApp
 # Likelihood applications
 #
 expCube = GtApp('gtlivetimecube', 'Likelihood')
+addCubes = GtApp('gtaddlivetime', 'Likelihood')
 expMap = GtApp('gtexpmap', 'Likelihood')
 diffResps = GtApp('gtdiffresp', 'Likelihood')
 like = GtApp('gtlikelihood', 'Likelihood')
