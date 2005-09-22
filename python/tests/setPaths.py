@@ -21,8 +21,9 @@ os.environ['PFILES'] = sysData
 
 # set the response functions to be used in all tests:
 #irfs = 'G25'
-irfs = 'TEST'
+#irfs = 'TEST'
 #irfs = 'DC1'
+irfs = 'DC1A'
 
 def removeFile(file):
     files = glob.glob(file)
