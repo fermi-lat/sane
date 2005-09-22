@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Sep 21 17:07:07 PDT 2005
+sane/python/tests
+
+Modified Files:
+	BinnedLikelihood_test.py setPaths.py 
+Log Message:
+use same data set for binned analysis; tagging v3r5p3
+    *
+------------------------------------------------------------
 User: jchiang  Wed Sep 21 17:07:06 PDT 2005
 sane/doc
 
