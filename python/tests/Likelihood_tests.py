@@ -69,7 +69,6 @@ def run(clean=False):
     like['fit_tolerance'] = 1e-4
     like['query_for_refit'] = 'no'
 
-    expCube.run()
     expMap.run()
     diffResps.run()
     like.run()

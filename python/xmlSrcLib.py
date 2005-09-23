@@ -1,22 +1,36 @@
 from xml.dom import minidom
 
-def ptSrc():
+powerLaw2 = """<spectrum type="PowerLaw2">
+ <parameter free="1" max="1000.0" min="1e-05" name="Integral" scale="1e-06" value="1.0"/>
+ <parameter free="1" max="-1.0" min="-5.0" name="Index" scale="1.0" value="-2.0"/>
+ <parameter free="0" max="200000.0" min="20.0" name="LowerLimit" scale="1.0" value="30.0"/>
+ <parameter free="0" max="200000.0" min="20.0" name="UpperLimit" scale="1.0" value="2e5"/>
+</spectrum>
+"""
+
+bpl2 = """<spectrum type="BrokenPowerLaw2">
+  <parameter free="1" max="1000.0" min="0.001" name="Integral" scale="1e-04" value="1.0"/>
+  <parameter free="1" max="-1.0" min="-5.0" name="Index1" scale="1.0" value="-1.8"/>
+  <parameter free="1" max="-1.0" min="-5.0" name="Index2" scale="1.0" value="-2.3"/>
+  <parameter free="1" max="10000.0" min="30.0" name="BreakValue" scale="1.0" value="1000.0"/>
+  <parameter free="0" max="200000.0" min="20.0" name="LowerLimit" scale="1.0" value="30.0"/>
+  <parameter free="0" max="200000.0" min="20.0" name="UpperLimit" scale="1.0" value="2e5"/>
+</spectrum>
+"""
+
+skyDir = """<spatialModel type="SkyDirFunction">
+  <parameter free="0" max="360." min="-360." name="RA" scale="1.0" value="83.45"/>
+  <parameter free="0" max="90." min="-90." name="DEC" scale="1.0" value="21.72"/>
+</spatialModel>
+"""
+
+def ptSrc(bpl=False):
+    if bpl:
+        spectrum = bpl2
+    else:
+        spectrum = powerLaw2
     (src, ) = ('  <source name=" " type="PointSource">\n'
-               + '    <spectrum type="PowerLaw">\n'
-               + '      <parameter free="1" max="1000.0" min="1e-5" '
-               + 'name="Prefactor" scale="1e-09" value="1"/>\n'
-               + '      <parameter free="1" max="-1.0" min="-5." '
-               + 'name="Index" scale="1.0" value="-2.1"/>\n'
-               + '      <parameter free="0" max="2000.0" min="30.0" '
-               + 'name="Scale" scale="1.0" value="100.0"/>\n'
-               + '    </spectrum>\n'
-               + '    <spatialModel type="SkyDirFunction">\n'
-               + '      <parameter free="0" max="360." '
-               + 'min="-360." name="RA" scale="1.0" value="83.45"/>\n'
-               + '      <parameter free="0" max="90." '
-               + 'min="-90." name="DEC" scale="1.0" value="21.72"/>\n'
-               + '    </spatialModel>\n'
-               + '  </source>\n', )
+               + spectrum + skyDir + '  </source>\n', )
     ptsrc = minidom.parseString(src).getElementsByTagName('source')[0]
     return ptsrc
 
