@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Fri Sep 23 15:47:30 PDT 2005
+sane/python/tests
+
+Modified Files:
+	Likelihood_tests.py 
+Log Message:
+add bpl2 to xmlSrcLib; get rid of extraneousrun of expCube
+    *
+------------------------------------------------------------
+User: jchiang  Fri Sep 23 15:47:30 PDT 2005
 sane/python
 
 Modified Files:
