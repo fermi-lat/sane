@@ -5,7 +5,7 @@
 $Id$
 @verbatim
 
-21-Sep-05  v3r5p3 JC   add gtaddlivetime to unbinned likelihood testes
+21-Sep-05  v3r5p3 JC   add gtaddlivetime to unbinned likelihood tests
 25-Aug-05  v3r5p2 JC   add gtmodelmap to binned likelihood tests
 24-Aug-05  v3r5p1 JC   try to parse PFILES correctly in pfilesPath.py 
                        on Windows as well
