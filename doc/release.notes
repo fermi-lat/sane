@@ -5,6 +5,8 @@
 $Id$
 @verbatim
 
+24-Sep-05  v3r5p4 JC   remove extraneous expCube.run() call from 
+                       Likelihood_tests.py
 21-Sep-05  v3r5p3 JC   add gtaddlivetime to unbinned likelihood tests
 25-Aug-05  v3r5p2 JC   add gtmodelmap to binned likelihood tests
 24-Aug-05  v3r5p1 JC   try to parse PFILES correctly in pfilesPath.py 
