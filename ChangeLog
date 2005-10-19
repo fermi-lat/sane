@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Oct 19 16:45:13 PDT 2005
+sane/python/tests
+
+Modified Files:
+	Likelihood_tests.py dataSubselector_tests.py 
+Log Message:
+add galprop model; exercise gtmaketime and add to gt_apps.py
+    *
+------------------------------------------------------------
 User: jchiang  Wed Oct 19 16:45:12 PDT 2005
 sane/python
 
