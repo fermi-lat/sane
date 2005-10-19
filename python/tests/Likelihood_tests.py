@@ -10,14 +10,17 @@ Use Likelihood applications to analyze obsSim data.
 from setPaths import *
 from gt_apps import expCube, expMap, diffResps, like, TsMap, filter, addCubes
 
+#start_time = 210211200.
+start_time = 0
+
 def cleanUp():
     removeFile('flux_model.xml')
     removeFile('exp*.fits')
     removeFile('TsMap.fits')
 
 def run(clean=False):
-    filter['tmin'] = 0.
-    filter['tmax'] = 86400/2
+    filter['tmin'] = 0. + start_time
+    filter['tmax'] = 86400/2 + start_time
     filter['outfile'] = 'filtered1.fits'
     filter.run()
     
@@ -28,8 +31,8 @@ def run(clean=False):
     expCube['pixel_size'] = 1
     expCube.run()
 
-    filter['tmin'] = 86400/2
-    filter['tmax'] = 86400
+    filter['tmin'] = 86400/2 + start_time
+    filter['tmax'] = 86400 + start_time
     filter['outfile'] = 'filtered2.fits'
     filter.run()
     

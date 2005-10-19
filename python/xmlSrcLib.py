@@ -2,7 +2,7 @@ from xml.dom import minidom
 
 powerLaw2 = """<spectrum type="PowerLaw2">
  <parameter free="1" max="1000.0" min="1e-05" name="Integral" scale="1e-06" value="1.0"/>
- <parameter free="1" max="-1.0" min="-5.0" name="Index" scale="1.0" value="-2.0"/>
+ <parameter free="1" max="0" min="-5.0" name="Index" scale="1.0" value="-2.0"/>
  <parameter free="0" max="200000.0" min="20.0" name="LowerLimit" scale="1.0" value="30.0"/>
  <parameter free="0" max="200000.0" min="20.0" name="UpperLimit" scale="1.0" value="2e5"/>
 </spectrum>
@@ -10,8 +10,8 @@ powerLaw2 = """<spectrum type="PowerLaw2">
 
 bpl2 = """<spectrum type="BrokenPowerLaw2">
   <parameter free="1" max="1000.0" min="0.001" name="Integral" scale="1e-04" value="1.0"/>
-  <parameter free="1" max="-1.0" min="-5.0" name="Index1" scale="1.0" value="-1.8"/>
-  <parameter free="1" max="-1.0" min="-5.0" name="Index2" scale="1.0" value="-2.3"/>
+  <parameter free="1" max="0" min="-5.0" name="Index1" scale="1.0" value="-1.8"/>
+  <parameter free="1" max="0" min="-5.0" name="Index2" scale="1.0" value="-2.3"/>
   <parameter free="1" max="10000.0" min="30.0" name="BreakValue" scale="1.0" value="1000.0"/>
   <parameter free="0" max="200000.0" min="20.0" name="LowerLimit" scale="1.0" value="30.0"/>
   <parameter free="0" max="200000.0" min="20.0" name="UpperLimit" scale="1.0" value="2e5"/>
@@ -22,6 +22,17 @@ skyDir = """<spatialModel type="SkyDirFunction">
   <parameter free="0" max="360." min="-360." name="RA" scale="1.0" value="83.45"/>
   <parameter free="0" max="90." min="-90." name="DEC" scale="1.0" value="21.72"/>
 </spatialModel>
+"""
+
+galProp = """<source name="GalProp Diffuse" type="DiffuseSource">
+   <!-- diffuse source units are cm^-2 s^-1 MeV^-1 sr^-1 -->
+   <spectrum type="ConstantValue">
+      <parameter free="0" max="10" min="0" name="Value" scale="1" value="1"/>
+   </spectrum>
+   <spatialModel file="GP_gamma_v0.fits" type="MapCubeFunction">
+      <parameter free="0" max="1000" min="0.001" name="Normalization" scale="1" value="1"/>
+   </spatialModel>
+</source>
 """
 
 def ptSrc(bpl=False):
@@ -53,7 +64,7 @@ def EGDiffuse():
     egdif = minidom.parseString(src).getElementsByTagName('source')[0]
     return egdif
 
-def GalDiffuse():
+def EgretDiffuse():
     (src, ) = ('  <source name="Galactic Diffuse" '
                + 'type="DiffuseSource">\n'
                + '    <spectrum type="PowerLaw">\n'
@@ -72,3 +83,11 @@ def GalDiffuse():
                + '  </source>\n', )
     galdif = minidom.parseString(src).getElementsByTagName('source')[0]
     return galdif
+
+def GalProp():
+    galdif = minidom.parseString(galProp).getElementsByTagName('source')[0]
+    return galdif
+
+def GalDiffuse():
+    return EgretDiffuse()
+
