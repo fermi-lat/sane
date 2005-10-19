@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Oct 19 16:45:12 PDT 2005
+sane/python
+
+Modified Files:
+	gt_apps.py xmlSrcLib.py 
+Log Message:
+add galprop model; exercise gtmaketime and add to gt_apps.py
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r5p4, operation: add
 Package: sane
