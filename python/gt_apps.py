@@ -27,6 +27,7 @@ orbSim = GtApp('gtorbsim', 'observationSim')
 # dataSubselector
 #
 filter = GtApp('gtselect', 'dataSubselector')
+maketime = GtApp('gtmaketime', 'dataSubselector')
 
 #
 # Pulsar-related

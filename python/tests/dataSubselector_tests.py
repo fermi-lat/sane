@@ -9,10 +9,15 @@ Generate test data with dataSubselector.
 #
 
 from setPaths import *
-from gt_apps import filter
+from gt_apps import filter, maketime
 
 def run(clean=False):
-    filter['infile'] = 'test_events_0000.fits'
+    maketime['scfile'] = 'orbSim_scData_0000.fits'
+    maketime['evfile'] = 'test_events_0000.fits'
+    maketime['filter'] = 'IN_SAA!=T'
+    maketime['outfile'] = 'test_events.fits'
+    maketime.run()
+    filter['infile'] = 'test_events.fits'
     filter['outfile'] = 'filtered_events_0000.fits'
     filter['ra'] = 86.4
     filter['dec'] = 28.9
