@@ -5,6 +5,8 @@
 $Id$
 @verbatim
 
+17-Nov-05  v3r6   JC   add galprop, gtmaketime; clean-up files after
+                       test_sane execution
 24-Sep-05  v3r5p4 JC   remove extraneous expCube.run() call from 
                        Likelihood_tests.py
 21-Sep-05  v3r5p3 JC   add gtaddlivetime to unbinned likelihood tests
