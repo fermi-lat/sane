@@ -5,6 +5,13 @@ filefunc = """<spectrum type="FileFunction" file="foo.dat">
 </spectrum>
 """
 
+powerLaw = """<spectrum type="PowerLaw">
+ <parameter free="1" max="1000.0" min="1e-03" name="Prefactor" scale="1e-09" value="1.0"/>
+ <parameter free="1" max="-1.0" min="-5.0" name="Index" scale="1.0" value="-2.0"/>
+ <parameter free="0" max="2000.0" min="30.0" name="Scale" scale="1.0" value="100.0"/>
+</spectrum>
+"""
+
 powerLaw2 = """<spectrum type="PowerLaw2">
  <parameter free="1" max="1000.0" min="1e-05" name="Integral" scale="1e-06" value="1.0"/>
  <parameter free="1" max="0" min="-5.0" name="Index" scale="1.0" value="-2.0"/>
