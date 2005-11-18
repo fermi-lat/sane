@@ -41,3 +41,9 @@ if __name__ == "__main__":
         for exe in getApp._failed_exes:
             print exe
         sys.exit(1)
+# clean up
+    removeFile('*.fits')
+    removeFile('Crab*')
+    removeFile('*.par')    
+    removeFile('*.dat')
+    
