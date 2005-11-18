@@ -1,5 +1,10 @@
 from xml.dom import minidom
 
+filefunc = """<spectrum type="FileFunction" file="foo.dat">
+ <parameter free="1" max="1e5" min="1e-5" name="Normalization" scale="1" value="1.0"/>
+</spectrum>
+"""
+
 powerLaw2 = """<spectrum type="PowerLaw2">
  <parameter free="1" max="1000.0" min="1e-05" name="Integral" scale="1e-06" value="1.0"/>
  <parameter free="1" max="0" min="-5.0" name="Index" scale="1.0" value="-2.0"/>

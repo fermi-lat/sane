@@ -61,6 +61,7 @@ def run(useWorkAround=False):
     pulsePhase['f0'] = freq
     pulsePhase['f1'] = fdot
     pulsePhase['f2'] = 0
+    pulsePhase['demodbin'] = 'no'
     if useWorkAround:
         pulsePhase['p0'] = period
         pulsePhase['p1'] = pdot
@@ -74,6 +75,7 @@ def run(useWorkAround=False):
     psearch['f1'] = fdot
     psearch['p0'] = period
     psearch['p1'] = pdot
+    psearch['demodbin'] = 'no'
     psearch['scanstep'] = 0.5
     psearch['numtrials'] = 200
     psearch['cancelpdot'] = 'yes'
