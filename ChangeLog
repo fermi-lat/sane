@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Nov 17 16:00:23 PST 2005
+sane/python/tests
+
+Modified Files:
+	BinnedLikelihood_test.py Pulsar_tests.py default_tests.py 
+Log Message:
+update test scripts for binned likelihood and pulsars; clean up files after successful execution
+    *
+------------------------------------------------------------
 User: jchiang  Thu Nov 17 16:00:22 PST 2005
 sane/python
 
