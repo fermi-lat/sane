@@ -77,7 +77,7 @@ def EGDiffuse():
     return egdif
 
 def EgretDiffuse():
-    (src, ) = ('  <source name="Galactic Diffuse" '
+    (src, ) = ('  <source name="EGRET Diffuse" '
                + 'type="DiffuseSource">\n'
                + '    <spectrum type="PowerLaw">\n'
                + '      <parameter max="1000" min="0.001" free="1" '
