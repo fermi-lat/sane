@@ -29,8 +29,7 @@ def Crab_filter():
     filter['ra'] = 83.57
     filter['dec'] = 22.01
     filter['rad'] = 20
-    filter['convLayerMin'] = 0
-    filter['convLayerMax'] = 11
+    filter['eventClass'] = 0
     filter.run()
 
 def Crab_cmap(useWorkAround=False):
