@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Dec 12 12:20:43 PST 2005
+sane/python
+
+Modified Files:
+	getApp.py gt_apps.py source_analysis.py 
+Log Message:
+add timing info access
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r6p1, operation: add
 Package: sane
