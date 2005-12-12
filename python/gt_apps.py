@@ -38,7 +38,7 @@ psearch = GtApp('gtpsearch', 'periodSearch')
 #
 # map_tools
 #
-count_map = GtApp('count_map', 'map_tools')
+#count_map = GtApp('count_map', 'map_tools')
 
 #
 # others

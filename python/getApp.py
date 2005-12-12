@@ -55,8 +55,11 @@ class GtApp(object):
         if print_command:
             print self.command()
         return os.popen4(self.command())
-    def command(self):
-        return self.app + self.pars()
+    def command(self, do_timing=True):
+        if do_timing:
+            return 'time -p ' + self.app + self.pars()
+        else:
+            return self.app + self.pars()
 
 if __name__ == '__main__':
     orbSim = GtApp('orbSim', 'observationSim')
