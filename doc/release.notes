@@ -5,6 +5,8 @@
 $Id$
 @verbatim
 
+12-Dec-05  v3r6p2 JC   apply time command in GtApp.runWithOutput(),
+                       add access in SourceAnalysis class
 21-Nov-05  v3r6p1 JC   rename EGRET diffuse model in xmlSrcLib.py
 17-Nov-05  v3r6   JC   add galprop, gtmaketime; clean-up files after
                        test_sane execution
