@@ -12,7 +12,7 @@ from xml.dom import minidom
 import celgal
 from makeSrcList import SourceList
 
-from gt_apps import diffResp, filter, expCube, expMap, like
+from gt_apps import diffResps, filter, expCube, expMap, like
 
 def haveFile(filename):
     try:
@@ -82,7 +82,7 @@ class SourceAnalysis(object):
         input, output = like.runWithOutput()
         lines = output.readlines()
         results = {}
-        for i, line in zip(xrange(sys.maxint), lines):
+        for i, line in enumerate(lines):
             sys.stdout.write(line)
             if line.find("TS value: ") != -1:
                 src = lines[i-6].split(':')[0]
@@ -97,6 +97,7 @@ class SourceAnalysis(object):
                         key, value = tuple(lines[j].split(': '))
                         results[src][key] = value.strip()
         self._addResults(results, like['source_model_output_file'])
+        self._parseTimingInfo(lines[-3:])
         os.remove(like['scfile'])
         os.remove(self.eventfilelist)
         if not self.retainFiles:
@@ -104,6 +105,12 @@ class SourceAnalysis(object):
                 os.remove(file)
         os.chdir(self.home_dir)
         return results
+    def _parseTimingInfo(self, lines):
+        if lines[1].find('user') == 0:
+            tokens = lines[1].strip().split()
+            self.cputime = float(tokens[1])
+        else:
+            self.cputime = None
     def _addAbsPath(self, files):
         my_files = []
         for file in files:
@@ -118,12 +125,12 @@ class SourceAnalysis(object):
     def _runDiffResps(self, diffModel):
         scfiles = self._scFiles()
         for file in self.eventfiles:
-            diffResp['evfile'] = file
-            diffResp['scfile'] = scfiles
-            diffResp['source_model_file'] = diffModel
-            diffResp['rspfunc'] = self.irfs
-            diffResp['clobber'] = 'no'
-            diffResp.run(catchError=None)
+            diffResps['evfile'] = file
+            diffResps['scfile'] = scfiles
+            diffResps['source_model_file'] = diffModel
+            diffResps['rspfunc'] = self.irfs
+            diffResps['clobber'] = 'no'
+            diffResps.run(catchError=None)
         os.remove(scfiles)
     def _makeExpCube(self):
         if not haveFile(self.expCubeFile):
@@ -147,13 +154,13 @@ class SourceAnalysis(object):
         self.filtered_files = []
         fd, self.eventfilelist = tempfile.mkstemp(dir=self.output_dir)
         for file in self.eventfiles:
-            filter['input_file'] = file
+            filter['infile'] = file
             filtered_file = os.path.basename(file) + '_filtered'
             if id is not None:
                 filtered_file += '_%s' % id
-            filter['output_file'] = os.path.join(self.output_dir,
+            filter['outfile'] = os.path.join(self.output_dir,
                                                  filtered_file)
-            self.filtered_files.append(filter['output_file'])
+            self.filtered_files.append(filter['outfile'])
             filter.run(catchError=None)
             os.write(fd, self.filtered_files[-1] + "\n")
         os.close(fd)
