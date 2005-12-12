@@ -31,19 +31,12 @@ def run(clean=False):
     filter['tmax'] = 0.0
     filter['emin'] = 32.0
     filter['emax'] = 200000.0
-    filter['convLayerMin'] = 0
-    filter['convLayerMax'] = 15
     filter['thetamin'] = 0.0
     filter['thetamax'] = 0.0
     filter['phimin'] = 0.0
     filter['phimax'] = 0.0
-    filter['gammaProbMin'] = 0.0
-    filter['gammaProbMax'] = 0.0
     filter['zmin'] = 0.0
     filter['zmax'] = 0.0
-    filter['bgcut'] = 'yes'
-    filter['psfcut'] = 'yes'
-    filter['erescut'] = 'yes'
     filter.run()
 
 if __name__ == "__main__":
