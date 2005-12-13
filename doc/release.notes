@@ -5,6 +5,7 @@
 $Id$
 @verbatim
 
+12-Dec-05  v3r7   JC   sync up tests to new ft1 def
 12-Dec-05  v3r6p2 JC   apply time command in GtApp.runWithOutput(),
                        add access in SourceAnalysis class
 21-Nov-05  v3r6p1 JC   rename EGRET diffuse model in xmlSrcLib.py
