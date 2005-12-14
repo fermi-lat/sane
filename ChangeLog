@@ -1,5 +1,13 @@
 ------------------------------------------------------------
 TAG
+Tag name: v3r6p2, operation: add
+Package: sane
+User: jchiang  Tue Dec 13 21:23:02 2005
+Files:
+
+    *
+------------------------------------------------------------
+TAG
 Tag name: v3r7, operation: add
 Package: sane
 User: jchiang  Mon Dec 12 21:35:29 2005
