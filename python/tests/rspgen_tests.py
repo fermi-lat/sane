@@ -16,9 +16,9 @@ def run():
     rspgen['specfile'] = 'Crab.pha'
     rspgen['scfile'] = 'Crab_scData_0000.fits'
     rspgen['outfile'] = 'Crab.rsp'
-    rspgen['ra'] = 83.57
-    rspgen['dec'] = 22.01
-    rspgen['psfradius'] = 20.0
+#    rspgen['ra'] = 83.57
+#    rspgen['dec'] = 22.01
+#    rspgen['psfradius'] = 20.0
     rspgen['time'] = 1000.0
     rspgen['thetacut'] = 70.0
     rspgen['thetabinsize'] = 1.0
