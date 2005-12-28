@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Dec 28 08:11:55 PST 2005
+sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+use single acceptance cone for gtrspgen; tagging v3r7p2
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r7p1, operation: add
 Package: sane
