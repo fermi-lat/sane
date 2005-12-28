@@ -20,6 +20,7 @@ def Crab_only():
     obsSim['outfile_prefix'] = 'Crab'
     obsSim['scfile'] = 'none'
     obsSim['rspfunc'] = irfs
+    obsSim['use_acceptance_cone'] = 'no'
     obsSim['random_seed'] = random_int()
     obsSim.run()
 

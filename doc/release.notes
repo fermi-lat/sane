@@ -5,6 +5,7 @@
 $Id$
 @verbatim
 
+28-Dec-05  v3r7p2 JC   ensure a single acceptance cone is used for gtrspgen
 24-Dec-05  v3r7p1 JC   update for new gtrspgen par file
 12-Dec-05  v3r7   JC   sync up tests to new ft1 def
 12-Dec-05  v3r6p2 JC   apply time command in GtApp.runWithOutput(),

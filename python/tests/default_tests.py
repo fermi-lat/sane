@@ -46,4 +46,4 @@ if __name__ == "__main__":
     removeFile('Crab*')
     removeFile('*.par')    
     removeFile('*.dat')
-    
+    removeFile('*.txt')
