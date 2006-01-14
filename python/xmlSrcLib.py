@@ -20,6 +20,17 @@ powerLaw2 = """<spectrum type="PowerLaw2">
 </spectrum>
 """
 
+expcutoff = """<spectrum type="ExpCutoff">
+  <parameter free="1" max="100000.0" min="0.01" name="Prefactor" scale="1e-09" value="50"/>
+  <parameter free="1" max="-1.0" min="-5." name="Index" scale="1.0" value="-2.1"/>
+  <parameter free="0" max="2000.0" min="30.0" name="Scale" scale="1.0" value="100.0"/>
+  <parameter free="1" max="10000.0" min="1.0" name="Ebreak" scale="1.0" value="10.0"/>
+  <parameter free="1" max="300.0" min="0.01" name="P1" scale="1000.0" value="100."/>
+  <parameter free="0" max="1.0" min="-1.0" name="P2" scale="1.0" value="0"/>
+  <parameter free="0" max="1.0" min="-1.0" name="P3" scale="1.0" value="0"/>
+</spectrum>
+"""
+
 bpl2 = """<spectrum type="BrokenPowerLaw2">
   <parameter free="1" max="1000.0" min="0.001" name="Integral" scale="1e-04" value="1.0"/>
   <parameter free="1" max="0" min="-5.0" name="Index1" scale="1.0" value="-1.8"/>
