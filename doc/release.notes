@@ -5,6 +5,8 @@
 $Id$
 @verbatim
 
+29-Jan-06  v3r7p3 JC   add ExpCutoff model; do timing only on posix systems;
+                       disable global pattern in req file
 28-Dec-05  v3r7p2 JC   ensure a single acceptance cone is used for gtrspgen
 24-Dec-05  v3r7p1 JC   update for new gtrspgen par file
 12-Dec-05  v3r7   JC   sync up tests to new ft1 def
