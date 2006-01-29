@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sun Jan 29 15:37:00 PST 2006
+sane/python/tests
+
+Modified Files:
+	Pulsar_tests.py 
+Log Message:
+gtpphase parameter name change
+    *
+------------------------------------------------------------
 User: jchiang  Sun Jan 29 15:32:53 PST 2006
 sane/doc
 
