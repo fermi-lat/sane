@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sun Jan 29 15:22:51 PST 2006
+sane/python
+
+Modified Files:
+	getApp.py xmlSrcLib.py 
+Log Message:
+do timing only on posix-compliant systems; expand energy range for sources
+    *
+------------------------------------------------------------
 User: jchiang  Fri Jan 13 16:35:23 PST 2006
 sane/python
 
