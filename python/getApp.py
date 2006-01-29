@@ -56,7 +56,7 @@ class GtApp(object):
             print self.command()
         return os.popen4(self.command())
     def command(self, do_timing=True):
-        if do_timing:
+        if do_timing and os.name == 'posix':
             return 'time -p ' + self.app + self.pars()
         else:
             return self.app + self.pars()

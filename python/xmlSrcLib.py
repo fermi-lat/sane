@@ -15,7 +15,7 @@ powerLaw = """<spectrum type="PowerLaw">
 powerLaw2 = """<spectrum type="PowerLaw2">
  <parameter free="1" max="1000.0" min="1e-05" name="Integral" scale="1e-06" value="1.0"/>
  <parameter free="1" max="0" min="-5.0" name="Index" scale="1.0" value="-2.0"/>
- <parameter free="0" max="200000.0" min="20.0" name="LowerLimit" scale="1.0" value="30.0"/>
+ <parameter free="0" max="200000.0" min="20.0" name="LowerLimit" scale="1.0" value="20.0"/>
  <parameter free="0" max="200000.0" min="20.0" name="UpperLimit" scale="1.0" value="2e5"/>
 </spectrum>
 """
@@ -36,7 +36,7 @@ bpl2 = """<spectrum type="BrokenPowerLaw2">
   <parameter free="1" max="0" min="-5.0" name="Index1" scale="1.0" value="-1.8"/>
   <parameter free="1" max="0" min="-5.0" name="Index2" scale="1.0" value="-2.3"/>
   <parameter free="1" max="10000.0" min="30.0" name="BreakValue" scale="1.0" value="1000.0"/>
-  <parameter free="0" max="200000.0" min="20.0" name="LowerLimit" scale="1.0" value="30.0"/>
+  <parameter free="0" max="200000.0" min="20.0" name="LowerLimit" scale="1.0" value="20.0"/>
   <parameter free="0" max="200000.0" min="20.0" name="UpperLimit" scale="1.0" value="2e5"/>
 </spectrum>
 """
@@ -52,7 +52,7 @@ galProp = """<source name="GalProp Diffuse" type="DiffuseSource">
    <spectrum type="ConstantValue">
       <parameter free="0" max="10" min="0" name="Value" scale="1" value="1"/>
    </spectrum>
-   <spatialModel file="GP_gamma_v0.fits" type="MapCubeFunction">
+   <spatialModel file="$(EXTFILESSYS)/galdiffuse/GP_gamma_v0r0p1.fits" type="MapCubeFunction">
       <parameter free="0" max="1000" min="0.001" name="Normalization" scale="1" value="1"/>
    </spatialModel>
 </source>
@@ -98,8 +98,8 @@ def EgretDiffuse():
                + '      <parameter max="200" min="50" free="0" '
                + 'name="Scale" scale="1" value="100" />\n'
                + '    </spectrum>\n'
-               + '    <spatialModel file="$(LIKELIHOODROOT)/src/test'
-               + '/Data/gas.cel" type="SpatialMap">\n'
+               + '    <spatialModel file="$(EXTFILESSYS)/galdiffuse'
+               + '/EGRET_diffuse_gal.fits" type="SpatialMap">\n'
                + '      <parameter max="1000" min="0.001" free="0" '
                + 'name="Prefactor" scale="1" value="1" />\n'
                + '    </spatialModel>\n'
