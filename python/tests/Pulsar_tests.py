@@ -56,7 +56,7 @@ def run(useWorkAround=False):
 
     pulsePhase['evfile'] = 'Geminga_events_0000.fits'
     pulsePhase['ephstyle'] = "FREQ"
-    pulsePhase['epoch'] = 0
+    pulsePhase['ephepoch'] = 0
     pulsePhase['phi0'] = 0
     pulsePhase['f0'] = freq
     pulsePhase['f1'] = fdot
