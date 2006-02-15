@@ -48,7 +48,7 @@ def preparePulsarSource():
 def run(useWorkAround=False):
     preparePulsarSource()
 
-    obsSim['xml_source_file'] = 'xmlFiles.dat'
+    obsSim['xml_source_file'] = 'xmlFiles.txt'
     obsSim['outfile_prefix'] = 'Geminga'
     obsSim['scfile'] = 'none'
     obsSim['random_seed'] = random_int()
@@ -62,6 +62,7 @@ def run(useWorkAround=False):
     pulsePhase['f1'] = fdot
     pulsePhase['f2'] = 0
     pulsePhase['demodbin'] = 'no'
+    pulsePhase['timesys'] = 'TT'
     if useWorkAround:
         pulsePhase['p0'] = period
         pulsePhase['p1'] = pdot
@@ -76,6 +77,7 @@ def run(useWorkAround=False):
     psearch['p0'] = period
     psearch['p1'] = pdot
     psearch['demodbin'] = 'no'
+    psearch['timesys'] = 'TT'
     psearch['scanstep'] = 0.5
     psearch['numtrials'] = 200
     psearch['cancelpdot'] = 'yes'

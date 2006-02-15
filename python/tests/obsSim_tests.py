@@ -15,14 +15,14 @@ from gt_apps import obsSim, orbSim
 def random_int(scale=1e5):
     return int(random.random()*scale)
 
-def sourceNamesDat(filename='source_names.dat',
+def sourceNamesDat(filename='source_names.txt',
                    srcList=('anticenter-32mev', 'Extragalactic_diffuse')):
     file = open(filename, 'w')
     for src in srcList:
         file.write(src + '\n')
     file.close()
 
-def xmlFilesDat(filename='xmlFiles.dat',
+def xmlFilesDat(filename='xmlFiles.txt',
                 fileList=('anticenter_sources.xml',
                           '$(OBSERVATIONSIMROOT)/xml/' +
                           'obsSim_source_library.xml')):
@@ -39,8 +39,8 @@ def run(clean=False):
     orbSim.run()
     sourceNamesDat()
     xmlFilesDat()
-    obsSim['xml_source_file'] = 'xmlFiles.dat'
-    obsSim['source_list'] = 'source_names.dat'
+    obsSim['xml_source_file'] = 'xmlFiles.txt'
+    obsSim['source_list'] = 'source_names.txt'
     obsSim['scfile'] = 'orbSim_scData_0000.fits'
     obsSim['outfile_prefix'] = 'test'
     obsSim['simulation_time'] = 86400.0
@@ -58,7 +58,7 @@ def run(clean=False):
 
 def cleanUp():
     removeFile('test_*.fits')
-    removeFile('source_names.dat')
+    removeFile('source_names.txt')
     removeFile('fit_comparison_*.fits')
 
 def compareFit(clean=False):

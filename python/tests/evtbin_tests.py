@@ -15,8 +15,8 @@ from gt_apps import obsSim, filter, evtbin
 def Crab_only():
     sourceNamesDat(srcList=('_3EG_J0534p2200-32mev',))
     xmlFilesDat()
-    obsSim['xml_source_file'] = 'xmlFiles.dat'
-    obsSim['source_list'] = 'source_names.dat'
+    obsSim['xml_source_file'] = 'xmlFiles.txt'
+    obsSim['source_list'] = 'source_names.txt'
     obsSim['outfile_prefix'] = 'Crab'
     obsSim['scfile'] = 'none'
     obsSim['rspfunc'] = irfs
