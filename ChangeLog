@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Wed Feb 15 09:14:44 PST 2006
+sane/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+set timesys=TT for pulsar tools; tagging v3r7p4
+    *
+------------------------------------------------------------
+User: jchiang  Wed Feb 15 09:14:44 PST 2006
 sane/cmt
 
 Modified Files:
