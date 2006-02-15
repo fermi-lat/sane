@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Feb 15 09:14:44 PST 2006
+sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+set timesys=TT for pulsar tools; tagging v3r7p4
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r7p3, operation: add
 Package: sane
