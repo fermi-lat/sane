@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Fri Feb 17 10:02:07 PST 2006
+sane/python/tests
+
+Modified Files:
+	setPaths.py 
+Log Message:
+backoff on using dc2 irfs for test programs; tagging v3r7p6
+    *
+------------------------------------------------------------
+User: jchiang  Fri Feb 17 10:02:07 PST 2006
 sane/doc
 
 Modified Files:
