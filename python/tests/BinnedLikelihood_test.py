@@ -45,7 +45,7 @@ def makeSourceMaps():
     srcMaps['source_model_file'] = 'srcModel.xml'
     srcMaps['outfile'] = 'sourceMaps.fits'
     srcMaps['exposure_cube_file'] = 'expcube_1_day.fits'
-    srcMaps['binned_exposure_map'] = 'none'
+    srcMaps['binned_exposure_map'] = 'binned_exposure.fits'
     srcMaps["rspfunc"] = irfs
     srcMaps.run()
 

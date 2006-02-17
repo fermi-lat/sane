@@ -5,6 +5,8 @@
 $Id$
 @verbatim
 
+16-Feb-06  v3r7p5 JC   update par file value for change in gtsrcmaps 
+                       exposure map handling
 15-Feb-06  v3r7p4 JC   set timesys=TT for pulsar tools
 29-Jan-06  v3r7p3 JC   add ExpCutoff model; do timing only on posix systems;
                        disable global pattern in req file
