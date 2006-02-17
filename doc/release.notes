@@ -5,6 +5,7 @@
 $Id$
 @verbatim
 
+17-Feb-06  v3r7p6 JC   back off on using DC2 irfs for test programs
 16-Feb-06  v3r7p5 JC   update par file value for change in gtsrcmaps 
                        exposure map handling
 15-Feb-06  v3r7p4 JC   set timesys=TT for pulsar tools
