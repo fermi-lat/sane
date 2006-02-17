@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Feb 16 21:18:29 PST 2006
+sane/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+update Binned test for new par handling; use dc2 irfs in tests
+    *
+------------------------------------------------------------
 User: jchiang  Thu Feb 16 21:18:28 PST 2006
 sane/cmt
 
