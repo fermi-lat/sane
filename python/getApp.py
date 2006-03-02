@@ -17,8 +17,13 @@ bindir = os.environ['BINDIR']
 def getApp(appName, package=None, raiseKeyErrors=True):
     if not package:
         package = appName
-    app = os.path.join(os.environ[package.upper() + 'ROOT'], bindir,
-                       appName + '.exe')
+    try:
+        app = os.path.join(os.environ[package.upper() + 'ROOT'], bindir,
+                           appName + '.exe')
+        if not os.path.exists(app): # assume it lives in the users PATH
+            app = appName
+    except KeyError:
+        app = appName # assume it lives in the users PATH
     pars = Pil(appName + '.par', raiseKeyErrors)
     return (app, pars)
 
