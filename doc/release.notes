@@ -5,6 +5,8 @@
 $Id$
 @verbatim
 
+04-Mar-06  v3r7p8 JC   Juergen's suggestion for preserving quotes in strings
+                       passed to pil.py
 03-Mar-06  v3r7p7 JC   enable GtApp to find executable from PATH;
                        update Galdiffuse xml prototype
 17-Feb-06  v3r7p6 JC   back off on using DC2 irfs for test programs
