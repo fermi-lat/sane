@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sat Mar  4 07:39:30 PST 2006
+sane/python
+
+Modified Files:
+	pil.py 
+Log Message:
+apply Juergen's suggestion for retaining quotes
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r7p7, operation: add
 Package: sane
