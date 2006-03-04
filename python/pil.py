@@ -57,7 +57,7 @@ class Pil(object):
         elif self.params[name][0] == 'i':
             return string.atoi(value)
         else:
-            return value
+            return self.params[name][2]
     def __setitem__(self, name, value):
         if name in self.names:
             self.params[name][2] = `value`
