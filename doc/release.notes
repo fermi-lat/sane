@@ -5,6 +5,8 @@
 $Id$
 @verbatim
 
+06-Mar-06  v3r8   JC   make Juergen's mod a no-default option instead;
+                       increase precision of point source locations in xml
 04-Mar-06  v3r7p8 JC   Juergen's suggestion for preserving quotes in strings
                        passed to pil.py
 03-Mar-06  v3r7p7 JC   enable GtApp to find executable from PATH;

@@ -1,6 +1,6 @@
 package sane
 
-version v3r7p8
+version v3r8
 
 author T. Burnett <tburnett@u.washington.edu>
 # $Id$
