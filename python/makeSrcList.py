@@ -67,8 +67,8 @@ class PointSource:
         coords = dir.getElementsByTagName('parameter')
         for coord in coords:
             if coord.getAttribute('name').encode('ascii') == 'RA':
-                coord.setAttribute('value', "%.2f" % pos[0])
+                coord.setAttribute('value', "%.4f" % pos[0])
             if coord.getAttribute('name').encode('ascii') == 'DEC':
-                coord.setAttribute('value', "%.2f" % pos[1])
+                coord.setAttribute('value', "%.4f" % pos[1])
     def write(self):
         return self.src.toxml()

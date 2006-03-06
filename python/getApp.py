@@ -14,7 +14,8 @@ _failed_exes = []
 
 bindir = os.environ['BINDIR']
 
-def getApp(appName, package=None, raiseKeyErrors=True):
+def getApp(appName, package=None, raiseKeyErrors=True,
+           preserveQuotes=False):
     if not package:
         package = appName
     try:
@@ -24,12 +25,14 @@ def getApp(appName, package=None, raiseKeyErrors=True):
             app = appName
     except KeyError:
         app = appName # assume it lives in the users PATH
-    pars = Pil(appName + '.par', raiseKeyErrors)
+    pars = Pil(appName + '.par', raiseKeyErrors, preserveQuotes)
     return (app, pars)
 
 class GtApp(object):
-    def __init__(self, appName, package=None, raiseKeyErrors=True):
-        self.app, self.pars = getApp(appName, package, raiseKeyErrors)
+    def __init__(self, appName, package=None, raiseKeyErrors=True,
+                 preserveQuotes=False):
+        self.app, self.pars = getApp(appName, package, raiseKeyErrors,
+                                     preserveQuotes)
         self.appName = appName
     def __setitem__(self, key, value):
         self.pars[key] = value
