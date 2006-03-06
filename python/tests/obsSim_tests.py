@@ -51,6 +51,8 @@ def run(clean=False):
     obsSim['emin'] = 32
     obsSim['emax'] = 2e5
     obsSim['rspfunc'] = irfs
+    if irfs == 'DSS':
+        obsSim['rspfunc'] = 'DC2'
     obsSim['random_seed'] = random_int()
     obsSim.run()
     if clean:
@@ -66,6 +68,8 @@ def compareFit(clean=False):
     obsSim['xml_source_file'] = 'flux_model.xml'
     obsSim['outfile_prefix'] = 'fit_comparison'
     obsSim['rspfunc'] = irfs
+    if irfs == 'DSS':
+        obsSim['rspfunc'] = 'DC2'
     obsSim.run()
     if clean:
         cleanUp()
