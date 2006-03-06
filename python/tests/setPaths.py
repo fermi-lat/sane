@@ -25,6 +25,7 @@ os.environ['PFILES'] = sysData
 #irfs = 'DC1'
 irfs = 'DC1A'
 #irfs = 'DC2'
+#irfs = 'DSS'
 
 def removeFile(file):
     files = glob.glob(file)

@@ -31,6 +31,7 @@ def run(clean=False):
     filter['tmax'] = 0.0
     filter['emin'] = 32.0
     filter['emax'] = 200000.0
+    filter['eventClass'] = -1
     filter['thetamin'] = 0.0
     filter['thetamax'] = 0.0
     filter['phimin'] = 0.0
