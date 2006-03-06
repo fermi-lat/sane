@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jchiang  Mon Mar  6 08:35:10 PST 2006
+sane/python/tests
+
+Modified Files:
+	dataSubselector_tests.py evtbin_tests.py obsSim_tests.py 
+	setPaths.py 
+Log Message:
+accommodate "DSS" as the set of irfs to use
+
+    *
+------------------------------------------------------------
 User: jchiang  Mon Mar  6 08:33:28 PST 2006
 sane/python
 
