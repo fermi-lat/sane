@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jchiang  Mon Mar  6 08:33:28 PST 2006
+sane/python
+
+Modified Files:
+	getApp.py makeSrcList.py pil.py 
+Log Message:
+increase precision in fit parameter values; allow option to preserve 
+quotation marks for parameters passed to applications
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r7p8, operation: add
 Package: sane
