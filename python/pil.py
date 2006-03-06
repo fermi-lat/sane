@@ -32,8 +32,9 @@ def havePathToFile(file):
     return path != "" and basename in os.listdir(path)
 
 class Pil(object):
-    def __init__(self, pfile, raiseKeyErrors=True):
+    def __init__(self, pfile, raiseKeyErrors=True, preserveQuotes=False):
         self.raiseKeyErrors = raiseKeyErrors
+        self.preserveQuotes = preserveQuotes
         self.params = {}
         self.names = []
         if not havePathToFile(pfile):
@@ -57,7 +58,10 @@ class Pil(object):
         elif self.params[name][0] == 'i':
             return string.atoi(value)
         else:
-            return self.params[name][2]
+            if self.preserveQuotes:
+                return self.params[name][2]
+            else:
+                return value
     def __setitem__(self, name, value):
         if name in self.names:
             self.params[name][2] = `value`
