@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jchiang  Mon Jul 10 09:45:08 PDT 2006
+sane/python
+
+Modified Files:
+	getApp.py gt_apps.py 
+Added Files:
+	GtApp.py 
+Log Message:
+refactor getApp.py module name
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r8, operation: add
 Package: sane
