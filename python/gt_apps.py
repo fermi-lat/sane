@@ -1,7 +1,7 @@
 """
 This module uses GtApp to wraps the Science Tools as python objects.
 """
-from getApp import GtApp
+from GtApp import GtApp
 
 #
 # Likelihood applications
