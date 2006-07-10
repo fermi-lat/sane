@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Jul 10 09:45:40 PDT 2006
+sane/python
+
+Removed Files:
+	getApp.py 
+Log Message:
+refactor getApp.py module name
+    *
+------------------------------------------------------------
 User: jchiang  Mon Jul 10 09:45:08 PDT 2006
 sane/python
 
