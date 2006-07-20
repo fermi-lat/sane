@@ -41,8 +41,11 @@ class GtApp(object):
     def __getattr__(self, attrname):
         return getattr(self.pars, attrname)
     def run(self, print_command=True, catchError="at the top level:"):
-        if self.pars['chatter'] == 0:
-            print_command = False
+        try:
+            if self.pars['chatter'] == 0:
+                print_command = False
+        except KeyError:
+            pass
         if catchError is not None:
             input, output = self.runWithOutput(print_command)
             for line in output:
@@ -66,7 +69,12 @@ class GtApp(object):
             print self.command()
         return os.popen4(self.command())
     def command(self, do_timing=True):
-        if do_timing and os.name == 'posix' and self.pars['chatter'] != 0:
+        chatter = 2
+        try:
+            chatter = self.pars['chatter']
+        except KeyError:
+            pass
+        if do_timing and os.name == 'posix' and chatter != 0:
             return 'time -p ' + self.app + self.pars()
         else:
             return self.app + self.pars()
