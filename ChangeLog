@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Jul 21 15:44:19 PDT 2006
+sane/python/tests
+
+Modified Files:
+	default_tests.py 
+Log Message:
+change old getApp reference; tagging v3r9p1
+    *
+------------------------------------------------------------
 User: jchiang  Fri Jul 21 15:44:18 PDT 2006
 sane/doc
 
