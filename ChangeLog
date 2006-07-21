@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Jul 21 15:44:18 PDT 2006
+sane/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+change old getApp reference; tagging v3r9p1
+    *
+------------------------------------------------------------
 User: jchiang  Fri Jul 21 15:44:17 PDT 2006
 sane/cmt
 
