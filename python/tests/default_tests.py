@@ -14,7 +14,7 @@ import sys
 sys.path.append(os.path.join(os.environ["SANEROOT"], "python"))
 
 from setPaths import *
-import getApp
+import GtApp
 
 import obsSim_tests as obsSim
 #import map_tools_tests as map_tools
@@ -36,9 +36,9 @@ if __name__ == "__main__":
     rspgen.run()
     pulsars.run(useWorkAround)
 #    map_tools.run(useWorkAround)
-    if getApp._failed_exes:
+    if GtApp._failed_exes:
         print "The following executables failed: "
-        for exe in getApp._failed_exes:
+        for exe in GtApp._failed_exes:
             print exe
         sys.exit(1)
 # clean up
