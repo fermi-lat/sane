@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Sep 26 14:56:29 PDT 2006
+sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+mods for gtcntsmap, gtmodelmap; tagging v3r9p2
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r9p1, operation: add
 Package: sane
