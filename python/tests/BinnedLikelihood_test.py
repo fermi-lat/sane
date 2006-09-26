@@ -31,6 +31,7 @@ def makeCountsMap():
     counts_map['outfile'] = 'countsMap.fits'
     counts_map["emin"] = 32
     counts_map["emax"] = 2e5
+    counts_map["energybinfile"] = 'none'
     counts_map.run()
 
 #def makeExposureCube():
@@ -64,6 +65,7 @@ def makeModelMap():
     model_map['srcmaps'] = likelihood['counts_map_file']
     model_map['source_model_file'] = likelihood['source_model_file']
     model_map['outfile'] = 'model_map.fits'
+    model_map['rspfunc'] = irfs
     model_map.run()
 
 def run():
