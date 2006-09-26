@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Sep 26 14:56:30 PDT 2006
+sane/python/tests
+
+Modified Files:
+	BinnedLikelihood_test.py 
+Log Message:
+mods for gtcntsmap, gtmodelmap; tagging v3r9p2
+    *
+------------------------------------------------------------
 User: jchiang  Tue Sep 26 14:56:29 PDT 2006
 sane/doc
 
