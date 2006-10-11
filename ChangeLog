@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Oct 11 12:14:45 PDT 2006
+sane/python/tests
+
+Modified Files:
+	Likelihood_tests.py 
+Log Message:
+add pyLikelihood to system tests
+    *
+------------------------------------------------------------
 User: jchiang  Wed Oct 11 12:14:44 PDT 2006
 sane/cmt
 
