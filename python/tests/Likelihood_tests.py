@@ -9,6 +9,7 @@ Use Likelihood applications to analyze obsSim data.
 
 from setPaths import *
 from gt_apps import expCube, expMap, diffResps, like, TsMap, filter, addCubes
+from UnbinnedAnalysis import *
 
 #start_time = 210211200.
 start_time = 0
@@ -75,6 +76,13 @@ def run(clean=False):
     expMap.run()
     diffResps.run()
     like.run()
+
+    pylike = unbinnedAnalysis(mode='h', rspfunc=irfs)
+    pylike.fit(verbosity=0)
+    print pylike.model
+    print "Ts values:"
+    for src in pylike.sourceNames():
+        print src, pylike.Ts(src)
     
 #    TsMap['Source_model_file'] = 'Ts_srcModel.xml'
 #    TsMap.run()

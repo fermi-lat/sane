@@ -16,6 +16,7 @@ use pulsePhase * -no_auto_imports
 use periodSearch * -no_auto_imports
 use python * IExternal -no_auto_imports
 use st_app *
+use pyLikelihood * -no_auto_imports
 
 application test_sane test/main.cxx
 
