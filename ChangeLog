@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Oct 12 10:12:22 PDT 2006
+sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+protect against lack of numarray on Windows; tagging v3r9p4
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r9p3, operation: add
 Package: sane
