@@ -5,6 +5,7 @@
 $Id$
 @verbatim
 
+12-Oct-06  v3r9p4 JC   protect against lack of numarray on Windows
 11-Oct-06  v3r9p3 JC   add pyLikelihood to python/Likelihood_tests.py
 26-Sep-06  v3r9p2 JC   test script mods for gtcntsmap, gtmodelmap
 21-Jul-06  v3r9p1 JC   change getApp reference in default_tests.py to GtApp
