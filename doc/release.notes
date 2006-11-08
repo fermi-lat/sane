@@ -5,6 +5,8 @@
 $Id$
 @verbatim
 
+08-Nov-06  v3r9p5 JC   set normalization of GalProp diffuse to be free by 
+                       default
 12-Oct-06  v3r9p4 JC   protect against lack of numarray on Windows
 11-Oct-06  v3r9p3 JC   add pyLikelihood to python/Likelihood_tests.py
 26-Sep-06  v3r9p2 JC   test script mods for gtcntsmap, gtmodelmap
