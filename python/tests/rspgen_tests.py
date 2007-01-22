@@ -18,7 +18,7 @@ def run():
     rspgen['outfile'] = 'Crab.rsp'
     rspgen['time'] = 1000.0
     rspgen['thetacut'] = 70.0
-    rspgen['thetabinsize'] = 1.0
+    rspgen['thetabinsize'] = 0.025
     rspgen['energybinalg'] = 'LOG'
     rspgen['emin'] = 30.0
     rspgen['emax'] = 200000.0
