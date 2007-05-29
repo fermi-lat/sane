@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue May 29 10:19:01 PDT 2007
+sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+switch to gtbin; accomodate changes in Likelihood par files; tagging v3r10
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r9p6, operation: add
 Package: sane
