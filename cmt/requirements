@@ -1,6 +1,6 @@
 package sane
 
-version v3r9p6
+version v3r10
 
 author T. Burnett <tburnett@u.washington.edu>
 # $Id$
@@ -33,5 +33,3 @@ private
 
 
 macro sane_extra "" WIN32 " -s=..\python *.py "
-
-

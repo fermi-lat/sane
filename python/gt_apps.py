@@ -13,7 +13,8 @@ diffResps = GtApp('gtdiffresp', 'Likelihood')
 like = GtApp('gtlikelihood', 'Likelihood')
 TsMap = GtApp('gttsmap', 'Likelihood')
 
-counts_map = GtApp('gtcntsmap', 'Likelihood')
+#counts_map = GtApp('gtcntsmap', 'Likelihood')
+counts_map = GtApp('gtbin', 'evtbin')
 srcMaps = GtApp('gtsrcmaps', 'Likelihood')
 model_map = GtApp('gtmodelmap', 'Likelihood')
 

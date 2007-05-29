@@ -41,9 +41,9 @@ if __name__ == "__main__":
         for exe in GtApp._failed_exes:
             print exe
         sys.exit(1)
-# clean up
-    removeFile('*.fits')
-    removeFile('Crab*')
-    removeFile('*.par')    
-    removeFile('*.dat')
-    removeFile('*.txt')
+## clean up
+#    removeFile('*.fits')
+#    removeFile('Crab*')
+#    removeFile('*.par')    
+#    removeFile('*.dat')
+#    removeFile('*.txt')
