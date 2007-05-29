@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Tue May 29 10:19:01 PDT 2007
+sane/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+switch to gtbin; accomodate changes in Likelihood par files; tagging v3r10
+    *
+------------------------------------------------------------
+User: jchiang  Tue May 29 10:19:01 PDT 2007
 sane/cmt
 
 Modified Files:
