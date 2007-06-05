@@ -6,17 +6,16 @@ from GtApp import GtApp
 #
 # Likelihood applications
 #
-expCube = GtApp('gtlivetimecube', 'Likelihood')
-addCubes = GtApp('gtaddlivetime', 'Likelihood')
+expCube = GtApp('gtltcube', 'Likelihood')
+addCubes = GtApp('gtltsum', 'Likelihood')
 expMap = GtApp('gtexpmap', 'Likelihood')
-diffResps = GtApp('gtdiffresp', 'Likelihood')
-like = GtApp('gtlikelihood', 'Likelihood')
+diffResps = GtApp('gtdiffrsp', 'Likelihood')
+like = GtApp('gtlike', 'Likelihood')
 TsMap = GtApp('gttsmap', 'Likelihood')
 
-#counts_map = GtApp('gtcntsmap', 'Likelihood')
 counts_map = GtApp('gtbin', 'evtbin')
 srcMaps = GtApp('gtsrcmaps', 'Likelihood')
-model_map = GtApp('gtmodelmap', 'Likelihood')
+model_map = GtApp('gtmodel', 'Likelihood')
 
 #
 # observationSim
@@ -28,18 +27,13 @@ orbSim = GtApp('gtorbsim', 'observationSim')
 # dataSubselector
 #
 filter = GtApp('gtselect', 'dataSubselector')
-maketime = GtApp('gtmaketime', 'dataSubselector')
+maketime = GtApp('gtmktime', 'dataSubselector')
 
 #
 # Pulsar-related
 #
 pulsePhase = GtApp('gtpphase', 'pulsePhase')
 psearch = GtApp('gtpsearch', 'periodSearch')
-
-#
-# map_tools
-#
-#count_map = GtApp('count_map', 'map_tools')
 
 #
 # others

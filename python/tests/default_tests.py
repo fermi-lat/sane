@@ -17,7 +17,6 @@ from setPaths import *
 import GtApp
 
 import obsSim_tests as obsSim
-#import map_tools_tests as map_tools
 import dataSubselector_tests as dataSubselector
 import Likelihood_tests as like
 import BinnedLikelihood_test as binned_test
@@ -35,7 +34,6 @@ if __name__ == "__main__":
     evtbin.run(useWorkAround)
     rspgen.run()
     pulsars.run(useWorkAround)
-#    map_tools.run(useWorkAround)
     if GtApp._failed_exes:
         print "The following executables failed: "
         for exe in GtApp._failed_exes:

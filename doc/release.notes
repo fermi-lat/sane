@@ -5,6 +5,8 @@
 $Id$
 @verbatim
 
+05-Jun-07  v3r11p1 JC  check in application name changes and tag
+05-Jun-07  v3r11  JC   change application names, but forgot to check in
 29-May-07  v3r10  JC   accomodate Likelihood par file changes, switch to
                        gtbin in BinnnedLikelihood_tests.py
 21-Jan-07  v3r9p6 JC   changed interpretation of gtrspgen thetabinsize
