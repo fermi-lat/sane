@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Tue Jun  5 08:19:32 PDT 2007
+sane/python/tests
+
+Modified Files:
+	default_tests.py 
+Log Message:
+account for app name changes; tagging v3r11p1
+    *
+------------------------------------------------------------
+User: jchiang  Tue Jun  5 08:19:32 PDT 2007
 sane/python
 
 Modified Files:
