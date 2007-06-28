@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Jun 28 09:34:49 PDT 2007
+sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+print out exception messages in Likelihood_tests.py for pyLikelihood analysis; tagging v3r11p2
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r11p1, operation: add
 Package: sane
