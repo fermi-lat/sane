@@ -5,6 +5,8 @@
 $Id$
 @verbatim
 
+28-Jun-07  v3r11p2 JC  print out exception messages for Import and NameErrors
+                       in pyLikelihood analysis in Likelihood_tests.py
 05-Jun-07  v3r11p1 JC  check in application name changes and tag
 05-Jun-07  v3r11  JC   change application names, but forgot to check in
 29-May-07  v3r10  JC   accomodate Likelihood par file changes, switch to
