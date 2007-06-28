@@ -12,8 +12,9 @@ from gt_apps import expCube, expMap, diffResps, like, TsMap, filter, addCubes
 try:
     from UnbinnedAnalysis import *
     pass
-except ImportError:
-    pass
+except ImportError, message:
+    print "ImportError occurred for UnbinnedAnalysis:"
+    print message
 
 #start_time = 210211200.
 start_time = 0
@@ -88,8 +89,9 @@ def run(clean=False):
         print "Ts values:"
         for src in pylike.sourceNames():
             print src, pylike.Ts(src)
-    except NameError:
-        pass
+    except NameError, message:
+        print "NameError occurred for pyLike analysis:"
+        print message
     
 #    TsMap['Source_model_file'] = 'Ts_srcModel.xml'
 #    TsMap.run()
