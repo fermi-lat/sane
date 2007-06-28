@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Thu Jun 28 09:34:49 PDT 2007
+sane/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+print out exception messages in Likelihood_tests.py for pyLikelihood analysis; tagging v3r11p2
+    *
+------------------------------------------------------------
+User: jchiang  Thu Jun 28 09:34:49 PDT 2007
 sane/cmt
 
 Modified Files:
