@@ -51,30 +51,30 @@ def makeCountsMap():
     
 def makeSourceMaps():
     srcMaps["scfile"] = 'orbSim_scData_0000.fits'
-    srcMaps['counts_map_file'] = counts_map['outfile']
-    srcMaps['source_model_file'] = 'srcModel.xml'
+    srcMaps['cmap'] = counts_map['outfile']
+    srcMaps['srcmdl'] = 'srcModel.xml'
     srcMaps['outfile'] = 'sourceMaps.fits'
-    srcMaps['exposure_cube_file'] = 'expcube_1_day.fits'
-    srcMaps['binned_exposure_map'] = 'binned_exposure.fits'
-    srcMaps["rspfunc"] = irfs
+    srcMaps['expcube'] = 'expcube_1_day.fits'
+    srcMaps['bexpmap'] = 'binned_exposure.fits'
+    srcMaps["irfs"] = irfs
     srcMaps.run()
 
 def runLikelihood():
     likelihood['scfile'] = 'orbSim_scData_0000.fits'
     likelihood['statistic'] = 'BINNED'
-    likelihood['source_model_file'] = 'srcModel.xml'
-    likelihood["rspfunc"] = irfs
-    likelihood['counts_map_file'] = 'sourceMaps.fits'
-    likelihood['exposure_cube_file'] = 'expcube_1_day.fits'
-    likelihood['binned_exposure_map'] = 'binned_exposure.fits'
+    likelihood['srcmdl'] = 'srcModel.xml'
+    likelihood["irfs"] = irfs
+    likelihood['cmap'] = 'sourceMaps.fits'
+    likelihood['expcube'] = 'expcube_1_day.fits'
+    likelihood['bexpmap'] = 'binned_exposure.fits'
     likelihood['optimizer'] = 'MINUIT'
     likelihood.run()
 
 def makeModelMap():
-    model_map['srcmaps'] = likelihood['counts_map_file']
-    model_map['source_model_file'] = likelihood['source_model_file']
+    model_map['srcmaps'] = likelihood['cmap']
+    model_map['srcmdl'] = likelihood['srcmdl']
     model_map['outfile'] = 'model_map.fits'
-    model_map['rspfunc'] = irfs
+    model_map['irfs'] = irfs
     model_map.run()
 
 def run():

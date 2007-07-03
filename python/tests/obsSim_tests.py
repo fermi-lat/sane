@@ -32,28 +32,28 @@ def xmlFilesDat(filename='xmlFiles.txt',
     xmlFiles.close()
 
 def run(clean=False):
-    orbSim['outfile_prefix'] = 'orbSim'
-    orbSim['pointing_strategy'] = 'ONEPERORBIT'
-    orbSim['rocking_angle'] = 35.0
-    orbSim['simulation_time'] = 86400.0
+    orbSim['scroot'] = 'orbSim'
+    orbSim['obsmode'] = 'ONEPERORBIT'
+    orbSim['rangle'] = 35.0
+    orbSim['simtime'] = 86400.0
     orbSim.run()
     sourceNamesDat()
     xmlFilesDat()
-    obsSim['xml_source_file'] = 'xmlFiles.txt'
-    obsSim['source_list'] = 'source_names.txt'
+    obsSim['infile'] = 'xmlFiles.txt'
+    obsSim['srclist'] = 'source_names.txt'
     obsSim['scfile'] = 'orbSim_scData_0000.fits'
-    obsSim['outfile_prefix'] = 'test'
-    obsSim['simulation_time'] = 86400.0
-    obsSim['use_acceptance_cone'] = 'yes'
+    obsSim['evroot'] = 'test'
+    obsSim['simtime'] = 86400.0
+    obsSim['use_ac'] = 'yes'
     obsSim['ra'] = 86.4
     obsSim['dec'] = 28.9
     obsSim['radius'] = 20
     obsSim['emin'] = 32
     obsSim['emax'] = 2e5
-    obsSim['rspfunc'] = irfs
+    obsSim['irfs'] = irfs
     if irfs == 'DSS':
-        obsSim['rspfunc'] = 'DC2'
-    obsSim['random_seed'] = random_int()
+        obsSim['irfs'] = 'DC2'
+    obsSim['seed'] = random_int()
     obsSim.run()
     if clean:
         cleanUp()
@@ -65,11 +65,11 @@ def cleanUp():
 
 def compareFit(clean=False):
     sourceNamesDat(srcList=['all_in_flux_model.xml'])
-    obsSim['xml_source_file'] = 'flux_model.xml'
-    obsSim['outfile_prefix'] = 'fit_comparison'
-    obsSim['rspfunc'] = irfs
+    obsSim['infile'] = 'flux_model.xml'
+    obsSim['evroot'] = 'fit_comparison'
+    obsSim['irfs'] = irfs
     if irfs == 'DSS':
-        obsSim['rspfunc'] = 'DC2'
+        obsSim['irfs'] = 'DC2'
     obsSim.run()
     if clean:
         cleanUp()
