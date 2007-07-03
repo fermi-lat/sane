@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Jul  3 16:14:12 PDT 2007
+sane/python/tests
+
+Modified Files:
+	BinnedLikelihood_test.py Likelihood_tests.py obsSim_tests.py 
+Log Message:
+parameter name changes
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r11p2, operation: add
 Package: sane
