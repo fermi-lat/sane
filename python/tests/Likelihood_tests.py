@@ -56,7 +56,7 @@ def run(clean=False):
    
     expMap.copy(expCube)
     expMap['evfile'] = 'filtered_events_0000.fits'
-    expMap['rspfunc'] = irfs
+    expMap['irfs'] = irfs
     expMap['srcrad'] = 30
     expMap['nlong'] = 120
     expMap['nlat'] = 120
@@ -83,7 +83,7 @@ def run(clean=False):
     like.run()
 
     try:
-        pylike = unbinnedAnalysis(mode='h', rspfunc=irfs)
+        pylike = unbinnedAnalysis(mode='h', irfs=irfs)
         pylike.fit(verbosity=0)
         print pylike.model
         print "Ts values:"

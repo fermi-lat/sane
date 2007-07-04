@@ -48,10 +48,10 @@ def preparePulsarSource():
 def run(useWorkAround=False):
     preparePulsarSource()
 
-    obsSim['xml_source_file'] = 'xmlFiles.txt'
-    obsSim['outfile_prefix'] = 'Geminga'
+    obsSim['infile'] = 'xmlFiles.txt'
+    obsSim['evroot'] = 'Geminga'
     obsSim['scfile'] = 'none'
-    obsSim['random_seed'] = random_int()
+    obsSim['seed'] = random_int()
     obsSim.run()
 
     pulsePhase['evfile'] = 'Geminga_events_0000.fits'
