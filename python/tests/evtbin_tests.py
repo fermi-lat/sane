@@ -15,15 +15,15 @@ from gt_apps import obsSim, filter, evtbin
 def Crab_only():
     sourceNamesDat(srcList=('_3EG_J0534p2200-32mev',))
     xmlFilesDat()
-    obsSim['xml_source_file'] = 'xmlFiles.txt'
-    obsSim['source_list'] = 'source_names.txt'
-    obsSim['outfile_prefix'] = 'Crab'
+    obsSim['infile'] = 'xmlFiles.txt'
+    obsSim['srclist'] = 'source_names.txt'
+    obsSim['evroot'] = 'Crab'
     obsSim['scfile'] = 'none'
-    obsSim['rspfunc'] = irfs
+    obsSim['irfs'] = irfs
     if irfs == 'DSS':
-        obsSim['rspfunc'] = 'DC2'
-    obsSim['use_acceptance_cone'] = 'no'
-    obsSim['random_seed'] = random_int()
+        obsSim['irfs'] = 'DC2'
+    obsSim['use_ac'] = 'no'
+    obsSim['seed'] = random_int()
     obsSim.run()
 
 def Crab_filter():
