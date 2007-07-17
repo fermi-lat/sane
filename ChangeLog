@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Jul 16 21:23:23 PDT 2007
+sane/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+account for pyLikelihood changes; tagging v3r12p1
+    *
+------------------------------------------------------------
 User: jchiang  Mon Jul 16 21:23:22 PDT 2007
 sane/cmt
 
