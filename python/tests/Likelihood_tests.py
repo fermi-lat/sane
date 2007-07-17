@@ -83,7 +83,7 @@ def run(clean=False):
     like.run()
 
     try:
-        pylike = unbinnedAnalysis(mode='h', irfs=irfs)
+        pylike = unbinnedAnalysis(mode='h')
         pylike.fit(verbosity=0)
         print pylike.model
         print "Ts values:"

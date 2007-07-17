@@ -5,6 +5,7 @@
 $Id$
 @verbatim
 
+16-Jul-07  v3r12p1 JC  account for  pyLikelihood interface change
 03-Jul-07  v3r12   JC  account for parameter name changes
 28-Jun-07  v3r11p2 JC  print out exception messages for Import and NameErrors
                        in pyLikelihood analysis in Likelihood_tests.py
