@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Mon Jul 16 21:23:23 PDT 2007
+sane/python/tests
+
+Modified Files:
+	Likelihood_tests.py 
+Log Message:
+account for pyLikelihood changes; tagging v3r12p1
+    *
+------------------------------------------------------------
+User: jchiang  Mon Jul 16 21:23:23 PDT 2007
 sane/doc
 
 Modified Files:
