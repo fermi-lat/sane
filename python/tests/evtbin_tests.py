@@ -40,23 +40,23 @@ def Crab_cmap(useWorkAround=False):
     evtbin['evfile'] = 'Crab_events_filtered.fits'
     evtbin['outfile'] = 'Crab.fits'
     evtbin['scfile'] = 'Crab_scData_0000.fits'
-    evtbin['timebinalg'] = 'LIN'
+    evtbin['tbinalg'] = 'LIN'
     evtbin['tstart'] = 0.0
     evtbin['tstop'] = 86400.0
-    evtbin['deltatime'] = 1000.0
-    evtbin['timebinfile'] = 'numxpix=100'
-    evtbin['numxpix'] = 100
-    evtbin['numypix'] = 100
-    evtbin['pixscale'] = 0.5
+    evtbin['dtime'] = 1000.0
+    evtbin['tbinfile'] = 'numxpix=100'
+    evtbin['nxpix'] = 100
+    evtbin['nypix'] = 100
+    evtbin['binsz'] = 0.5
     evtbin['coordsys'] = 'CEL'
     evtbin['xref'] = 83.0
     evtbin['yref'] = 22.0
     evtbin['axisrot'] = 0.0
-    evtbin['energybinalg'] = 'LOG'
+    evtbin['ebinalg'] = 'LOG'
     evtbin['emin'] = 30.0
     evtbin['emax'] = 200000.0
     evtbin['enumbins'] = 20
-    evtbin['deltaenergy'] = 0.0
+    evtbin['denergy'] = 0.0
     evtbin['proj'] = 'CAR'
     evtbin['snratio'] = 1
     evtbin['lcemin'] = 0
@@ -76,7 +76,7 @@ def Crab_lc():
     evtbin['outfile'] = 'Crab.lc'
     evtbin['tstart'] = 0
     evtbin['tstop'] = 8.64e4
-    evtbin['deltatime'] = 1e3
+    evtbin['dtime'] = 1e3
     evtbin.write()
     evtbin.run()
 
