@@ -41,7 +41,7 @@ def run(clean=False):
     filter['tmax'] = 86400 + start_time
     filter['outfile'] = 'filtered2.fits'
     filter.run()
-    
+   
     expCube['evfile'] = 'filtered2.fits'
     expCube['scfile'] = 'orbSim_scData_0000.fits'
     expCube['outfile'] = 'expcube2.fits'
