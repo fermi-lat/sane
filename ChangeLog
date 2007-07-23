@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Mon Jul 23 12:27:47 PDT 2007
+sane/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+gtrspgen, gtbin par name changes; tagging v3r13
+    *
+------------------------------------------------------------
+User: jchiang  Mon Jul 23 12:27:47 PDT 2007
 sane/cmt
 
 Modified Files:
