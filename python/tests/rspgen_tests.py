@@ -18,13 +18,13 @@ def run():
     rspgen['outfile'] = 'Crab.rsp'
     rspgen['time'] = 1000.0
     rspgen['thetacut'] = 70.0
-    rspgen['thetabinsize'] = 0.025
-    rspgen['energybinalg'] = 'LOG'
+    rspgen['dcostheta'] = 0.025
+    rspgen['ebinalg'] = 'LOG'
     rspgen['emin'] = 30.0
     rspgen['emax'] = 200000.0
     rspgen['enumbins'] = 20
-    rspgen['deltaenergy'] = 0.0
-    rspgen['resptype'] = 'DC1F'
+    rspgen['denergy'] = 0.0
+    rspgen['irfs'] = 'DC1F'
     rspgen.run()
 
 if __name__ == "__main__":
