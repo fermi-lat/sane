@@ -71,6 +71,7 @@ def run(useWorkAround=False):
     pulsePhase.run()
 
     psearch['evfile'] = pulsePhase['evfile']
+    psearch['outfile'] = 'NONE'
     psearch['ephstyle'] = 'FREQ'
     psearch['f0'] = freq
     psearch['f1'] = fdot
