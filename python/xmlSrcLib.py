@@ -21,8 +21,8 @@ powerLaw = """<spectrum type="PowerLaw">
 powerLaw2 = """<spectrum type="PowerLaw2">
  <parameter free="1" max="1000.0" min="1e-05" name="Integral" scale="1e-06" value="1.0"/>
  <parameter free="1" max="0" min="-5.0" name="Index" scale="1.0" value="-2.0"/>
- <parameter free="0" max="200000.0" min="20.0" name="LowerLimit" scale="1.0" value="20.0"/>
- <parameter free="0" max="200000.0" min="20.0" name="UpperLimit" scale="1.0" value="2e5"/>
+ <parameter free="0" max="300000.0" min="20.0" name="LowerLimit" scale="1.0" value="20.0"/>
+ <parameter free="0" max="300000.0" min="20.0" name="UpperLimit" scale="1.0" value="2e5"/>
 </spectrum>
 """
 
@@ -42,8 +42,8 @@ bpl2 = """<spectrum type="BrokenPowerLaw2">
   <parameter free="1" max="0" min="-5.0" name="Index1" scale="1.0" value="-1.8"/>
   <parameter free="1" max="0" min="-5.0" name="Index2" scale="1.0" value="-2.3"/>
   <parameter free="1" max="10000.0" min="30.0" name="BreakValue" scale="1.0" value="1000.0"/>
-  <parameter free="0" max="200000.0" min="20.0" name="LowerLimit" scale="1.0" value="20.0"/>
-  <parameter free="0" max="200000.0" min="20.0" name="UpperLimit" scale="1.0" value="2e5"/>
+  <parameter free="0" max="300000.0" min="20.0" name="LowerLimit" scale="1.0" value="20.0"/>
+  <parameter free="0" max="300000.0" min="20.0" name="UpperLimit" scale="1.0" value="2e5"/>
 </spectrum>
 """
 
