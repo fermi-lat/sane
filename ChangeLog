@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Fri Aug 24 23:09:32 PDT 2007
+sane/python/tests
+
+Modified Files:
+	Pulsar_tests.py 
+Log Message:
+gtpsearch par changes; extend limts for [Broken]PowerLaw2; tagging v3r13p1
+    *
+------------------------------------------------------------
+User: jchiang  Fri Aug 24 23:09:32 PDT 2007
 sane/python
 
 Modified Files:
