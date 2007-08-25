@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Aug 24 23:09:31 PDT 2007
+sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+gtpsearch par changes; extend limts for [Broken]PowerLaw2; tagging v3r13p1
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r13, operation: add
 Package: sane
