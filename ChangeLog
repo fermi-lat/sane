@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: golpa  Mon Oct  1 10:45:22 PDT 2007
+sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+use commonUtilities
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r13p1, operation: add
 Package: sane
