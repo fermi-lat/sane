@@ -11,14 +11,15 @@
 #include <iostream>
 #include <string>
 
+#include "facilities/commonUtilities.h"
+
 int main(int iargc, char *argv[]) {
    std::string command;
-   char * root_path = std::getenv("SANEROOT");
-   if (!root_path) {
-      std::cerr << "SANEROOT not set" << std::endl;
+   std::stringrootPath = facilities::commonUtilities::getPackagePath("sane");
+   if (root_path == "") {
+      std::cerr << "Unable to determine sane root directory" << std::endl;
       std::exit(-1);
    }
-   std::string rootPath(root_path);
    std::string pythonDir = rootPath + "/python/tests";
    if (iargc == 1) {
       command = std::string("python ") + pythonDir 
