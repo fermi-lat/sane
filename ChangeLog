@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: golpa  Mon Oct  1 10:45:22 PDT 2007
+sane/src
+
+Modified Files:
+	sane_main.cxx 
+Log Message:
+use commonUtilities
+    *
+------------------------------------------------------------
+User: golpa  Mon Oct  1 10:45:22 PDT 2007
 sane/cmt
 
 Modified Files:
