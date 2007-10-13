@@ -15,8 +15,8 @@
 
 int main(int iargc, char *argv[]) {
    std::string command;
-   std::stringrootPath = facilities::commonUtilities::getPackagePath("sane");
-   if (root_path == "") {
+   std::string rootPath = facilities::commonUtilities::getPackagePath("sane");
+   if (rootPath == "") {
       std::cerr << "Unable to determine sane root directory" << std::endl;
       std::exit(-1);
    }
