@@ -51,6 +51,8 @@ class Pil(object):
         file.close()
     def keys(self):
         return self.names
+    def has_key(self, name):
+        return self.params.has_key(name)
     def __getitem__(self, name):
         value = (self.params[name][2]).strip('"').strip("'")
         if self.params[name][0] == 'r':
