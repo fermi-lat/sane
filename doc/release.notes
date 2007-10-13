@@ -5,6 +5,8 @@
 $Id$
 @verbatim
 
+12-Oct-07  v3r14   JC  using facilities::commonUtilities; use **kwds in 
+                       GtApp.run() following THB suggestion.
 24-Aug-07  v3r13p1 JC  gtpsearch parameter changes
 23-Jul-07  v3r13   JC  new rspgen, gtbin parameter name changes        
 16-Jul-07  v3r12p1 JC  account for  pyLikelihood interface change
