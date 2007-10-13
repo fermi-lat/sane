@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Oct 12 21:14:30 PDT 2007
+sane/python
+
+Modified Files:
+	GtApp.py pil.py 
+Log Message:
+use **kwds in GtApp.run()
+    *
+------------------------------------------------------------
 User: golpa  Mon Oct  1 10:45:22 PDT 2007
 sane/src/test
 
