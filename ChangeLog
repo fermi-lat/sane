@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Oct 17 12:11:56 PDT 2007
+sane/python
+
+Modified Files:
+	GtApp.py 
+Log Message:
+simplify things using default python behavior
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r14, operation: add
 Package: sane
