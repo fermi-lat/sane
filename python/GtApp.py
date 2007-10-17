@@ -40,14 +40,7 @@ class GtApp(object):
         return self.pars[key]
     def __getattr__(self, attrname):
         return getattr(self.pars, attrname)
-#    def run(self, print_command=True, catchError="at the top level:"):
-    def run(self, **kwds):
-        print_command = True
-        if kwds.has_key('print_command'):
-            print_command = kwds['print_command']
-        catchError = "at the top level:"
-        if kwds.has_key('catchError'):
-            catchError = kwds['catchError']
+    def run(self, print_command=True, catchError="at the top level:", **kwds):
         for item in kwds.keys():
             if self.pars.has_key(item):
                 self.pars[item] = kwds[item]
