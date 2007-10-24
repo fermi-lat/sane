@@ -63,14 +63,14 @@ class GtApp(object):
         else:
             if print_command:
                 print self.command()
-            retcode = os.system(self.command())
+            retcode = os.system(self.command(do_timing=print_command))
             if retcode != 0:
                 _failed_exes.append(self.app)
                 raise RuntimeError, self.appName + " execution failed"
     def runWithOutput(self, print_command=True):
         if print_command:
             print self.command()
-        return os.popen4(self.command())
+        return os.popen4(self.command(print_command))
     def command(self, do_timing=True):
         chatter = 2
         try:
