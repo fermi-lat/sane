@@ -64,11 +64,11 @@ def run(useWorkAround=False):
     pulsePhase['solareph'] = '"JPL DE405"'
     pulsePhase['ephstyle'] = "FREQ"
     pulsePhase['ephepoch'] = 0
+    pulsePhase['tcorrect'] = 'none'
     pulsePhase['phi0'] = 0
     pulsePhase['f0'] = freq
     pulsePhase['f1'] = fdot
     pulsePhase['f2'] = 0
-#    pulsePhase['demodbin'] = 'no'
     pulsePhase['timesys'] = 'TT'
     if useWorkAround:
         pulsePhase['p0'] = period
@@ -87,31 +87,14 @@ def run(useWorkAround=False):
     psearch['p0'] = period
     psearch['p1'] = pdot
     psearch['solareph'] = '"JPL DE405"'
-#    psearch['demodbin'] = 'no'
     psearch['timesys'] = 'TT'
-    psearch['scanstep'] = 0.1
+    psearch['scanstep'] = 0.5
     psearch['numtrials'] = 200
-#    psearch['cancelpdot'] = 'yes'
     psearch['plot'] = 'no'
     psearch['chatter'] = 0
     if useWorkAround:
         psearch.pars.write()
-    if os.name == 'nt':
-        try:
-            import win32pipe
-            input, output = psearch.runWithOutput()
-        except ImportError:
-            psearch.run()
-            output = []
-    else:
-        input, output = psearch.runWithOutput()
-#    for line in output:
-#        if line.find('Maximum at') != -1:
-#            print line.strip()
-#        if line.find('Statistic:') != -1:
-#            print line.strip()
-#        if line.find('Chance probability') != -1:
-#            print line.strip()
+    psearch.run()
 
 if __name__ == '__main__':
     run(True)
