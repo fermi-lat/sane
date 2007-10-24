@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Wed Oct 24 09:47:06 PDT 2007
+sane/python/tests
+
+Modified Files:
+	Pulsar_tests.py 
+Log Message:
+changes for pulsar tool interfaces
+    *
+------------------------------------------------------------
+User: jchiang  Wed Oct 24 09:47:06 PDT 2007
 sane/python
 
 Modified Files:
