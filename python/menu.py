@@ -4,6 +4,8 @@
 import sys, time, os, copy
 from Tkinter import *
 from tkMessageBox import *
+from facilities import py_facilities
+os_environ = py_facilities.commonUtilities_getEnvironment
 
 class RunProgram:
     def __init__(self, name, command):
@@ -29,7 +31,8 @@ def runLauncher(tools, title):
     root.mainloop()
 
 def get_tools(env):
-    applist = os.environ[env].strip(os.pathsep).split(os.pathsep);
+#    applist = os.environ[env].strip(os.pathsep).split(os.pathsep);
+    applist = os_environ(env).strip(os.pathsep).split(os.pathsep);
     tools = []
     for app_entry in applist:
         tools.append(app_entry.split( '='))
@@ -56,7 +59,8 @@ class PackageMenu(Menu):
             self.add_command(label=appName, command=RunProgram(appName, exe))
 
 def getTools(env):
-    applist = os.environ[env].strip(os.pathsep).split(os.pathsep);
+#    applist = os.environ[env].strip(os.pathsep).split(os.pathsep);
+    applist = os_environ(env).strip(os.pathsep).split(os.pathsep);
     tools = {}
     for app_entry in applist:
         package, app, exe = parse_entry(app_entry)
@@ -66,7 +70,8 @@ def getTools(env):
     return tools
 
 def parse_entry(entry):
-    bindir = os.path.sep + os.environ["BINDIR"]
+#    bindir = os.path.sep + os.environ["BINDIR"]
+    bindir = os.path.sep + os_environ("BINDIR")
     app, exe = entry.split("=")
     exe += ' mode=ql'
     package = exe.split(bindir)[0].split(os.path.sep)[-2]
