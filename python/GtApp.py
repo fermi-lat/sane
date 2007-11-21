@@ -9,17 +9,21 @@ Provide a unified interface to FTOOL and par file.
 #
 import sys, os
 from pil import Pil
+from facilities import py_facilities
+os_environ = py_facilities.commonUtilities_getEnvironment
 
 _failed_exes = []
 
-bindir = os.environ['BINDIR']
+#bindir = os.environ['BINDIR']
+bindir = os_environ('BINDIR')
 
 def getApp(appName, package=None, raiseKeyErrors=True,
            preserveQuotes=False):
     if not package:
         package = appName
     try:
-        app = os.path.join(os.environ[package.upper() + 'ROOT'], bindir,
+#        app = os.path.join(os.environ[package.upper() + 'ROOT'], bindir,
+        app = os.path.join(os_environ(package.upper() + 'ROOT'), bindir,
                            appName + '.exe')
         if not os.path.exists(app): # assume it lives in the users PATH
             app = appName

@@ -10,6 +10,8 @@ desired .par file.
 #
 
 import os, sys, re
+from facilities import py_facilities
+os_environ = py_facilities.commonUtilities_getEnvironment
 
 ParFileError = 'ParFileError'
 def pfilesPath(parfile=None):
@@ -18,7 +20,8 @@ def pfilesPath(parfile=None):
             pattern = re.compile(";*:*")
         else:
             pattern = re.compile("#*;*")
-        paths = re.split(pattern, os.environ['PFILES'])
+#        paths = re.split(pattern, os.environ['PFILES'])
+        paths = re.split(pattern, os_environ('PFILES'))
         paths = [path for path in paths if path != '']
     except KeyError:
         print "Your PFILES environment variable is not set."
