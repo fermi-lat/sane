@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: golpa  Mon Dec 10 13:38:07 PST 2007
+sane
+
+Added Files:
+	SConscript 
+Log Message:
+Initial import of SCons files
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r14p3, operation: add
 Package: sane
