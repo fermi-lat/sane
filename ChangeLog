@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: jchiang  Mon Jan  7 13:19:50 PST 2008
+sane/python/tests
+
+Modified Files:
+	BinnedLikelihood_test.py dataSubselector_tests.py 
+	obsSim_tests.py setPaths.py 
+Log Message:
+disable use of gtorbsim; fix random number seed
+    *
+------------------------------------------------------------
+User: jchiang  Mon Jan  7 13:19:50 PST 2008
 sane/python
 
 Modified Files:
