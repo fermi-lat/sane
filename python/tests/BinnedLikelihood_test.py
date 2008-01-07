@@ -30,15 +30,15 @@ def makeCountsMap():
     counts_map['evfile'] = 'filtered_events_0000.fits'
     counts_map['outfile'] = 'countsMap.fits'
     counts_map['scfile'] = 'orbSim_scData_0000.fits'
-    counts_map['emin'] = 32
+    counts_map['emin'] = 100
     counts_map['emax'] = 2e5
     counts_map['enumbins'] = 20
     counts_map['nxpix'] = 160
     counts_map['nypix'] = 160
     counts_map['binsz'] = 0.25
     counts_map['coordsys'] = 'CEL'
-    counts_map['xref'] = 86.4
-    counts_map['yref'] = 28.9
+    counts_map['xref'] = 90
+    counts_map['yref'] = 20
     counts_map['axisrot'] = 0
     counts_map['proj'] = 'STG'
     counts_map.run()
