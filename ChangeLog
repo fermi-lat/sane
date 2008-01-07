@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Jan  7 13:19:50 PST 2008
+sane/python
+
+Modified Files:
+	gt_apps.py source_analysis.py 
+Log Message:
+disable use of gtorbsim; fix random number seed
+    *
+------------------------------------------------------------
 User: golpa  Mon Dec 10 13:38:07 PST 2007
 sane
 
