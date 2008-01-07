@@ -19,8 +19,8 @@ def run(clean=False):
     maketime.run()
     filter['infile'] = 'test_events.fits'
     filter['outfile'] = 'filtered_events_0000.fits'
-    filter['ra'] = 86.4
-    filter['dec'] = 28.9
+    filter['ra'] = 90
+    filter['dec'] = 20
     filter['rad'] = 20.0
     filter['lonMin'] = 0.0
     filter['lonMax'] = 360.0

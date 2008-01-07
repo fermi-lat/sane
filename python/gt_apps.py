@@ -21,7 +21,7 @@ model_map = GtApp('gtmodel', 'Likelihood')
 # observationSim
 #
 obsSim = GtApp('gtobssim', 'observationSim')
-orbSim = GtApp('gtorbsim', 'observationSim')
+#orbSim = GtApp('gtorbsim', 'observationSim')
 
 #
 # dataSubselector

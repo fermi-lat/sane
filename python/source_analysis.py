@@ -12,14 +12,15 @@ from xml.dom import minidom
 import celgal
 from makeSrcList import SourceList
 
-from gt_apps import diffResps, filter, expCube, expMap, like
+#from gt_apps import diffResps, filter, expCube, expMap, like
+diffResps = GtApp('gtdiffrsp')
+filter = GtApp('gtselect')
+expCube = GtApp('gtltcube')
+expMap = GtApp('gtexpmap')
+like = GtApp('gtlike')
 
 def haveFile(filename):
-    try:
-        open(filename)
-        return True
-    except IOError:
-        return False
+    return os.path.isfile(filename)
 
 def parseRoiLine(line):
     id, ra, dec, radius = line.split()

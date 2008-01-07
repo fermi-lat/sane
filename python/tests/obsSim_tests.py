@@ -7,10 +7,12 @@ Generate test data with obsSim.
 #
 # $Header$
 #
+import shutil
 import random
 
 from setPaths import *
-from gt_apps import obsSim, orbSim
+#from gt_apps import obsSim, orbSim
+from GtApp import GtApp
 
 def random_int(scale=1e5):
     return int(random.random()*scale)
@@ -36,8 +38,8 @@ def run(clean=False):
 #    orbSim['obsmode'] = 'ONEPERORBIT'
 #    orbSim['rangle'] = 35.0
 #    orbSim['simtime'] = 86400.0
-    orbSim.run(scroot='orbSim', obsmode='ONEPERORBIT', rangle=35.,
-               simtime=86400)
+#    orbSim.run(scroot='orbSim', obsmode='ONEPERORBIT', rangle=35.,
+#               simtime=86400)
     sourceNamesDat()
     xmlFilesDat()
 #    obsSim['infile'] = 'xmlFiles.txt'
@@ -54,10 +56,12 @@ def run(clean=False):
     obsSim['irfs'] = irfs
     if irfs == 'DSS':
         obsSim['irfs'] = 'DC2'
-    obsSim['seed'] = random_int()
+#    obsSim['seed'] = random_int()
+    obsSim['seed'] = 479153
     obsSim.run(infile='xmlFiles.txt', srclist='source_names.txt',
-               scfile='orbSim_scData_0000.fits', evroot='test', simtime=86400,
-               use_ac='yes', ra=86.4, dec=28.9, radius=20, emin=32, emax=2e5)
+               scfile='none', evroot='test', simtime=86400,
+               use_ac='yes', ra=90, dec=20, radius=20, emin=100, emax=2e5)
+    shutil.copy('test_scData_0000.fits', 'orbSim_scData_0000.fits')
     if clean:
         cleanUp()
 
