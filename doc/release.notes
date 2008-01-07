@@ -5,8 +5,9 @@
 $Id$
 @verbatim
 
-30-Nov-07  v4r14p3 JC  xml env var name changes by Navid
-21-Nov-07  v4r14p2 JC  use facilities.py_facilities.commonUtilities
+07-Jan-08  v3r14p4 JC  disable use of gtorbsim; fix random number seed
+30-Nov-07  v3r14p3 JC  xml env var name changes by Navid
+21-Nov-07  v3r14p2 JC  use facilities.py_facilities.commonUtilities
 24-Oct-07  v3r14p1 JC  changes in test code for pulsar tool interfaces
 12-Oct-07  v3r14   JC  using facilities::commonUtilities; use **kwds in 
                        GtApp.run() following THB suggestion.
