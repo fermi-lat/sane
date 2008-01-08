@@ -14,6 +14,8 @@ from setPaths import *
 #from gt_apps import obsSim, orbSim
 from GtApp import GtApp
 
+obsSim = GtApp('gtobssim', 'observationSim')
+
 def random_int(scale=1e5):
     return int(random.random()*scale)
 
