@@ -62,8 +62,14 @@ class Pil(object):
         else:
             if self.preserveQuotes:
                 return self.params[name][2]
+            if self.params[name][0] == 's':
+                return '"%s"' % value
             else:
                 return value
+#            if self.preserveQuotes:
+#                return self.params[name][2]
+#            else:
+#                return value
     def __setitem__(self, name, value):
         if name in self.names:
             self.params[name][2] = `value`
@@ -102,7 +108,10 @@ class Pil(object):
     def copy(self, rhs):
         for name in self.names:
             if name in rhs.names:
-                self[name] = rhs[name]
+                if rhs.params[name][0] == 's':
+                    self[name] = rhs[name].strip('"')
+                else:
+                    self[name] = rhs[name]
 
 if __name__ == '__main__':
     pars = Pil('likelihood.par')
