@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Jan 14 09:32:47 PST 2008
+sane/python
+
+Modified Files:
+	pil.py 
+Log Message:
+enclose string parameters in quotes for ape
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r14p5, operation: add
 Package: sane
