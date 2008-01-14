@@ -5,6 +5,7 @@
 $Id$
 @verbatim
 
+14-Jan-08  v3r14p6 JC  enclose string parameters in pil.py for ape
 07-Jan-08  v3r14p5 JC  create obsSim object in obsSim_tests.py
 07-Jan-08  v3r14p4 JC  disable use of gtorbsim; fix random number seed
 30-Nov-07  v3r14p3 JC  xml env var name changes by Navid
