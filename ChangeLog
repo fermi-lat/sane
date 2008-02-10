@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sun Feb 10 14:36:53 PST 2008
+sane/python
+
+Modified Files:
+	pil.py 
+Log Message:
+move quotes from __getitem__ to __call__ in pil
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r14p6, operation: add
 Package: sane
