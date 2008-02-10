@@ -13,8 +13,8 @@ from obsSim_tests import sourceNamesDat, xmlFilesDat, random_int
 from GtApp import GtApp
 from gt_apps import obsSim, pulsePhase, psearch
 
-pulsePhase = GtApp('gtpphase', 'pulsePhase', preserveQuotes=True)
-psearch = GtApp('gtpsearch', 'periodSearch', preserveQuotes=True)
+pulsePhase = GtApp('gtpphase', 'pulsePhase')
+psearch = GtApp('gtpsearch', 'periodSearch')
 
 #
 # Geminga parameters
@@ -61,7 +61,7 @@ def run(useWorkAround=False):
     pulsePhase['evfile'] = 'Geminga_events_0000.fits'
     pulsePhase['scfile'] = 'Geminga_scData_0000.fits'
     pulsePhase['psrdbfile'] = os.environ['PULSARDBROOT'] + '/data/groD4-dc2v4r1.fits'
-    pulsePhase['solareph'] = '"JPL DE405"'
+    pulsePhase['solareph'] = 'JPL DE405'
     pulsePhase['ephstyle'] = "FREQ"
     pulsePhase['ephepoch'] = 0
     pulsePhase['tcorrect'] = 'none'
@@ -86,7 +86,7 @@ def run(useWorkAround=False):
     psearch['f1'] = fdot
     psearch['p0'] = period
     psearch['p1'] = pdot
-    psearch['solareph'] = '"JPL DE405"'
+    psearch['solareph'] = 'JPL DE405'
     psearch['timesys'] = 'TT'
     psearch['scanstep'] = 0.5
     psearch['numtrials'] = 200
