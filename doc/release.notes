@@ -5,6 +5,8 @@
 $Id$
 @verbatim
 
+10-Feb-08  v3r14p7 JC  move enclosing quotes for string pars to Pil.__call__
+                       from Pil.__getitem__
 14-Jan-08  v3r14p6 JC  enclose string parameters in pil.py for ape
 07-Jan-08  v3r14p5 JC  create obsSim object in obsSim_tests.py
 07-Jan-08  v3r14p4 JC  disable use of gtorbsim; fix random number seed
