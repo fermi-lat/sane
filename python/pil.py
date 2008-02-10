@@ -62,14 +62,8 @@ class Pil(object):
         else:
             if self.preserveQuotes:
                 return self.params[name][2]
-            if self.params[name][0] == 's':
-                return '"%s"' % value
             else:
                 return value
-#            if self.preserveQuotes:
-#                return self.params[name][2]
-#            else:
-#                return value
     def __setitem__(self, name, value):
         if name in self.names:
             self.params[name][2] = `value`
@@ -79,7 +73,10 @@ class Pil(object):
         args = ''
         for name in self.keys():
             try:
-                args += ' ' + ''.join(('', name, '=%s' % self[name]))
+                if self.params[name][0] == 's':
+                    args += ' ' + ''.join(('', name, '="%s"' % self[name]))
+                else:
+                    args += ' ' + ''.join(('', name, '=%s' % self[name]))
             except ValueError:
                 pass
         return args
