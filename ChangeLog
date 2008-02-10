@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Sun Feb 10 14:36:53 PST 2008
+sane/python/tests
+
+Modified Files:
+	Pulsar_tests.py 
+Log Message:
+move quotes from __getitem__ to __call__ in pil
+    *
+------------------------------------------------------------
+User: jchiang  Sun Feb 10 14:36:53 PST 2008
 sane/python
 
 Modified Files:
