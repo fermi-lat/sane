@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Wed Feb 20 11:34:19 PST 2008
+sane/python/tests
+
+Modified Files:
+	BinnedLikelihood_test.py Likelihood_tests.py evtbin_tests.py 
+	obsSim_tests.py setPaths.py 
+Log Message:
+update test scripts to exercise scData bug-fix in gtsrcmaps
+    *
+------------------------------------------------------------
 TAG
 Tag name: sane-03-14-07, operation: add
 Package: sane
