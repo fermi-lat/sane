@@ -14,17 +14,6 @@ from gt_apps import obsSim, counts_map, expCube, srcMaps, like, model_map
 makeCube = expCube
 likelihood = like
 
-#def generateData():
-#    sourceNamesDat(srcList=('anticenter-32mev',))
-#    obsSim["xml_source_file"] = "anticenter_sources.xml"
-#    obsSim["outfile_prefix"] = "ptsrcs"
-#    obsSim['scfile'] = "none"
-#    obsSim["rspfunc"] = irfs
-#    obsSim["emin"] = 32
-#    obsSim["emax"] = 2e5
-#    obsSim["random_seed"] = random_int()
-#    obsSim.run()
-
 def makeCountsMap():
     counts_map['algorithm'] = 'CCUBE'
     counts_map['evfile'] = 'filtered_events_0000.fits'
@@ -43,12 +32,6 @@ def makeCountsMap():
     counts_map['proj'] = 'STG'
     counts_map.run()
 
-#def makeExposureCube():
-#    makeCube['evfile'] = 'filtered_events_0000.fits'
-#    makeCube['scfile'] = 'orbSim_scData_0000.fits'
-#    makeCube['outfile'] = 'expcube_1_day.fits'
-#    makeCube.run()
-    
 def makeSourceMaps():
     srcMaps["scfile"] = 'orbSim_scData_0000.fits'
     srcMaps['cmap'] = counts_map['outfile']
@@ -78,9 +61,7 @@ def makeModelMap():
     model_map.run()
 
 def run():
-#    generateData()
     makeCountsMap()
-#    makeExposureCube()
     makeSourceMaps()
     runLikelihood()
     makeModelMap()

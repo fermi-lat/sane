@@ -32,6 +32,8 @@ def Crab_filter():
     filter['ra'] = 83.57
     filter['dec'] = 22.01
     filter['rad'] = 20
+    filter['tmin'] = 0
+    filter['tmax'] = 0
     filter['eventClass'] = 0
     filter.run()
 
@@ -41,8 +43,8 @@ def Crab_cmap(useWorkAround=False):
     evtbin['outfile'] = 'Crab.fits'
     evtbin['scfile'] = 'Crab_scData_0000.fits'
     evtbin['tbinalg'] = 'LIN'
-    evtbin['tstart'] = 0.0
-    evtbin['tstop'] = 86400.0
+    evtbin['tstart'] = 0.
+    evtbin['tstop'] = 86400.
     evtbin['dtime'] = 1000.0
     evtbin['tbinfile'] = 'numxpix=100'
     evtbin['nxpix'] = 100

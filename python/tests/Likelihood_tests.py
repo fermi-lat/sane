@@ -17,7 +17,7 @@ except ImportError, message:
     print message
 
 #start_time = 210211200.
-start_time = 0
+start_time = 86400
 
 def cleanUp():
     removeFile('flux_model.xml')
