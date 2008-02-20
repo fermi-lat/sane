@@ -11,7 +11,6 @@ import shutil
 import random
 
 from setPaths import *
-#from gt_apps import obsSim, orbSim
 from GtApp import GtApp
 
 obsSim = GtApp('gtobssim', 'observationSim')
@@ -20,7 +19,8 @@ def random_int(scale=1e5):
     return int(random.random()*scale)
 
 def sourceNamesDat(filename='source_names.txt',
-                   srcList=('anticenter-32mev', 'Extragalactic_diffuse')):
+                   srcList=('anticenter-32mev',
+                            'Extragalactic_diffuse')):
     file = open(filename, 'w')
     for src in srcList:
         file.write(src + '\n')
@@ -36,30 +36,14 @@ def xmlFilesDat(filename='xmlFiles.txt',
     xmlFiles.close()
 
 def run(clean=False):
-#    orbSim['scroot'] = 'orbSim'
-#    orbSim['obsmode'] = 'ONEPERORBIT'
-#    orbSim['rangle'] = 35.0
-#    orbSim['simtime'] = 86400.0
-#    orbSim.run(scroot='orbSim', obsmode='ONEPERORBIT', rangle=35.,
-#               simtime=86400)
     sourceNamesDat()
     xmlFilesDat()
-#    obsSim['infile'] = 'xmlFiles.txt'
-#    obsSim['srclist'] = 'source_names.txt'
-#    obsSim['scfile'] = 'orbSim_scData_0000.fits'
-#    obsSim['evroot'] = 'test'
-#    obsSim['simtime'] = 86400.0
-#    obsSim['use_ac'] = 'yes'
-#    obsSim['ra'] = 86.4
-#    obsSim['dec'] = 28.9
-#    obsSim['radius'] = 20
-#    obsSim['emin'] = 32
-#    obsSim['emax'] = 2e5
     obsSim['irfs'] = irfs
     if irfs == 'DSS':
         obsSim['irfs'] = 'DC2'
 #    obsSim['seed'] = random_int()
     obsSim['seed'] = 479153
+    obsSim['tstart'] = 86400
     obsSim.run(infile='xmlFiles.txt', srclist='source_names.txt',
                scfile='none', evroot='test', simtime=86400,
                use_ac='yes', ra=90, dec=20, radius=20, emin=100, emax=2e5)
