@@ -5,6 +5,8 @@
 $Id$
 @verbatim
 
+20-Feb-08  v3r15   JC  modify test scripts to exercise gtsrcmaps scData
+                       bug fix
 10-Feb-08  v3r14p7 JC  move enclosing quotes for string pars to Pil.__call__
                        from Pil.__getitem__
 14-Jan-08  v3r14p6 JC  enclose string parameters in pil.py for ape
