@@ -5,6 +5,7 @@
 $Id$
 @verbatim
 
+20-Feb-08  v3r15p1 JC  reset irfs to DC1A for test scripts
 20-Feb-08  v3r15   JC  modify test scripts to exercise gtsrcmaps scData
                        bug fix
 10-Feb-08  v3r14p7 JC  move enclosing quotes for string pars to Pil.__call__
