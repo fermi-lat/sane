@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Wed Feb 20 17:31:22 PST 2008
+sane/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+reset irfs to DC1A; tagging v3r15p1
+    *
+------------------------------------------------------------
+User: jchiang  Wed Feb 20 17:31:22 PST 2008
 sane/cmt
 
 Modified Files:
