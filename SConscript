@@ -1,4 +1,4 @@
-import glob,os,platform
+#$Id$
 
 Import('baseEnv')
 Import('listFiles')
@@ -13,7 +13,9 @@ progEnv.Tool('rspgenLib')
 progEnv.Tool('periodSearchLib')
 progEnv.Tool('st_appLib')
 progEnv.Tool('pyLikelihoodLib')
+progEnv.Tool('facilitiesLib')
+progEnv.Tool('addLibrary', library = baseEnv['pythonLibs'])
 
-test_saneBin = progEnv.Program('test_sane', 'src/test/main.cxx', LIBS = baseEnv['pythonLibs'])
+test_saneBin = progEnv.Program('test_sane', 'src/test/main.cxx')
 
 progEnv.Tool('registerObjects', package = 'sane', testApps = [test_saneBin])
