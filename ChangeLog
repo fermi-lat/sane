@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: golpa  Thu Feb 21 17:16:13 PST 2008
+sane
+
+Modified Files:
+	SConscript 
+Log Message:
+fixed the way the test app was created in SCons
+    *
+------------------------------------------------------------
 TAG
 Tag name: sane-03-15-01, operation: add
 Package: sane
