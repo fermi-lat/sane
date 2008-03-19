@@ -18,4 +18,4 @@ progEnv.Tool('addLibrary', library = baseEnv['pythonLibs'])
 
 test_saneBin = progEnv.Program('test_sane', 'src/test/main.cxx')
 
-progEnv.Tool('registerObjects', package = 'sane', testApps = [test_saneBin])
+progEnv.Tool('registerObjects', package = 'sane', testApps = [test_saneBin], data = listFiles(['data/*'], recursive = True))
