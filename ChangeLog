@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Mar 27 09:26:15 PDT 2008
+sane
+
+Modified Files:
+	SConscript 
+Log Message:
+add python modules to build targets
+    *
+------------------------------------------------------------
 TAG
 Tag name: sane-03-15-01, operation: mov
 Package: sane
