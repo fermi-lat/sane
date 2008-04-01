@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Tue Apr  1 13:51:24 PDT 2008
+sane/python/tests
+
+Modified Files:
+	dataSubselector_tests.py evtbin_tests.py 
+Log Message:
+use new gtselect interface; tagging v3r16
+    *
+------------------------------------------------------------
+User: jchiang  Tue Apr  1 13:51:24 PDT 2008
 sane/doc
 
 Modified Files:
