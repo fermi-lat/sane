@@ -34,7 +34,7 @@ def Crab_filter():
     filter['rad'] = 20
     filter['tmin'] = 0
     filter['tmax'] = 0
-    filter['eventClass'] = 0
+#    filter['eventClass'] = 0
     filter.run()
 
 def Crab_cmap(useWorkAround=False):
