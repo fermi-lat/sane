@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Apr  1 13:51:24 PDT 2008
+sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+use new gtselect interface; tagging v3r16
+    *
+------------------------------------------------------------
 User: jchiang  Thu Mar 27 09:26:15 PDT 2008
 sane
 
