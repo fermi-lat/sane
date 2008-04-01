@@ -22,22 +22,10 @@ def run(clean=False):
     filter['ra'] = 90
     filter['dec'] = 20
     filter['rad'] = 20.0
-    filter['lonMin'] = 0.0
-    filter['lonMax'] = 360.0
-    filter['latMin'] = -90.0
-    filter['latMax'] = 90.0
-    filter['coordSys'] = 'CEL'
     filter['tmin'] = 0.0
     filter['tmax'] = 0.0
     filter['emin'] = 32.0
     filter['emax'] = 200000.0
-    filter['eventClass'] = -1
-    filter['thetamin'] = 0.0
-    filter['thetamax'] = 0.0
-    filter['phimin'] = 0.0
-    filter['phimax'] = 0.0
-    filter['zmin'] = 0.0
-    filter['zmax'] = 0.0
     filter.run()
 
 if __name__ == "__main__":
