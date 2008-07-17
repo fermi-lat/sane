@@ -39,6 +39,13 @@ if __name__ == "__main__":
         for exe in GtApp._failed_exes:
             print exe
         sys.exit(1)
+
+    #
+    # Test importing Toby' package since ASP currently uses it
+    #
+    import pointfit
+    pointfit.Background
+
 ## clean up
 #    removeFile('*.fits')
 #    removeFile('Crab*')
