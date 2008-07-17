@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Wed Jul 16 22:32:59 PDT 2008
+sane/python/tests
+
+Modified Files:
+	default_tests.py setPaths.py 
+Log Message:
+test import of pointfit
+    *
+------------------------------------------------------------
+User: jchiang  Wed Jul 16 22:32:59 PDT 2008
 sane/cmt
 
 Modified Files:
