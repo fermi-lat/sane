@@ -1,6 +1,6 @@
 package sane
 
-version v3r16
+version v3r16p1
 
 author T. Burnett <tburnett@u.washington.edu>
 # $Id$
@@ -18,7 +18,7 @@ use python * IExternal -no_auto_imports
 use st_app *
 use pyLikelihood * -no_auto_imports
 use facilities *
-use py_pointlike * -no_auto_imports
+use pointlike * -no_auto_imports
 
 application test_sane test/main.cxx
 
