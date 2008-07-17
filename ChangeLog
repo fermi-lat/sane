@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+TAG
+Tag name: v3r16p1, operation: mov
+Package: sane
+User: glastrm  Thu Jul 17 14:30:33 2008
+Files:
+  sane/SConscript  1.6
+
+    *
+------------------------------------------------------------
 User: glastrm  Thu Jul 17 14:30:27 PDT 2008
 sane
 
