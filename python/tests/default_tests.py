@@ -41,7 +41,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     #
-    # Test importing Toby' package since ASP currently uses it
+    # Test importing Toby's package.
     #
     import pointfit
     pointfit.Background
