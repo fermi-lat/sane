@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Jul 29 13:32:00 PDT 2008
+sane/python
+
+Modified Files:
+	xmlSrcLib.py 
+Log Message:
+set the index parameter free for the EGDiffuse spectrum
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-07-00, operation: add
 Package: sane
