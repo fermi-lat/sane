@@ -5,6 +5,8 @@
 $Id$
 @verbatim
 
+10-Aug-08  v3r16p2 JC  specify expcube for new gtmodel
+17-Jul-08  v3r16p1 JC  added import test for pointfit
 01-Apr-08  v3r16   JC  use new gtselect interface
 20-Feb-08  v3r15p1 JC  reset irfs to DC1A for test scripts
 20-Feb-08  v3r15   JC  modify test scripts to exercise gtsrcmaps scData
