@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sun Aug 10 12:52:50 PDT 2008
+sane/python/tests
+
+Modified Files:
+	BinnedLikelihood_test.py 
+Log Message:
+set expcube for new gtmodel imp
+    *
+------------------------------------------------------------
 User: jchiang  Tue Jul 29 13:32:00 PDT 2008
 sane/python
 
