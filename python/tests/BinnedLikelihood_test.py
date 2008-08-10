@@ -58,6 +58,7 @@ def makeModelMap():
     model_map['srcmdl'] = likelihood['srcmdl']
     model_map['outfile'] = 'model_map.fits'
     model_map['irfs'] = irfs
+    model_map['expcube'] = likelihood['expcube']
     model_map.run()
 
 def run():
