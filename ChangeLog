@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Fri Sep 12 13:13:44 PDT 2008
+sane/python
+
+Modified Files:
+	cleanXml.py readXml.py 
+Log Message:
+sync readXml.py and cleanXml.py with likeGui versions; will delete likeGui versions; tagging v3r17
+    *
+------------------------------------------------------------
+User: jchiang  Fri Sep 12 13:13:44 PDT 2008
 sane/doc
 
 Modified Files:
