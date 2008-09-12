@@ -35,9 +35,11 @@ class SourceModel:
         return self.srcList[name]
     def __setitem__(self, name, value):
         self.srcList[name] = value
-        self.doc.childNodes[0].appendChild(value.node)
+        source_library = self.doc.getElementsByTagName('source_library')[0]
+        source_library.appendChild(value.node)
     def __delitem__(self, name):
-        self.doc.childNodes[0].removeChild(self.srcList[name].node)
+        source_library = self.doc.getElementsByTagName('source_library')[0]
+        source_library.removeChild(self.srcList[name].node)
         del self.srcList[name]
     def names(self):
         return self.srcList.keys()
@@ -52,6 +54,7 @@ class SourceModel:
         file = open(filename, 'w')
         file.write(doc.toxml() + '\n')
         file.close()
+        self.filename = filename
 
 class DomElement:
     def __init__(self, node, converter=None):

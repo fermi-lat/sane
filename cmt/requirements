@@ -1,8 +1,8 @@
 package sane
 
-version v3r16p2
+version v3r17
 
-author T. Burnett <tburnett@u.washington.edu>
+author J. Chiang <jchiang@slac.stanford.edu>
 # $Id$
 
 use STpolicy *
