@@ -6,6 +6,8 @@ from xml.dom import minidom
 def indent_lines(lines):
     level = 0
     for i in range(1, len(lines)):
+        if lines[i].find('<!--') != -1:  # skip comment lines
+            continue
         if lines[i].find('</') == -1:
             lines[i] = '  '*level + lines[i]
             if (lines[i].find('/>') == -1 and lines[i].find('</') == -1):
