@@ -5,6 +5,7 @@
 $Id$
 @verbatim
 
+01-Oct-08  v3r17p1 JC  update D4 file used by gtpphase in sane tests
 12-Sep-08  v3r17   JC  resynchronize readXml.py and cleanXml.py with
                        likeGui version and delete likeGui version.
 10-Aug-08  v3r16p2 JC  specify expcube for new gtmodel
