@@ -55,12 +55,13 @@ def run(useWorkAround=False):
     obsSim['infile'] = 'xmlFiles.txt'
     obsSim['evroot'] = 'Geminga'
     obsSim['scfile'] = 'none'
+    obsSim['irfs'] = irfs
     obsSim['seed'] = random_int()
     obsSim.run()
 
     pulsePhase['evfile'] = 'Geminga_events_0000.fits'
     pulsePhase['scfile'] = 'Geminga_scData_0000.fits'
-    pulsePhase['psrdbfile'] = os.environ['PULSARDBROOT'] + '/data/groD4-dc2v4r1.fits'
+    pulsePhase['psrdbfile'] = os.environ['PULSARDBROOT'] + '/data/groD4-dc2v5.fits'
     pulsePhase['solareph'] = 'JPL DE405'
     pulsePhase['ephstyle'] = "FREQ"
     pulsePhase['ephepoch'] = 0
