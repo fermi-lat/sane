@@ -58,7 +58,7 @@ galProp = """<source name="GalProp Diffuse" type="DiffuseSource">
    <spectrum type="ConstantValue">
       <parameter free="1" max="10" min="0" name="Value" scale="1" value="1"/>
    </spectrum>
-   <spatialModel file="$(EXTFILESSYS)/galdiffuse/GP_gamma.fits" type="MapCubeFunction">
+   <spatialModel file="$(GALPROP_MODEL)" type="MapCubeFunction">
       <parameter free="0" max="1000" min="0.001" name="Normalization" scale="1" value="1"/>
    </spatialModel>
 </source>
