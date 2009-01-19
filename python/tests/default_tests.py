@@ -40,12 +40,6 @@ if __name__ == "__main__":
             print exe
         sys.exit(1)
 
-    #
-    # Test importing Toby's package.
-    #
-    import pointfit
-    pointfit.Background
-
 ## clean up
 #    removeFile('*.fits')
 #    removeFile('Crab*')

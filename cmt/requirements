@@ -18,7 +18,6 @@ use python * IExternal -no_auto_imports
 use st_app *
 use pyLikelihood * -no_auto_imports
 use facilities *
-use pointlike * -no_auto_imports
 
 application test_sane test/main.cxx
 
