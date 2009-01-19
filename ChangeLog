@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Jan 19 14:37:38 PST 2009
+sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+get rid of pointless dependency so that package builds in latest; tagging v3r18
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-09-00, operation: add
 Package: sane
