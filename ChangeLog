@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Mon Jan 19 14:37:39 PST 2009
+sane/python/tests
+
+Modified Files:
+	default_tests.py 
+Log Message:
+get rid of pointless dependency so that package builds in latest; tagging v3r18
+    *
+------------------------------------------------------------
+User: jchiang  Mon Jan 19 14:37:39 PST 2009
 sane/python
 
 Modified Files:
