@@ -34,7 +34,9 @@ def run(clean=False):
     expCube['scfile'] = 'orbSim_scData_0000.fits'
     expCube['outfile'] = 'expcube1.fits'
     expCube['dcostheta'] = 0.05
-    expCube['binsize'] = 1
+    expCube['binsz'] = 1
+#    expCube['phibins'] = 10
+    expCube['phibins'] = 0
     expCube.run()
 
     filter['tmin'] = 86400/2 + start_time
@@ -46,7 +48,7 @@ def run(clean=False):
     expCube['scfile'] = 'orbSim_scData_0000.fits'
     expCube['outfile'] = 'expcube2.fits'
     expCube['dcostheta'] = 0.05
-    expCube['binsize'] = 1
+    expCube['binsz'] = 1
     expCube.run()
 
     addCubes['infile1'] = 'expcube1.fits'
@@ -84,7 +86,7 @@ def run(clean=False):
 
     try:
         pylike = unbinnedAnalysis(mode='h')
-        pylike.fit(verbosity=0)
+        pylike.fit(verbosity=0, tol=like['ftol'])
         print pylike.model
         print "Ts values:"
         for src in pylike.sourceNames():

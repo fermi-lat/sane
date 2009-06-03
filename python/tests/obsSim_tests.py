@@ -46,7 +46,7 @@ def run(clean=False):
     obsSim['tstart'] = 86400
     obsSim.run(infile='xmlFiles.txt', srclist='source_names.txt',
                scfile='none', evroot='test', simtime=86400,
-               use_ac='yes', ra=90, dec=20, radius=20, emin=100, emax=2e5)
+               use_ac='yes', ra=90, dec=20, radius=20, emin=100, emax=3e5)
     shutil.copy('test_scData_0000.fits', 'orbSim_scData_0000.fits')
     if clean:
         cleanUp()
