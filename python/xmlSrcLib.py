@@ -19,7 +19,7 @@ powerLaw = """<spectrum type="PowerLaw">
 """
 
 powerLaw2 = """<spectrum type="PowerLaw2">
- <parameter free="1" max="1000.0" min="1e-05" name="Integral" scale="1e-06" value="1.0"/>
+ <parameter free="1" max="1000.0" min="1e-05" name="Integral" scale="1e-07" value="1.0"/>
  <parameter free="1" max="0" min="-5.0" name="Index" scale="1.0" value="-2.0"/>
  <parameter free="0" max="300000.0" min="20.0" name="LowerLimit" scale="1.0" value="20.0"/>
  <parameter free="0" max="300000.0" min="20.0" name="UpperLimit" scale="1.0" value="2e5"/>
