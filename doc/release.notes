@@ -5,6 +5,8 @@
 $Id$
 @verbatim
 
+03-Jun-09  v3r18p1 JC  Set scale for Integral parameter of PowerLaw2 to 1e-7
+                       in xmlSrcLib.py (D. Landriu request)
 19-Jan-09  v3r18   JC  Get rid of pointlike dependence so that package
                        builds in ST LATEST
 01-Oct-08  v3r17p1 JC  update D4 file used by gtpphase in sane tests
