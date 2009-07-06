@@ -1,7 +1,7 @@
 # -*- python -*-
 # $Id$
 # Authors: T. Burnett <tburnett@u.washington.edu>
-# Version: sane-03-18-00
+# Version: sane-03-18-01
 
 Import('baseEnv')
 Import('listFiles')
@@ -15,7 +15,6 @@ progEnv.Tool('evtbinLib')
 progEnv.Tool('rspgenLib')
 progEnv.Tool('periodSearchLib')
 progEnv.Tool('st_appLib')
-progEnv.Tool('pyLikelihoodLib')
 progEnv.Tool('facilitiesLib')
 progEnv.Tool('addLibrary', library = baseEnv['pythonLibs'])
 
