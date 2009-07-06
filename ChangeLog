@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: glastrm  Mon Jul  6 10:40:04 PDT 2009
+ScienceTools-scons/sane
+
+Modified Files:
+	SConscript 
+Log Message:
+sane test app doesn't depend on pyLikelihood
+    *
+------------------------------------------------------------
 User: heather  Wed Jul  1 10:09:58 PDT 2009
 sane/doc
 
