@@ -15,7 +15,6 @@ progEnv.Tool('evtbinLib')
 progEnv.Tool('rspgenLib')
 progEnv.Tool('periodSearchLib')
 progEnv.Tool('st_appLib')
-progEnv.Tool('pyLikelihoodLib')
 progEnv.Tool('facilitiesLib')
 progEnv.Tool('addLibrary', library = baseEnv['pythonLibs'])
 
