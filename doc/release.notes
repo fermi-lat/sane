@@ -6,6 +6,7 @@ $Id$
 @verbatim
  * EOH *
 
+16-Jul-09  v3r18p2 jrb Update SConscript
 03-Jun-09  v3r18p1 JC  Set scale for Integral parameter of PowerLaw2 to 1e-7
                        in xmlSrcLib.py (D. Landriu request)
 19-Jan-09  v3r18   JC  Get rid of pointlike dependence so that package
