@@ -55,6 +55,8 @@ class Pil(object):
         return self.params.has_key(name)
     def __getitem__(self, name):
         value = (self.params[name][2]).strip('"').strip("'")
+        if value == 'INDEF':
+            return value
         if self.params[name][0] == 'r':
             return string.atof(value)
         elif self.params[name][0] == 'i':
@@ -73,7 +75,8 @@ class Pil(object):
         args = ''
         for name in self.keys():
             try:
-                if self.params[name][0] == 's':
+                if (self.params[name][0] == 's' or
+                    self[name] == 'INDEF'):
                     args += ' ' + ''.join(('', name, '="%s"' % self[name]))
                 else:
                     args += ' ' + ''.join(('', name, '=%s' % self[name]))
