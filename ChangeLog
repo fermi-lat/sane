@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Thu Mar 11 13:18:39 PST 2010
+sane/python
+
+Modified Files:
+	pil.py 
+Log Message:
+handle INDEFs in parfiles
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-16-00, operation: add
 Package: sane
