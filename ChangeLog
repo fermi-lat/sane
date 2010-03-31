@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Mar 31 13:54:44 PDT 2010
+sane/python/tests
+
+Modified Files:
+	rspgen_tests.py 
+Log Message:
+use DC1AF irfs in rspgen test case
+    *
+------------------------------------------------------------
 TAG
 Tag name: sane-03-19-00, operation: add
 Package: sane
