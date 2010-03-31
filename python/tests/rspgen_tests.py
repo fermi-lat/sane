@@ -24,7 +24,7 @@ def run():
     rspgen['emax'] = 200000.0
     rspgen['enumbins'] = 20
     rspgen['denergy'] = 0.0
-    rspgen['irfs'] = 'DC1F'
+    rspgen['irfs'] = 'DC1AF'
     rspgen.run()
 
 if __name__ == "__main__":
