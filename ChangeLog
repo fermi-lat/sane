@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sat Jun  5 09:28:36 PDT 2010
+ScienceTools-scons/sane/data
+
+Modified Files:
+	setup.csh setup.sh 
+Log Message:
+add env vars for pulsar tool tests
+    *
+------------------------------------------------------------
 User: jchiang  Sat Jun  5 09:20:49 PDT 2010
 ScienceTools-scons/sane/data
 
