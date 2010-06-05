@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sat Jun  5 09:20:49 PDT 2010
+ScienceTools-scons/sane/data
+
+Added Files:
+	setup.csh setup.sh 
+Log Message:
+add setup files for envvars required by test_sane that SCons does not provide
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-16-01, operation: add
 Package: sane
