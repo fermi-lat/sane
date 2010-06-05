@@ -13,3 +13,5 @@ export ST_APPROOT=${INST_DIR}/st_app
 export PYLIKELIHOODROOT=${INST_DIR}/pyLikelihood
 export FACILITIESROOT=${INST_DIR}/facilities
 export SANEROOT=${INST_DIR}/sane
+export GENERICSOURCESROOT=${INST_DIR}/celestialSources/genericSources
+export PULSARDBROOT=${INST_DIR}/pulsarDb

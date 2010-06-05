@@ -13,3 +13,5 @@ setenv ST_APPROOT ${INST_DIR}/st_app
 setenv PYLIKELIHOODROOT ${INST_DIR}/pyLikelihood
 setenv FACILITIESROOT ${INST_DIR}/facilities
 setenv SANEROOT ${INST_DIR}/sane
+setenv GENERICSOURCESROOT ${INST_DIR}/celestialSources/genericSources
+setenv PULSARDBROOT ${INST_DIR}/pulsarDb
