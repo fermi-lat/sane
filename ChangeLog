@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Jun  7 13:34:22 PDT 2010
+ScienceTools-scons/sane/python/tests
+
+Modified Files:
+	default_tests.py setPaths.py 
+Log Message:
+set env vars in test code for SCons builds
+    *
+------------------------------------------------------------
 User: jchiang  Sat Jun  5 09:28:36 PDT 2010
 ScienceTools-scons/sane/data
 
