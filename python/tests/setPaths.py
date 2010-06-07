@@ -36,6 +36,26 @@ def removeFile(file):
     for file in files:
         os.remove(file)
 
+def setup_env_vars():
+    try:
+        os.environ['DATASUBSELECTORROOT']
+    except KeyError:
+        inst_dir = lambda x : os.path.join(os.environ['INST_DIR'], x)
+        os.environ['DATASUBSELECTORROOT'] = inst_dir('dataSubselector')
+        os.environ['LIKELIHOODROOT'] = inst_dir('Likelihood')
+        os.environ['OBSERVATIONSIMROOT'] = inst_dir('observationSim')
+        os.environ['MAP_TOOLSROOT'] = inst_dir('map_tools')
+        os.environ['EVTBINROOT'] = inst_dir('evtbin')
+        os.environ['RSPGENROOT'] = inst_dir('rspgen')
+        os.environ['PULSEPHASEROOT'] = inst_dir('pulsePhase')
+        os.environ['PERIODSEARCHROOT'] = inst_dir('periodSearch')
+        os.environ['ST_APPROOT'] = inst_dir('st_app')
+        os.environ['PYLIKELIHOODROOT'] = inst_dir('pyLikelihood')
+        os.environ['FACILITIESROOT'] = inst_dir('facilities')
+        os.environ['SANEROOT'] = inst_dir('sane')
+        os.environ['GENERICSOURCESROOT'] = inst_dir('celestialSources/genericSources')
+        os.environ['PULSARDBROOT'] = inst_dir('pulsarDb')
+
 def copy_par_files():
     packages = ['observationSim', 'map_tools', 'dataSubselector',
                 'Likelihood', 'evtbin', 'rspgen', 'pulsePhase', 'periodSearch']
@@ -50,4 +70,5 @@ def copy_par_files():
                         pars.params[par][0] = "f"
                 pars.write(file)
 
+setup_env_vars()
 copy_par_files()

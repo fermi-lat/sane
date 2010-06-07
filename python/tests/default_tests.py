@@ -11,6 +11,11 @@ System tests for Science Tools
 import os
 import sys
 
+try:
+    os.environ['SANEROOT']
+except KeyError:
+    os.environ['SANEROOT'] = os.path.join(os.environ['INST_DIR'], 'sane')
+
 sys.path.append(os.path.join(os.environ["SANEROOT"], "python"))
 
 from setPaths import *
