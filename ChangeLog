@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Jun  7 18:29:13 PDT 2010
+ScienceTools-scons/sane/python/tests
+
+Modified Files:
+	setPaths.py 
+Log Message:
+comment out unneeded bindir variable
+    *
+------------------------------------------------------------
 TAG
 Tag name: sane-03-19-02, operation: add
 Package: sane
