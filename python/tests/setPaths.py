@@ -12,7 +12,7 @@ import sys
 import glob
 from pil import Pil
 
-bindir = os.environ['BINDIR']
+#bindir = os.environ['BINDIR']
 sysData = os.path.join(os.environ["SANEROOT"], 'data')
 os.chdir(sysData)
 
