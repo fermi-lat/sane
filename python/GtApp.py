@@ -8,6 +8,7 @@ Provide a unified interface to FTOOL and par file.
 # $Header$
 #
 import sys, os
+import subprocess
 from pil import Pil
 from facilities import py_facilities
 os_environ = py_facilities.commonUtilities_getEnvironment
@@ -74,7 +75,14 @@ class GtApp(object):
     def runWithOutput(self, print_command=True):
         if print_command:
             print self.command()
-        return os.popen4(self.command(print_command))
+        process = subprocess.Popen(self.command(print_command),
+                                   shell=True, bufsize=-1,
+                                   stdin=subprocess.PIPE,
+                                   stdout=subprocess.PIPE,
+                                   stderr=subprocess.STDOUT,
+                                   close_fds=True)
+        return (process.stdin, process.stdout)
+#        return os.popen4(self.command(print_command))
     def command(self, do_timing=True):
         chatter = 2
         try:
