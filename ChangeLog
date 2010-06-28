@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Sun Jun 27 21:43:13 PDT 2010
+sane/python
+
+Modified Files:
+	GtApp.py 
+Log Message:
+use subprocess.Popen instead of os.popen4
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-17-00, operation: add
 Package: sane
