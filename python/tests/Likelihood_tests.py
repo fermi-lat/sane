@@ -68,6 +68,7 @@ def run(clean=False):
 
     diffResps.copy(expMap)
     diffResps['srcmdl'] = 'srcModel.xml'
+#    diffResps['srcmdl'] = 'srcModel_galprop.xml'
     diffResps['evfile'] = 'filtered_events_0000.fits'
 
     like.copy(expCube)

@@ -21,6 +21,8 @@ def random_int(scale=1e5):
 def sourceNamesDat(filename='source_names.txt',
                    srcList=('anticenter-32mev',
                             'Extragalactic_diffuse')):
+#                   srcList=('anticenter-32mev',
+#                            'GALPROP_diffuse')):
     file = open(filename, 'w')
     for src in srcList:
         file.write(src + '\n')
