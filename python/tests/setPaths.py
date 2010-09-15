@@ -30,6 +30,8 @@ irfs = 'DC1A'
 #irfs = 'PASS5_v0'
 #irfs = 'P6_v2'
 #irfs = 'P6_V1_TRANSIENT'
+#irfs = 'P6_V8_DIFFUSE'
+#irfs = 'P6_v8_diff'
 
 def removeFile(file):
     files = glob.glob(file)
