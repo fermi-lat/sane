@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sat Sep 25 17:23:10 PDT 2010
+ScienceTools-scons/sane/data
+
+Added Files:
+	srcModel_egretdiffuse.xml 
+Log Message:
+change Likelihood tests to use EGRET diffuse model to test SpatialMap output
+    *
+------------------------------------------------------------
 TAG
 Tag name: sane-03-19-05, operation: add
 Package: sane
