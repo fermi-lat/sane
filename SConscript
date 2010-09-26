@@ -1,7 +1,7 @@
 # -*- python -*-
 # $Id$
 # Authors: T. Burnett <tburnett@u.washington.edu>
-# Version: sane-03-19-05
+# Version: sane-03-19-06
 
 Import('baseEnv')
 Import('listFiles')
