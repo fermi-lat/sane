@@ -35,8 +35,9 @@ def makeCountsMap():
 def makeSourceMaps():
     srcMaps["scfile"] = 'orbSim_scData_0000.fits'
     srcMaps['cmap'] = counts_map['outfile']
-    srcMaps['srcmdl'] = 'srcModel.xml'
+#    srcMaps['srcmdl'] = 'srcModel.xml'
 #    srcMaps['srcmdl'] = 'srcModel_galprop.xml'
+    srcMaps['srcmdl'] = 'srcModel_egretdiffuse.xml'
     srcMaps['outfile'] = 'sourceMaps.fits'
     srcMaps['expcube'] = 'expcube_1_day.fits'
     srcMaps['bexpmap'] = 'binned_exposure.fits'
@@ -46,8 +47,9 @@ def makeSourceMaps():
 def runLikelihood():
     likelihood['scfile'] = 'orbSim_scData_0000.fits'
     likelihood['statistic'] = 'BINNED'
-    likelihood['srcmdl'] = 'srcModel.xml'
+#    likelihood['srcmdl'] = 'srcModel.xml'
 #    likelihood['srcmdl'] = 'srcModel_galprop.xml'
+    likelihood['srcmdl'] = 'srcModel_egretdiffuse.xml'
     likelihood["irfs"] = irfs
     likelihood['cmap'] = 'sourceMaps.fits'
     likelihood['expcube'] = 'expcube_1_day.fits'
