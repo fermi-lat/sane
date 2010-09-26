@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Sat Sep 25 17:23:11 PDT 2010
+ScienceTools-scons/sane/python/tests
+
+Modified Files:
+	BinnedLikelihood_test.py Likelihood_tests.py obsSim_tests.py 
+	setPaths.py 
+Log Message:
+change Likelihood tests to use EGRET diffuse model to test SpatialMap output
+    *
+------------------------------------------------------------
 User: jchiang  Sat Sep 25 17:23:10 PDT 2010
 ScienceTools-scons/sane/data
 
