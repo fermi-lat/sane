@@ -9,9 +9,9 @@ Binned likelihood tests.
 
 from setPaths import *
 from obsSim_tests import sourceNamesDat, random_int
-from gt_apps import obsSim, counts_map, expCube, srcMaps, like, model_map
+from GtApp import GtApp
+from gt_apps import obsSim, counts_map, srcMaps, like, model_map
 
-makeCube = expCube
 likelihood = like
 
 def makeCountsMap():
@@ -31,6 +31,15 @@ def makeCountsMap():
     counts_map['axisrot'] = 0
     counts_map['proj'] = 'STG'
     counts_map.run()
+
+def makeExpCube():
+    gtexpcube = GtApp('gtexpcube')
+    gtexpcube.run(infile='expcube_1_day.fits',
+                  evfile='NONE',
+                  cmfile='countsMap.fits',
+                  outfile='binned_exposure.fits',
+                  irfs=irfs,
+                  bincalc='EDGE')
 
 def makeSourceMaps():
     srcMaps["scfile"] = 'orbSim_scData_0000.fits'
@@ -68,6 +77,7 @@ def makeModelMap():
 
 def run():
     makeCountsMap()
+    makeExpCube()
     makeSourceMaps()
     runLikelihood()
     makeModelMap()
