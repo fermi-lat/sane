@@ -33,7 +33,7 @@ def makeCountsMap():
     counts_map.run()
 
 def makeExpCube():
-    gtexpcube = GtApp('gtexpcube')
+    gtexpcube = GtApp('gtexpcube', 'map_tools')
     gtexpcube.run(infile='expcube_1_day.fits',
                   evfile='NONE',
                   cmfile='countsMap.fits',
