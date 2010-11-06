@@ -6,6 +6,7 @@ $Id$
 @verbatim
  * EOH *
 
+ sane-03-19-08 05-Nov-2010 jchiang use package name in GtApp for gtexpcube in binned tests
  sane-03-19-07 04-Nov-2010 jchiang modify binned likelihood tests to gtexpcube
  sane-03-19-06 25-Sep-2010 jchiang use EGRET diffuse model in Likelihood tests to exercise SpatialMap usage
  sane-03-19-05 15-Sep-2010 jchiang increase number of energy bins for counts cube in functional tests
