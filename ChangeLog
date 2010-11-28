@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Sat Nov 27 18:15:09 PST 2010
+ScienceTools-scons/sane/python/tests
+
+Modified Files:
+	BinnedLikelihood_test.py Likelihood_tests.py 
+	dataSubselector_tests.py obsSim_tests.py setPaths.py 
+Log Message:
+add gtexpcube2, using matching geometry and all-sky Galactic coords
+    *
+------------------------------------------------------------
 TAG
 Tag name: sane-03-19-08, operation: add
 Package: sane
