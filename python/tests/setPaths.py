@@ -13,6 +13,8 @@ import glob
 from pil import Pil
 
 #bindir = os.environ['BINDIR']
+if not os.environ.has_key('SANEROOT'):
+    os.environ['SANEROOT'] = os.path.join(os.environ['INST_DIR'], 'sane')
 sysData = os.path.join(os.environ["SANEROOT"], 'data')
 os.chdir(sysData)
 

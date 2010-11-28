@@ -9,24 +9,28 @@ Generate test data with dataSubselector.
 #
 
 from setPaths import *
-from gt_apps import filter, maketime
+from GtApp import GtApp
+
+gtselect = GtApp('gtselect', 'dataSubselector')
+gtmktime = GtApp('gtmktime', 'dataSubselector')
 
 def run(clean=False):
-    maketime['scfile'] = 'orbSim_scData_0000.fits'
-    maketime['evfile'] = 'test_events_0000.fits'
-    maketime['filter'] = 'IN_SAA!=T'
-    maketime['outfile'] = 'test_events.fits'
-    maketime.run()
-    filter['infile'] = 'test_events.fits'
-    filter['outfile'] = 'filtered_events_0000.fits'
-    filter['ra'] = 90
-    filter['dec'] = 20
-    filter['rad'] = 20.0
-    filter['tmin'] = 0.0
-    filter['tmax'] = 0.0
-    filter['emin'] = 32.0
-    filter['emax'] = 200000.0
-    filter.run()
+    gtmktime['scfile'] = 'orbSim_scData_0000.fits'
+    gtmktime['evfile'] = 'test_events_0000.fits'
+    gtmktime['filter'] = 'IN_SAA!=T'
+    gtmktime['outfile'] = 'test_events.fits'
+    gtmktime.run()
+
+    gtselect['infile'] = 'test_events.fits'
+    gtselect['outfile'] = 'filtered_events_0000.fits'
+    gtselect['ra'] = 90
+    gtselect['dec'] = 20
+    gtselect['rad'] = 20.0
+    gtselect['tmin'] = 0.0
+    gtselect['tmax'] = 0.0
+    gtselect['emin'] = 32.0
+    gtselect['emax'] = 200000.0
+    gtselect.run()
 
 if __name__ == "__main__":
     run()
