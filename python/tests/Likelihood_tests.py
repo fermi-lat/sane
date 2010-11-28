@@ -8,7 +8,16 @@ Use Likelihood applications to analyze obsSim data.
 #
 
 from setPaths import *
-from gt_apps import expCube, expMap, diffResps, like, TsMap, filter, addCubes
+from GtApp import GtApp
+
+gtselect = GtApp('gtselect', 'dataSubselector')
+gtltcube = GtApp('gtltcube', 'Likelihood')
+gtexpmap = GtApp('gtexpmap', 'Likelihood')
+gtdiffrsp = GtApp('gtdiffrsp', 'Likelihood')
+gtlike = GtApp('gtlike', 'Likelihood')
+gttsmap = GtApp('gttsmap', 'Likelihood')
+gtltsum = GtApp('gtltsum', 'Likelihood')
+
 try:
     from UnbinnedAnalysis import *
     pass
@@ -25,70 +34,74 @@ def cleanUp():
     removeFile('TsMap.fits')
 
 def run(clean=False):
-    filter['tmin'] = 0. + start_time
-    filter['tmax'] = 86400/2 + start_time
-    filter['outfile'] = 'filtered1.fits'
-    filter.run()
+    gtselect['tmin'] = 0. + start_time
+    gtselect['tmax'] = 86400/2 + start_time
+    gtselect['infile'] = 'test_events_0000.fits'
+    gtselect['outfile'] = 'filtered1.fits'
+    gtselect['ra'] = 90
+    gtselect['dec'] = 20
+    gtselect['rad'] = 20
+    gtselect.run()
     
-    expCube['evfile'] = 'filtered1.fits'
-    expCube['scfile'] = 'orbSim_scData_0000.fits'
-    expCube['outfile'] = 'expcube1.fits'
-    expCube['dcostheta'] = 0.05
-    expCube['binsz'] = 1
-#    expCube['phibins'] = 10
-    expCube['phibins'] = 0
-    expCube.run()
+    gtltcube['evfile'] = 'filtered1.fits'
+    gtltcube['scfile'] = 'orbSim_scData_0000.fits'
+    gtltcube['outfile'] = 'expcube1.fits'
+    gtltcube['dcostheta'] = 0.05
+    gtltcube['binsz'] = 1
+#    gtltcube['phibins'] = 10
+    gtltcube['phibins'] = 0
+    gtltcube.run()
 
-    filter['tmin'] = 86400/2 + start_time
-    filter['tmax'] = 86400 + start_time
-    filter['outfile'] = 'filtered2.fits'
-    filter.run()
+    gtselect['tmin'] = 86400/2 + start_time
+    gtselect['tmax'] = 86400 + start_time
+    gtselect['outfile'] = 'filtered2.fits'
+    gtselect.run()
    
-    expCube['evfile'] = 'filtered2.fits'
-    expCube['scfile'] = 'orbSim_scData_0000.fits'
-    expCube['outfile'] = 'expcube2.fits'
-    expCube['dcostheta'] = 0.05
-    expCube['binsz'] = 1
-    expCube.run()
+    gtltcube['evfile'] = 'filtered2.fits'
+    gtltcube['scfile'] = 'orbSim_scData_0000.fits'
+    gtltcube['outfile'] = 'expcube2.fits'
+    gtltcube['dcostheta'] = 0.05
+    gtltcube['binsz'] = 1
+    gtltcube.run()
 
-    addCubes['infile1'] = 'expcube1.fits'
-    addCubes['infile2'] = 'expcube2.fits'
-    addCubes['outfile'] = 'expcube_1_day.fits'
-    addCubes.run()
+    gtltsum['infile1'] = 'expcube1.fits'
+    gtltsum['infile2'] = 'expcube2.fits'
+    gtltsum['outfile'] = 'expcube_1_day.fits'
+    gtltsum.run()
    
-    expMap.copy(expCube)
-    expMap['evfile'] = 'filtered_events_0000.fits'
-    expMap['irfs'] = irfs
-    expMap['srcrad'] = 30
-    expMap['nlong'] = 120
-    expMap['nlat'] = 120
-    expMap['nenergies'] = 20
-    expMap['expcube'] = 'expcube_1_day.fits'
-    expMap['outfile'] = 'expMap.fits'
+    gtexpmap.copy(gtltcube)
+    gtexpmap['evfile'] = 'filtered_events_0000.fits'
+    gtexpmap['irfs'] = irfs
+    gtexpmap['srcrad'] = 30
+    gtexpmap['nlong'] = 120
+    gtexpmap['nlat'] = 120
+    gtexpmap['nenergies'] = 20
+    gtexpmap['expcube'] = 'expcube_1_day.fits'
+    gtexpmap['outfile'] = 'expMap.fits'
 
-    diffResps.copy(expMap)
-#    diffResps['srcmdl'] = 'srcModel.xml'
-#    diffResps['srcmdl'] = 'srcModel_galprop.xml'
-    diffResps['srcmdl'] = 'srcModel_egretdiffuse.xml'
-    diffResps['evfile'] = 'filtered_events_0000.fits'
+    gtdiffrsp.copy(gtexpmap)
+#    gtdiffrsp['srcmdl'] = 'srcModel.xml'
+#    gtdiffrsp['srcmdl'] = 'srcModel_galprop.xml'
+    gtdiffrsp['srcmdl'] = 'srcModel_egretdiffuse.xml'
+    gtdiffrsp['evfile'] = 'filtered_events_0000.fits'
 
-    like.copy(expCube)
-    like.copy(diffResps)
-    like['expmap'] = expMap['outfile']
-    like['expcube'] = addCubes['outfile']
-    like['statistic'] = 'UNBINNED'
-    like['optimizer'] = 'MINUIT'
-    like['chatter'] = 2
-    like['ftol'] = 1e-4
-    like['refit'] = 'no'
+    gtlike.copy(gtltcube)
+    gtlike.copy(gtdiffrsp)
+    gtlike['expmap'] = gtexpmap['outfile']
+    gtlike['expcube'] = gtltsum['outfile']
+    gtlike['statistic'] = 'UNBINNED'
+    gtlike['optimizer'] = 'MINUIT'
+    gtlike['chatter'] = 2
+    gtlike['ftol'] = 1e-4
+    gtlike['refit'] = 'no'
 
-    expMap.run()
-    diffResps.run()
-    like.run()
+    gtexpmap.run()
+    gtdiffrsp.run()
+    gtlike.run()
 
     try:
         pylike = unbinnedAnalysis(mode='h')
-        pylike.fit(verbosity=0, tol=like['ftol'])
+        pylike.fit(verbosity=0, tol=gtlike['ftol'])
         print pylike.model
         print "Ts values:"
         for src in pylike.sourceNames():

@@ -10,74 +10,89 @@ Binned likelihood tests.
 from setPaths import *
 from obsSim_tests import sourceNamesDat, random_int
 from GtApp import GtApp
-from gt_apps import obsSim, counts_map, srcMaps, like, model_map
-
-likelihood = like
+gtbin = GtApp('gtbin', 'evtbin')
+gtltcube = GtApp('gtltcube', 'Likelihood')
+gtexpcube2 = GtApp('gtexpcube2', 'Likelihood')
+gtsrcmaps = GtApp('gtsrcmaps', 'Likelihood')
+gtlike = GtApp('gtlike', 'Likelihood')
+gtmodel = GtApp('gtmodel', 'Likelihood')
 
 def makeCountsMap():
-    counts_map['algorithm'] = 'CCUBE'
-    counts_map['evfile'] = 'filtered_events_0000.fits'
-    counts_map['outfile'] = 'countsMap.fits'
-    counts_map['scfile'] = 'orbSim_scData_0000.fits'
-    counts_map['emin'] = 100
-    counts_map['emax'] = 2e5
-    counts_map['enumbins'] = 30
-    counts_map['nxpix'] = 160
-    counts_map['nypix'] = 160
-    counts_map['binsz'] = 0.25
-    counts_map['coordsys'] = 'CEL'
-    counts_map['xref'] = 90
-    counts_map['yref'] = 20
-    counts_map['axisrot'] = 0
-    counts_map['proj'] = 'STG'
-    counts_map.run()
+    gtbin['algorithm'] = 'CCUBE'
+    gtbin['evfile'] = 'test_events_0000.fits'
+    gtbin['outfile'] = 'countsMap.fits'
+    gtbin['scfile'] = 'orbSim_scData_0000.fits'
+    gtbin['emin'] = 100
+    gtbin['emax'] = 2e5
+    gtbin['enumbins'] = 30
+    gtbin['nxpix'] = 160
+    gtbin['nypix'] = 160
+    gtbin['binsz'] = 0.25
+    gtbin['coordsys'] = 'CEL'
+    gtbin['xref'] = 90
+    gtbin['yref'] = 20
+    gtbin['axisrot'] = 0
+    gtbin['proj'] = 'STG'
+    gtbin.run()
 
-def makeExpCube():
-    gtexpcube = GtApp('gtexpcube', 'map_tools')
-    gtexpcube.run(infile='expcube_1_day.fits',
-                  evfile='NONE',
-                  cmfile='countsMap.fits',
-                  outfile='binned_exposure.fits',
-                  irfs=irfs,
-                  bincalc='EDGE')
+def makeExpCubes():
+    gtltcube.run(evfile='test_events_0000.fits',
+                 scfile='orbSim_scData_0000.fits',
+                 outfile='ltcube.fits')
+    gtexpcube2.run(infile='ltcube.fits',
+                   cmap='countsMap.fits',
+                   outfile='bexpmap.fits',
+                   irfs=irfs)
+    gtexpcube2.run(infile='ltcube.fits',
+                   cmap='countsMap.fits',
+                   outfile='bexpmap_allsky.fits',
+                   irfs=irfs,
+                   allsky='yes',
+                   proj='CAR',
+                   coordsys='GAL')
 
 def makeSourceMaps():
-    srcMaps["scfile"] = 'orbSim_scData_0000.fits'
-    srcMaps['cmap'] = counts_map['outfile']
-#    srcMaps['srcmdl'] = 'srcModel.xml'
-#    srcMaps['srcmdl'] = 'srcModel_galprop.xml'
-    srcMaps['srcmdl'] = 'srcModel_egretdiffuse.xml'
-    srcMaps['outfile'] = 'sourceMaps.fits'
-    srcMaps['expcube'] = 'expcube_1_day.fits'
-    srcMaps['bexpmap'] = 'binned_exposure.fits'
-    srcMaps["irfs"] = irfs
-    srcMaps.run()
+    gtsrcmaps["scfile"] = 'orbSim_scData_0000.fits'
+    gtsrcmaps['cmap'] = gtbin['outfile']
+#    gtsrcmaps['srcmdl'] = 'srcModel.xml'
+#    gtsrcmaps['srcmdl'] = 'srcModel_galprop.xml'
+    gtsrcmaps['srcmdl'] = 'srcModel_egretdiffuse.xml'
+    gtsrcmaps['outfile'] = 'sourceMaps.fits'
+    gtsrcmaps['expcube'] = 'ltcube.fits'
+    gtsrcmaps['bexpmap'] = 'bexpmap.fits'
+    gtsrcmaps["irfs"] = irfs
+    gtsrcmaps.run()
+
+    gtsrcmaps.run(outfile='sourceMaps_allsky.fits',
+                  bexpmap='bexpmap_allsky.fits')
 
 def runLikelihood():
-    likelihood['scfile'] = 'orbSim_scData_0000.fits'
-    likelihood['statistic'] = 'BINNED'
-#    likelihood['srcmdl'] = 'srcModel.xml'
-#    likelihood['srcmdl'] = 'srcModel_galprop.xml'
-    likelihood['srcmdl'] = 'srcModel_egretdiffuse.xml'
-    likelihood["irfs"] = irfs
-    likelihood['cmap'] = 'sourceMaps.fits'
-    likelihood['expcube'] = 'expcube_1_day.fits'
-    likelihood['bexpmap'] = 'binned_exposure.fits'
-    likelihood['optimizer'] = 'MINUIT'
-    likelihood['sfile'] = 'binned_fit_model.xml'
-    likelihood.run()
+    gtlike['scfile'] = 'orbSim_scData_0000.fits'
+    gtlike['statistic'] = 'BINNED'
+#    gtlike['srcmdl'] = 'srcModel.xml'
+#    gtlike['srcmdl'] = 'srcModel_galprop.xml'
+    gtlike['srcmdl'] = 'srcModel_egretdiffuse.xml'
+    gtlike["irfs"] = irfs
+    gtlike['cmap'] = 'sourceMaps.fits'
+    gtlike['expcube'] = 'ltcube.fits'
+    gtlike['bexpmap'] = 'bexpmap.fits'
+    gtlike['optimizer'] = 'MINUIT'
+    gtlike['sfile'] = 'binned_fit_model.xml'
+    gtlike.run()
+    gtlike.run(cmap='sourceMaps_allsky.fits',
+               bexpmap='bexpmap_allsky.fits')
 
 def makeModelMap():
-    model_map['srcmaps'] = likelihood['cmap']
-    model_map['srcmdl'] = likelihood['sfile']
-    model_map['outfile'] = 'model_map.fits'
-    model_map['irfs'] = irfs
-    model_map['expcube'] = likelihood['expcube']
-    model_map.run()
+    gtmodel['srcmaps'] = gtlike['cmap']
+    gtmodel['srcmdl'] = gtlike['sfile']
+    gtmodel['outfile'] = 'model_map.fits'
+    gtmodel['irfs'] = irfs
+    gtmodel['expcube'] = gtlike['expcube']
+    gtmodel.run()
 
 def run():
     makeCountsMap()
-    makeExpCube()
+    makeExpCubes()
     makeSourceMaps()
     runLikelihood()
     makeModelMap()

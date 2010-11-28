@@ -13,7 +13,7 @@ import random
 from setPaths import *
 from GtApp import GtApp
 
-obsSim = GtApp('gtobssim', 'observationSim')
+gtobssim = GtApp('gtobssim', 'observationSim')
 
 def random_int(scale=1e5):
     return int(random.random()*scale)
@@ -42,15 +42,15 @@ def xmlFilesDat(filename='xmlFiles.txt',
 def run(clean=False):
     sourceNamesDat()
     xmlFilesDat()
-    obsSim['irfs'] = irfs
+    gtobssim['irfs'] = irfs
     if irfs == 'DSS':
-        obsSim['irfs'] = 'DC2'
-#    obsSim['seed'] = random_int()
-    obsSim['seed'] = 479153
-    obsSim['tstart'] = 86400
-    obsSim.run(infile='xmlFiles.txt', srclist='source_names.txt',
-               scfile='none', evroot='test', simtime=86400,
-               use_ac='yes', ra=90, dec=20, radius=20, emin=100, emax=3e5)
+        gtobssim['irfs'] = 'DC2'
+#    gtobssim['seed'] = random_int()
+    gtobssim['seed'] = 479153
+    gtobssim['tstart'] = 86400
+    gtobssim.run(infile='xmlFiles.txt', srclist='source_names.txt',
+                 scfile='none', evroot='test', simtime=86400,
+                 use_ac='yes', ra=90, dec=20, radius=30, emin=100, emax=3e5)
     shutil.copy('test_scData_0000.fits', 'orbSim_scData_0000.fits')
     if clean:
         cleanUp()
@@ -62,12 +62,12 @@ def cleanUp():
 
 def compareFit(clean=False):
     sourceNamesDat(srcList=['all_in_flux_model.xml'])
-    obsSim['infile'] = 'flux_model.xml'
-    obsSim['evroot'] = 'fit_comparison'
-    obsSim['irfs'] = irfs
+    gtobssim['infile'] = 'flux_model.xml'
+    gtobssim['evroot'] = 'fit_comparison'
+    gtobssim['irfs'] = irfs
     if irfs == 'DSS':
-        obsSim['irfs'] = 'DC2'
-    obsSim.run()
+        gtobssim['irfs'] = 'DC2'
+    gtobssim.run()
     if clean:
         cleanUp()
 
