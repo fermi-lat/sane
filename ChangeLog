@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Tue Nov 30 08:20:30 PST 2010
+ScienceTools-scons/sane/python/tests
+
+Modified Files:
+	BinnedLikelihood_test.py 
+Log Message:
+update tests for new gtexpcube2 interface
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: sane-03-20-00, operation: add
 Package: sane
