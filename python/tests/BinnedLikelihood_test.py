@@ -44,10 +44,9 @@ def makeExpCubes():
                    outfile='bexpmap.fits',
                    irfs=irfs)
     gtexpcube2.run(infile='ltcube.fits',
-                   cmap='countsMap.fits',
+                   cmap='none',
                    outfile='bexpmap_allsky.fits',
                    irfs=irfs,
-                   allsky='yes',
                    proj='CAR',
                    coordsys='GAL')
 
