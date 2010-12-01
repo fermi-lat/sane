@@ -48,7 +48,10 @@ def makeExpCubes():
                    outfile='bexpmap_allsky.fits',
                    irfs=irfs,
                    proj='CAR',
-                   coordsys='GAL')
+                   coordsys='GAL',
+                   emin=100,
+                   emax=2e5,
+                   enumbins=30)
 
 def makeSourceMaps():
     gtsrcmaps["scfile"] = 'orbSim_scData_0000.fits'
