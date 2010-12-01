@@ -1,6 +1,6 @@
 # -*- python -*-
 # $Id$
-# Authors: T. Burnett <tburnett@u.washington.edu>
+# Authors: J. Chiang <jchiang@slac.stanford.edu
 # Version: sane-03-20-02
 
 Import('baseEnv')
