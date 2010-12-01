@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Wed Dec  1 09:04:27 PST 2010
+ScienceTools-scons/sane/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+change author line in SConscript; tagging v3r20p3
+
+    *
+------------------------------------------------------------
 User: jchiang  Wed Dec  1 08:56:31 PST 2010
 ScienceTools-scons/sane
 
