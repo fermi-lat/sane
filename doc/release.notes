@@ -6,6 +6,7 @@ $Id$
 @verbatim
  * EOH *
 
+ sane-03-20-02 01-Dec-2010 jchiang bug-fix for gtexpcube2 call in binned tests
  sane-03-20-01 30-Nov-2010 jchiang update binned likelihood tests for new gtexpcube2 interface
  sane-03-20-00 27-Nov-2010 jchiang modify tests to use gtexpcube2
  sane-03-19-08 05-Nov-2010 jchiang use package name in GtApp for gtexpcube in binned tests
