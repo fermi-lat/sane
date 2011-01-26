@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Jan 26 11:21:07 PST 2011
+ScienceTools-scons/sane/python
+
+Modified Files:
+	GtApp.py 
+Log Message:
+smooth out handling of alternative source models for offline testing purposes
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-20-00, operation: add
 Package: sane
