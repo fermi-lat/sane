@@ -80,9 +80,7 @@ def run(clean=False):
     gtexpmap['outfile'] = 'expMap.fits'
 
     gtdiffrsp.copy(gtexpmap)
-#    gtdiffrsp['srcmdl'] = 'srcModel.xml'
-#    gtdiffrsp['srcmdl'] = 'srcModel_galprop.xml'
-    gtdiffrsp['srcmdl'] = 'srcModel_egretdiffuse.xml'
+    gtdiffrsp['srcmdl'] = srcmdl
     gtdiffrsp['evfile'] = 'filtered_events_0000.fits'
 
     gtlike.copy(gtltcube)

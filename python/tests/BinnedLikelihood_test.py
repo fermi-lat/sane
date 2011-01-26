@@ -56,9 +56,7 @@ def makeExpCubes():
 def makeSourceMaps():
     gtsrcmaps["scfile"] = 'orbSim_scData_0000.fits'
     gtsrcmaps['cmap'] = gtbin['outfile']
-#    gtsrcmaps['srcmdl'] = 'srcModel.xml'
-#    gtsrcmaps['srcmdl'] = 'srcModel_galprop.xml'
-    gtsrcmaps['srcmdl'] = 'srcModel_egretdiffuse.xml'
+    gtsrcmaps['srcmdl'] = srcmdl
     gtsrcmaps['outfile'] = 'sourceMaps.fits'
     gtsrcmaps['expcube'] = 'ltcube.fits'
     gtsrcmaps['bexpmap'] = 'bexpmap.fits'
@@ -71,9 +69,7 @@ def makeSourceMaps():
 def runLikelihood():
     gtlike['scfile'] = 'orbSim_scData_0000.fits'
     gtlike['statistic'] = 'BINNED'
-#    gtlike['srcmdl'] = 'srcModel.xml'
-#    gtlike['srcmdl'] = 'srcModel_galprop.xml'
-    gtlike['srcmdl'] = 'srcModel_egretdiffuse.xml'
+    gtlike['srcmdl'] = srcmdl
     gtlike["irfs"] = irfs
     gtlike['cmap'] = 'sourceMaps.fits'
     gtlike['expcube'] = 'ltcube.fits'

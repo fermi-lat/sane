@@ -34,7 +34,11 @@ irfs = 'DC1A'
 #irfs = 'P6_V1_TRANSIENT'
 #irfs = 'P6_V3_DIFFUSE'
 #irfs = 'P6_V8_DIFFUSE'
-#irfs = 'P6_v8_diff'
+#irfs = 'P6_V11_DIFFUSE'
+
+#srcmdl = 'srcModel.xml'
+model_type = 'EGRET_DIFFUSE'
+srcmdl = 'srcModel_egretdiffuse.xml'
 
 def removeFile(file):
     files = glob.glob(file)
