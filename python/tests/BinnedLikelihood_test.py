@@ -75,6 +75,8 @@ def runLikelihood():
     gtlike['expcube'] = 'ltcube.fits'
     gtlike['bexpmap'] = 'bexpmap.fits'
     gtlike['optimizer'] = 'MINUIT'
+    if sys.platform == 'darwin':
+        gtlike['optimizer'] = 'NEWMINUIT'
     gtlike['sfile'] = 'binned_fit_model.xml'
     gtlike.run()
     gtlike.run(cmap='sourceMaps_allsky.fits',
