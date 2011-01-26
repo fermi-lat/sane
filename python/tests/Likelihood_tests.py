@@ -89,6 +89,8 @@ def run(clean=False):
     gtlike['expcube'] = gtltsum['outfile']
     gtlike['statistic'] = 'UNBINNED'
     gtlike['optimizer'] = 'MINUIT'
+    if sys.platform == 'darwin':
+        gtlike['optimizer'] = 'NEWMINUIT'
     gtlike['chatter'] = 2
     gtlike['ftol'] = 1e-4
     gtlike['refit'] = 'no'
@@ -98,7 +100,7 @@ def run(clean=False):
     gtlike.run()
 
     try:
-        pylike = unbinnedAnalysis(mode='h')
+        pylike = unbinnedAnalysis(mode='h', optimizer='NEWMINUIT')
         pylike.fit(verbosity=0, tol=gtlike['ftol'])
         print pylike.model
         print "Ts values:"
