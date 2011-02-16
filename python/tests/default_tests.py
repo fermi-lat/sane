@@ -38,7 +38,7 @@ if __name__ == "__main__":
     binned_test.run()
     evtbin.run(useWorkAround)
     rspgen.run()
-    pulsars.run(useWorkAround)
+#    pulsars.run(useWorkAround)
     if GtApp._failed_exes:
         print "The following executables failed: "
         for exe in GtApp._failed_exes:
