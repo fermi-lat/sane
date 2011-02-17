@@ -29,11 +29,11 @@ obsSim = GtApp('gtobssim', 'observationSim')
 filter = GtApp('gtselect', 'dataSubselector')
 maketime = GtApp('gtmktime', 'dataSubselector')
 
-#
-# Pulsar-related
-#
-pulsePhase = GtApp('gtpphase', 'pulsePhase')
-psearch = GtApp('gtpsearch', 'periodSearch')
+##
+## Pulsar-related
+##
+#pulsePhase = GtApp('gtpphase', 'pulsePhase')
+#psearch = GtApp('gtpsearch', 'periodSearch')
 
 #
 # others
