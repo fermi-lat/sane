@@ -27,7 +27,6 @@ import Likelihood_tests as like
 import BinnedLikelihood_test as binned_test
 import evtbin_tests as evtbin
 import rspgen_tests as rspgen
-import Pulsar_tests as pulsars
 
 if __name__ == "__main__":
     cleanUp = False
@@ -38,7 +37,6 @@ if __name__ == "__main__":
     binned_test.run()
     evtbin.run(useWorkAround)
     rspgen.run()
-#    pulsars.run(useWorkAround)
     if GtApp._failed_exes:
         print "The following executables failed: "
         for exe in GtApp._failed_exes:
