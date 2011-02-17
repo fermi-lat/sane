@@ -20,11 +20,6 @@ application test_sane test/main.cxx
 
 path_append PYTHONPATH "$(SANEROOT)/python"
 
-#any package using this one will make a local executable
-
-#pattern -global user_package \
-#   application <package> "$(SANEROOT)/src/sane_main.cxx $(sane_extra)" 
-
 private
 
 macro sane_extra "" WIN32 " -s=..\python *.py "
