@@ -9,11 +9,8 @@ use STpolicy *
 use dataSubselector * -no_auto_imports
 use Likelihood * 
 use observationSim * -no_auto_imports
-use map_tools * -no_auto_imports
 use evtbin * -no_auto_imports
 use rspgen * -no_auto_imports
-use pulsePhase * -no_auto_imports
-use periodSearch * -no_auto_imports
 use python * IExternal -no_auto_imports
 use st_app *
 use pyLikelihood * -no_auto_imports
