@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Thu Feb 17 11:27:10 PST 2011
+ScienceTools-scons/sane/python
+
+Modified Files:
+	gt_apps.py 
+Log Message:
+omit pulsar tools from gt_apps.py
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: sane-03-21-00, operation: add
 Package: sane
