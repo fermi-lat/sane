@@ -6,6 +6,7 @@ $Id$
 @verbatim
  * EOH *
 
+ sane-03-21-00 16-Feb-2011 jchiang clean out tests of irrelevant applications
  sane-03-20-04 26-Jan-2011 jchiang use NewMinuit optimizer in test scripts on MacOSX
  sane-03-20-03 01-Dec-2010 jchiang change author line in SConscript file
  sane-03-20-02 01-Dec-2010 jchiang bug-fix for gtexpcube2 call in binned tests
