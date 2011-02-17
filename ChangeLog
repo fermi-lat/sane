@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Wed Feb 16 20:57:21 PST 2011
+ScienceTools-scons/sane/python/tests
+
+Modified Files:
+	setPaths.py 
+Log Message:
+clean out tests of useless code
+    *
+------------------------------------------------------------
+User: jchiang  Wed Feb 16 20:57:21 PST 2011
 ScienceTools-scons/sane/cmt
 
 Modified Files:
