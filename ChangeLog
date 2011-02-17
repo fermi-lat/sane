@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jchiang  Wed Feb 16 20:15:42 PST 2011
+ScienceTools-scons/sane/python/tests
+
+Modified Files:
+	default_tests.py 
+Removed Files:
+	map_tools_tests.py 
+Log Message:
+more useless chaff
+    *
+------------------------------------------------------------
 User: jchiang  Wed Feb 16 19:22:04 PST 2011
 ScienceTools-scons/sane/python/tests
 
