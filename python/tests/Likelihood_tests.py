@@ -9,6 +9,7 @@ Use Likelihood applications to analyze obsSim data.
 
 from setPaths import *
 from GtApp import GtApp
+from UpperLimits import UpperLimits
 
 gtselect = GtApp('gtselect', 'dataSubselector')
 gtltcube = GtApp('gtltcube', 'Likelihood')
@@ -99,16 +100,22 @@ def run(clean=False):
     gtdiffrsp.run()
     gtlike.run()
 
-    try:
-        pylike = unbinnedAnalysis(mode='h', optimizer='NEWMINUIT')
-        pylike.fit(verbosity=0, tol=gtlike['ftol'])
-        print pylike.model
-        print "Ts values:"
-        for src in pylike.sourceNames():
-            print src, pylike.Ts(src)
-    except NameError, message:
-        print "NameError occurred for pyLike analysis:"
-        print message
+
+    like = unbinnedAnalysis(mode='h', optimizer='NEWMINUIT')
+    like.fit(verbosity=0, tol=gtlike['ftol'])
+    print like.model
+    print "Ts values:"
+    for src in like.sourceNames():
+        print src, like.Ts(src)
+
+    print "Exercise UpperLimits.py"
+    ul = UpperLimits(like)
+    for src in like.sourceNames():
+        if like[src].src.getType() == 'Point':
+            flux_ul = ul[src].compute(emin=100, emax=3e5)[0]
+            print src, flux_ul
+#            bayes_ul = ul[src].bayesianUL(emin=100, emax=3e5)[0]
+#            print src, bayes_ul
     
 #    TsMap['srcmdl'] = 'Ts_srcModel.xml'
 #    TsMap.run()
