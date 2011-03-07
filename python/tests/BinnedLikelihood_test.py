@@ -61,6 +61,17 @@ def makeSourceMaps():
     gtsrcmaps['expcube'] = 'ltcube.fits'
     gtsrcmaps['bexpmap'] = 'bexpmap.fits'
     gtsrcmaps["irfs"] = irfs
+    #
+    # test for failure
+    #
+    try:
+        gtsrcmaps.run()
+    except RuntimeError:
+        pass
+    #
+    # test emapbnds override
+    #
+    gtsrcmaps["emapbnds"] = "no"
     gtsrcmaps.run()
 
     gtsrcmaps.run(outfile='sourceMaps_allsky.fits',
