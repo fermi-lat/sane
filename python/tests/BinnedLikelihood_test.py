@@ -9,7 +9,7 @@ Binned likelihood tests.
 
 from setPaths import *
 from obsSim_tests import sourceNamesDat, random_int
-from GtApp import GtApp
+from GtApp import GtApp, _failed_exes
 gtbin = GtApp('gtbin', 'evtbin')
 gtltcube = GtApp('gtltcube', 'Likelihood')
 gtexpcube2 = GtApp('gtexpcube2', 'Likelihood')
@@ -67,6 +67,7 @@ def makeSourceMaps():
     try:
         gtsrcmaps.run()
     except RuntimeError:
+        _failed_exes.pop()
         pass
     #
     # test emapbnds override
