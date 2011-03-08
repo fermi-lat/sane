@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Mar  7 16:04:53 PST 2011
+ScienceTools-scons/sane/python/tests
+
+Modified Files:
+	BinnedLikelihood_test.py 
+Log Message:
+pop the expected gtsrcmaps failure off of the _failed_exes stack
+    *
+------------------------------------------------------------
 TAG
 Tag name: sane-03-21-03, operation: add
 Package: sane
