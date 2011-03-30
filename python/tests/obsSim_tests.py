@@ -20,7 +20,8 @@ def random_int(scale=1e5):
 
 if model_type == 'EGRET_DIFFUSE':
     source_list = ('anticenter-32mev', 'Galactic_diffuse')
-                   
+elif model_type == 'GALPROP_DIFFUSE':
+    source_list = ('anticenter-32mev', 'GALPROP_diffuse')
 else:
     source_list = ('anticenter-32mev', 'Extragalactic_diffuse')
 

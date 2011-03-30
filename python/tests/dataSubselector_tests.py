@@ -29,7 +29,10 @@ def run(clean=False):
     gtselect['tmin'] = 0.0
     gtselect['tmax'] = 0.0
     gtselect['emin'] = 32.0
-    gtselect['emax'] = 200000.0
+    if model_type == 'GALPROP_DIFFUSE':
+        gtselect['emax'] = 1e5
+    else:
+        gtselect['emax'] = 200000.0
     gtselect.run()
 
 if __name__ == "__main__":
