@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: jchiang  Tue Mar 29 22:04:09 PDT 2011
+ScienceTools-scons/sane/python/tests
+
+Modified Files:
+	BinnedLikelihood_test.py dataSubselector_tests.py 
+	obsSim_tests.py setPaths.py 
+Log Message:
+add tests for Npred integrations in gtmodel output vs values obtained from binned analysis
+    *
+------------------------------------------------------------
+User: jchiang  Tue Mar 29 22:04:09 PDT 2011
 ScienceTools-scons/sane/data
 
 Added Files:
