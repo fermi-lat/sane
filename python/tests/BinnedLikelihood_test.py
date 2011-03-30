@@ -9,6 +9,7 @@ Binned likelihood tests.
 
 from setPaths import *
 from obsSim_tests import sourceNamesDat, random_int
+from BinnedAnalysis import *
 from GtApp import GtApp, _failed_exes
 gtbin = GtApp('gtbin', 'evtbin')
 gtltcube = GtApp('gtltcube', 'Likelihood')
@@ -23,7 +24,10 @@ def makeCountsMap():
     gtbin['outfile'] = 'countsMap.fits'
     gtbin['scfile'] = 'orbSim_scData_0000.fits'
     gtbin['emin'] = 100
-    gtbin['emax'] = 2e5
+    if model_type == 'GALPROP_DIFFUSE':
+        gtbin['emax'] = 1e5
+    else:
+        gtbin['emax'] = 2e5
     gtbin['enumbins'] = 30
     gtbin['nxpix'] = 160
     gtbin['nypix'] = 160
@@ -49,9 +53,9 @@ def makeExpCubes():
                    irfs=irfs,
                    proj='CAR',
                    coordsys='GAL',
-                   emin=100,
-                   emax=2e5,
-                   enumbins=30)
+                   emin=gtbin['emin'],
+                   emax=gtbin['emax'],
+                   enumbins=gtbin['enumbins'])
 
 def makeSourceMaps():
     gtsrcmaps["scfile"] = 'orbSim_scData_0000.fits'
@@ -102,12 +106,26 @@ def makeModelMap():
     gtmodel['expcube'] = gtlike['expcube']
     gtmodel.run()
 
+    gtmodel.run(outtype='ccube', outfile='model_cube.fits')
+    
+    like = binnedAnalysis(mode='h', srcmdl=gtlike['sfile'])
+    Npred_tot = sum([like.NpredValue(srcname) 
+                     for srcname in like.sourceNames()])
+    import pyfits
+    modelmap = pyfits.open('model_map.fits')
+    modelcube = pyfits.open('model_cube.fits')
+    delta1 = abs(sum(modelmap[0].data.flat) - Npred_tot)
+    delta2 = abs(sum(modelcube[0].data.flat) - Npred_tot)
+    if delta1 > 1e-3 or delta2 > 1e-3:
+        raise RuntimeError("Npred mismatch in gtmodel output: "
+                           + "delta1 = %s, delta2 = %s" % (delta1, delta2))
+
 def run():
     makeCountsMap()
     makeExpCubes()
     makeSourceMaps()
     runLikelihood()
     makeModelMap()
-
+   
 if __name__ == "__main__":
     run()

@@ -39,6 +39,8 @@ irfs = 'DC1A'
 #srcmdl = 'srcModel.xml'
 model_type = 'EGRET_DIFFUSE'
 srcmdl = 'srcModel_egretdiffuse.xml'
+#model_type = 'GALPROP_DIFFUSE'
+#srcmdl = 'srcModel_galprop.xml'
 
 def removeFile(file):
     files = glob.glob(file)
