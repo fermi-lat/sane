@@ -1,5 +1,46 @@
 ------------------------------------------------------------
 TAG
+Tag name: ScienceTools-09-23-01, operation: add
+Package: sane
+User: jchiang  Fri Apr 15 13:11:46 2011
+Files:
+  sane/.cvsignore  1.1.1.1
+  sane/ChangeLog  1.624
+  sane/SConscript  1.37
+  sane/cmt/requirements  1.119
+  sane/data/setup.csh  1.2
+  sane/data/ptsrcModel.xml  1.3
+  sane/data/anticenter_sources.xml  1.1
+  sane/data/srcModel.xml  1.5
+  sane/data/srcModel_egretdiffuse.xml  1.1
+  sane/data/setup.sh  1.2
+  sane/data/srcModel_galprop.xml  1.1
+  sane/doc/release.notes  1.111
+  sane/python/readXml.py  1.2
+  sane/python/GtApp.py  1.8
+  sane/python/source_analysis.py  1.4
+  sane/python/pil.py  1.12
+  sane/python/menu.py  1.7
+  sane/python/makeSrcList.py  1.2
+  sane/python/cleanXml.py  1.2
+  sane/python/.cvsignore  1.1.1.1
+  sane/python/xmlSrcLib.py  1.15
+  sane/python/pfilesPath.py  1.5
+  sane/python/gt_apps.py  1.12
+  sane/python/tests/default_tests.py  1.15
+  sane/python/tests/Likelihood_tests.py  1.21
+  sane/python/tests/evtbin_tests.py  1.16
+  sane/python/tests/BinnedLikelihood_test.py  1.26
+  sane/python/tests/dataSubselector_tests.py  1.10
+  sane/python/tests/rspgen_tests.py  1.7
+  sane/python/tests/setPaths.py  1.19
+  sane/python/tests/obsSim_tests.py  1.16
+  sane/src/sane_main.cxx  1.6
+  sane/src/test/main.cxx  1.7
+
+    *
+------------------------------------------------------------
+TAG
 Tag name: ScienceTools-09-23-00, operation: add
 Package: sane
 User: jchiang  Mon Apr  4 15:25:24 2011
