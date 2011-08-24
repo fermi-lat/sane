@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Wed Aug 24 12:38:12 PDT 2011
+ScienceTools-scons/sane/python
+
+Modified Files:
+	makeSrcList.py 
+Log Message:
+remove unneeded copy.deepcopy that seems to be causing problems with the output xml under python 2.7 (ST-09-25-00)
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-25-00, operation: add
 Package: sane
