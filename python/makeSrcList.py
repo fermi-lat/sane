@@ -59,7 +59,7 @@ class SourceList:
 
 class PointSource:
     def __init__(self, name, pos=(0, 0)):
-        self.src = copy.deepcopy(ptSrc())
+        self.src = ptSrc()
         self.src.setAttribute('name', name)
         self._setDir(pos)
     def _setDir(self, pos):
