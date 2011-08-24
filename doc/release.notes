@@ -6,6 +6,7 @@ $Id$
 @verbatim
  * EOH *
 
+ sane-03-21-06 24-Aug-2011 jchiang bug-fix for makeSrcList.py under python 2.7
  sane-03-21-05 29-Mar-2011 jchiang add test for Npred vs summed gtmodel output
  sane-03-21-04 07-Mar-2011 jchiang tweak the unit tests to account for the expected failure of gtsrcmaps
  sane-03-21-03 07-Mar-2011 jchiang test for failure of gtsrcmaps in BinnedLikelihood_tests.py
