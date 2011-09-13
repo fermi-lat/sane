@@ -1,6 +1,9 @@
 """
 This module uses GtApp to wraps the Science Tools as python objects.
 """
+#
+# $Header$
+#
 from GtApp import GtApp
 
 #
@@ -16,6 +19,7 @@ TsMap = GtApp('gttsmap', 'Likelihood')
 counts_map = GtApp('gtbin', 'evtbin')
 srcMaps = GtApp('gtsrcmaps', 'Likelihood')
 model_map = GtApp('gtmodel', 'Likelihood')
+gtexpcube2 = GtApp('gtexpcube2', 'Likelihood')
 
 #
 # observationSim
