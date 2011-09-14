@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Wed Sep 14 09:05:39 PDT 2011
+ScienceTools-scons/sane/python
+
+Modified Files:
+	xmlSrcLib.py 
+Log Message:
+increase max values for [Lower,Upper]Limit parameters in PowerLaw2 to 1e6 as requested by D. Landriu
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: sane-03-21-07, operation: add
 Package: sane
