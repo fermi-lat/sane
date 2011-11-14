@@ -104,6 +104,7 @@ def makeModelMap():
     gtmodel['outfile'] = 'model_map.fits'
     gtmodel['irfs'] = irfs
     gtmodel['expcube'] = gtlike['expcube']
+    gtmodel['bexpmap'] = gtlike['bexpmap']
     gtmodel.run()
 
     gtmodel.run(outtype='ccube', outfile='model_cube.fits')
