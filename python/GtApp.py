@@ -41,15 +41,23 @@ class GtApp(object):
         self.appName = appName
     def __setitem__(self, key, value):
         self.pars[key] = value
+        self._test_par_value(key)
     def __getitem__(self, key):
         return self.pars[key]
     def __getattr__(self, attrname):
         return getattr(self.pars, attrname)
+    def _test_par_value(self, key):
+        "Test if a valid value has been specified."
+        try:
+            self.pars[key]
+        except ValueError as ee:
+            # Add more context for exception message.
+            raise ValueError("for parameter %s, %s" % (key, ee.args[0]))
     def run(self, print_command=True, catchError="at the top level:", 
             dry_run=False, **kwds):
         for item in kwds.keys():
             if self.pars.has_key(item):
-                self.pars[item] = kwds[item]
+                self[item] = kwds[item]
         try:
             if self.pars['chatter'] == 0:
                 print_command = False
