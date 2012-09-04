@@ -80,9 +80,8 @@ class Pil(object):
                     args += ' ' + ''.join(('', name, '="%s"' % self[name]))
                 else:
                     args += ' ' + ''.join(('', name, '=%s' % self[name]))
-            except ValueError as ee:
-                # Re-raise the exception, providing additional context.
-                raise ValueError("for parameter %s, %s" % (name, ee.args[0]))
+            except ValueError:
+                pass
         return args
     def write(self, filename=None):
         if filename is None:
