@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Sep  4 00:08:11 PDT 2012
+ScienceTools-scons/sane/python
+
+Modified Files:
+	GtApp.py pil.py 
+Log Message:
+validate parameter value when set
+    *
+------------------------------------------------------------
 User: jchiang  Mon Sep  3 22:35:29 PDT 2012
 ScienceTools-scons/sane/python
 
