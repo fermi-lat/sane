@@ -56,8 +56,7 @@ class GtApp(object):
         except KeyError:
             pass
         if dry_run:
-            print self.command()
-            return
+            return self.command()
         if catchError is not None:
             input, output = self.runWithOutput(print_command)
             for line in output:
@@ -72,7 +71,9 @@ class GtApp(object):
         else:
             if print_command:
                 print self.command()
-            retcode = os.system(self.command(do_timing=print_command))
+#            retcode = os.system(self.command(do_timing=print_command))
+            retcode = subprocess.call(self.command(do_timing=print_command),
+                                      shell=True)
             if retcode != 0:
                 _failed_exes.append(self.app)
                 raise RuntimeError, self.appName + " execution failed"
@@ -86,7 +87,6 @@ class GtApp(object):
                                    stderr=subprocess.STDOUT,
                                    close_fds=True)
         return (process.stdin, process.stdout)
-#        return os.popen4(self.command(print_command))
     def command(self, do_timing=True):
         chatter = 2
         try:
