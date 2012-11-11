@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Sat Nov 10 19:23:52 PST 2012
+ScienceTools-scons/sane/src/test
+
+Modified Files:
+	main.cxx 
+Log Message:
+use st_facilities::Environment
+    *
+------------------------------------------------------------
+User: jchiang  Sat Nov 10 19:23:52 PST 2012
 ScienceTools-scons/sane/src
 
 Modified Files:
