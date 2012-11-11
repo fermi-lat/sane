@@ -15,7 +15,7 @@ std::string pyname("python ");
 #include "st_app/StApp.h"
 #include "st_app/StAppFactory.h"
 
-#include "facilities/commonUtilities.h"
+#include "st_facilities/Environment.h"
 
 class SaneApp : public st_app::StApp {
 
@@ -24,7 +24,7 @@ class SaneApp : public st_app::StApp {
         std::stringstream cmd;
         std::string app("/python/menu.py");
 
-        cmd << pyname<< facilities::commonUtilities::getPackagePath("sane") << app;
+        cmd << pyname<< st_facilities::Environment::packagePath("sane") << app;
 
         system(cmd.str().c_str());
     }
