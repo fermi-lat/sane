@@ -11,11 +11,11 @@
 #include <iostream>
 #include <string>
 
-#include "facilities/commonUtilities.h"
+#include "st_facilities/Environment.h"
 
 int main(int iargc, char *argv[]) {
    std::string command;
-   std::string rootPath = facilities::commonUtilities::getPackagePath("sane");
+   std::string rootPath = st_facilities::Environment::packagePath("sane");
    if (rootPath == "") {
       std::cerr << "Unable to determine sane root directory" << std::endl;
       std::exit(-1);
