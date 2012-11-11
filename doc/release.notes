@@ -6,6 +6,7 @@ $Id$
 @verbatim
  * EOH *
 
+ sane-03-22-01 10-Nov-2012 jchiang ensure setupEnvironment() is called exactly once via st_facilities::Environment
  sane-03-22-00 04-Sep-2012 jchiang test parameter value when set, return command string for dry_run=True in GtApp.py
  sane-03-21-09 13-Nov-2011 jchiang fix email address in SConscript file; fix call to gtmodel in BinnedLikelihood_tests.py
  sane-03-21-08 14-Sep-2011 jchiang increase max values for [Lower,Upper]Limit parameters in PowerLaw2 model in xmlSrcLib.py as requested by D. Landriu
