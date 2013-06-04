@@ -16,7 +16,10 @@ from pil import Pil
 if not os.environ.has_key('SANEROOT'):
     os.environ['SANEROOT'] = os.path.join(os.environ['INST_DIR'], 'sane')
 sysData = os.path.join(os.environ["SANEROOT"], 'data')
-os.chdir(sysData)
+if os.environ.has_key('TEST_SANE_DIR'):
+    os.chdir(os.environ['TEST_SANE_DIR'])
+else:
+    os.chdir(sysData)
 
 # ensure the desired .par files are used.
 os.environ['PFILES'] = sysData
@@ -32,13 +35,15 @@ irfs = 'DC1A'
 #irfs = 'PASS5_v0'
 #irfs = 'P6_v2'
 #irfs = 'P6_V1_TRANSIENT'
+#irfs = 'IDEAL'
 #irfs = 'P6_V3_DIFFUSE'
 #irfs = 'P6_V8_DIFFUSE'
 #irfs = 'P6_V11_DIFFUSE'
+#irfs = 'P7REP_SOURCE_V15'
 
 #srcmdl = 'srcModel.xml'
 model_type = 'EGRET_DIFFUSE'
-srcmdl = 'srcModel_egretdiffuse.xml'
+srcmdl = os.path.join(sysData, 'srcModel_egretdiffuse.xml')
 #model_type = 'GALPROP_DIFFUSE'
 #srcmdl = 'srcModel_galprop.xml'
 

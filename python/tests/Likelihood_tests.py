@@ -10,6 +10,7 @@ Use Likelihood applications to analyze obsSim data.
 from setPaths import *
 from GtApp import GtApp
 from UpperLimits import UpperLimits
+import IntegralUpperLimit
 
 gtselect = GtApp('gtselect', 'dataSubselector')
 gtltcube = GtApp('gtltcube', 'Likelihood')
@@ -114,6 +115,13 @@ def run(clean=False):
         if like[src].src.getType() == 'Point':
             flux_ul = ul[src].compute(emin=100, emax=3e5)[0]
             print src, flux_ul
+
+    print "Exercise IntegralUpperLimit.py"
+    for src in like.sourceNames():
+        if like[src].src.getType() == 'Point':
+            flux_ul = IntegralUpperLimit.calc_int(like, src)
+            print src, flux_ul[0]
+
 #            bayes_ul = ul[src].bayesianUL(emin=100, emax=3e5)[0]
 #            print src, bayes_ul
     
