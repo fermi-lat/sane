@@ -33,7 +33,7 @@ def sourceNamesDat(filename='source_names.txt',
     file.close()
 
 def xmlFilesDat(filename='xmlFiles.txt',
-                fileList=('anticenter_sources.xml',
+                fileList=(os.path.join(sysData, 'anticenter_sources.xml'),
                           '$(OBSERVATIONSIMROOT)/xml/' +
                           'obsSim_source_library.xml')):
     xmlFiles = open(filename, "w")
