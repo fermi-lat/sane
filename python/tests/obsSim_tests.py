@@ -44,8 +44,8 @@ def xmlFilesDat(filename='xmlFiles.txt',
 def run(clean=False):
     sourceNamesDat()
     xmlFilesDat()
-    gtobssim['irfs'] = irfs
-    if irfs == 'DSS':
+    gtobssim['irfs'] = irfs0
+    if irfs0 == 'DSS':
         gtobssim['irfs'] = 'DC2'
 #    gtobssim['seed'] = random_int()
     gtobssim['seed'] = 479153
@@ -66,8 +66,8 @@ def compareFit(clean=False):
     sourceNamesDat(srcList=['all_in_flux_model.xml'])
     gtobssim['infile'] = 'flux_model.xml'
     gtobssim['evroot'] = 'fit_comparison'
-    gtobssim['irfs'] = irfs
-    if irfs == 'DSS':
+    gtobssim['irfs'] = irfs0
+    if irfs0 == 'DSS':
         gtobssim['irfs'] = 'DC2'
     gtobssim.run()
     if clean:

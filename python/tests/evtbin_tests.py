@@ -19,8 +19,8 @@ def Crab_only():
     obsSim['srclist'] = 'source_names.txt'
     obsSim['evroot'] = 'Crab'
     obsSim['scfile'] = 'none'
-    obsSim['irfs'] = irfs
-    if irfs == 'DSS':
+    obsSim['irfs'] = irfs0
+    if irfs0 == 'DSS':
         obsSim['irfs'] = 'DC2'
     obsSim['use_ac'] = 'no'
     obsSim['seed'] = random_int()
