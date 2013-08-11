@@ -11,6 +11,7 @@ from setPaths import *
 from obsSim_tests import sourceNamesDat, random_int
 from BinnedAnalysis import *
 from GtApp import GtApp, _failed_exes
+gtselect = GtApp('gtselect')
 gtbin = GtApp('gtbin', 'evtbin')
 gtltcube = GtApp('gtltcube', 'Likelihood')
 gtexpcube2 = GtApp('gtexpcube2', 'Likelihood')
@@ -18,9 +19,19 @@ gtsrcmaps = GtApp('gtsrcmaps', 'Likelihood')
 gtlike = GtApp('gtlike', 'Likelihood')
 gtmodel = GtApp('gtmodel', 'Likelihood')
 
+#irfs = 'INDEF'
+evfile = 'filtered_events.fits'
+
 def makeCountsMap():
+    gtselect.run(infile='test_events_0000.fits',
+                 outfile=evfile,
+                 ra='INDEF', dec='INDEF', rad='INDEF',
+                 tmin='INDEF', tmax='INDEF', zmax=180,
+                 irfs=irfs0,
+                 emin=30, emax=300000)
+                 
     gtbin['algorithm'] = 'CCUBE'
-    gtbin['evfile'] = 'test_events_0000.fits'
+    gtbin['evfile'] = evfile
     gtbin['outfile'] = 'countsMap.fits'
     gtbin['scfile'] = 'orbSim_scData_0000.fits'
     gtbin['emin'] = 100
@@ -40,7 +51,7 @@ def makeCountsMap():
     gtbin.run()
 
 def makeExpCubes():
-    gtltcube.run(evfile='test_events_0000.fits',
+    gtltcube.run(evfile=evfile,
                  scfile='orbSim_scData_0000.fits',
                  outfile='ltcube.fits')
     gtexpcube2.run(infile='ltcube.fits',
@@ -50,7 +61,7 @@ def makeExpCubes():
     gtexpcube2.run(infile='ltcube.fits',
                    cmap='none',
                    outfile='bexpmap_allsky.fits',
-                   irfs=irfs,
+                   irfs=irfs0,
                    proj='CAR',
                    coordsys='GAL',
                    emin=gtbin['emin'],
