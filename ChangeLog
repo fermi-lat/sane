@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jchiang  Sat Aug 10 21:29:58 PDT 2013
+ScienceTools-scons/sane/python/tests
+
+Modified Files:
+	BinnedLikelihood_test.py Likelihood_tests.py 
+	dataSubselector_tests.py evtbin_tests.py obsSim_tests.py 
+	setPaths.py 
+Log Message:
+mods to test new irf handling
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-32-05, operation: add
 Package: sane
