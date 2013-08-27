@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Mon Aug 26 22:08:02 PDT 2013
+ScienceTools-scons/sane/python/tests
+
+Modified Files:
+	BinnedLikelihood_test.py Likelihood_tests.py 
+	dataSubselector_tests.py setPaths.py 
+Log Message:
+changes to support FSSC proposal for irfs handling
+    *
+------------------------------------------------------------
 TAG
 Tag name: sane-03-22-03, operation: add
 Package: sane
