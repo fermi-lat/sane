@@ -27,7 +27,6 @@ def makeCountsMap():
                  outfile=evfile,
                  ra='INDEF', dec='INDEF', rad='INDEF',
                  tmin='INDEF', tmax='INDEF', zmax=180,
-                 irfs=irfs0,
                  emin=30, emax=300000)
                  
     gtbin['algorithm'] = 'CCUBE'

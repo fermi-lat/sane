@@ -33,7 +33,6 @@ def run(clean=False):
         gtselect['emax'] = 1e5
     else:
         gtselect['emax'] = 200000.0
-    gtselect['irfs'] = irfs0
     gtselect.run()
 
 if __name__ == "__main__":

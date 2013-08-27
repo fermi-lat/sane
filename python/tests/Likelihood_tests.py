@@ -43,7 +43,6 @@ def run(clean=False):
     gtselect['ra'] = 90
     gtselect['dec'] = 20
     gtselect['rad'] = 20
-    gtselect['irfs'] = irfs
     gtselect.run()
     
     gtltcube['evfile'] = 'filtered1.fits'
@@ -51,7 +50,6 @@ def run(clean=False):
     gtltcube['outfile'] = 'expcube1.fits'
     gtltcube['dcostheta'] = 0.05
     gtltcube['binsz'] = 1
-#    gtltcube['phibins'] = 10
     gtltcube['phibins'] = 0
     gtltcube['chatter'] = 4
     gtltcube.run()
@@ -59,7 +57,6 @@ def run(clean=False):
     gtselect['tmin'] = 86400/2 + start_time
     gtselect['tmax'] = 86400 + start_time
     gtselect['outfile'] = 'filtered2.fits'
-    gtselect['irfs'] = irfs
     gtselect.run()
    
     gtltcube['evfile'] = 'filtered2.fits'
@@ -79,7 +76,6 @@ def run(clean=False):
     gtexpmap.copy(gtltcube)
     gtexpmap['evfile'] = 'filtered_events_0000.fits'
     gtexpmap['irfs'] = irfs
-#    gtexpmap['irfs'] = "INDEF"
     gtexpmap['srcrad'] = 30
     gtexpmap['nlong'] = 120
     gtexpmap['nlat'] = 120
