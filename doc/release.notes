@@ -6,6 +6,7 @@ $Id$
 @verbatim
  * EOH *
 
+ sane-03-23-00 27-Aug-2013 jchiang changes for FSSC-requested irfs handling
  sane-03-22-03 10-Aug-2013 jchiang update tests to exercize automatic irf discovery code
  sane-03-22-02 04-Jun-2013 jchiang updates to test_sane scripts
  sane-03-22-01 10-Nov-2012 jchiang ensure setupEnvironment() is called exactly once via st_facilities::Environment
