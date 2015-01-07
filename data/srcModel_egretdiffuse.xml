@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <source_library title="source library">
-  <source name="EGRET Diffuse" type="DiffuseSource">
+  <source name="EGRET Diffuse" type="DiffuseSource" >
     <spectrum type="PowerLaw">
       <parameter free="1" max="1000.0" min="0.001" name="Prefactor" scale="0.001" value="11.0"/>
       <parameter free="0" max="-1.0" min="-3.5" name="Index" scale="1.0" value="-2.1"/>
