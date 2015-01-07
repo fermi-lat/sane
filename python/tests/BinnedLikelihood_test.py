@@ -58,14 +58,12 @@ def makeExpCubes():
                    outfile='bexpmap.fits',
                    irfs=irfs)
     gtexpcube2.run(infile='ltcube.fits',
-                   cmap='none',
+                   cmap='countsMap.fits',
                    outfile='bexpmap_allsky.fits',
                    irfs=irfs0,
+                   nxpix=360, nypix=180, binsz=1, xref=0, yref=0,
                    proj='CAR',
-                   coordsys='GAL',
-                   emin=gtbin['emin'],
-                   emax=gtbin['emax'],
-                   enumbins=gtbin['enumbins'])
+                   coordsys='GAL')
 
 def makeSourceMaps():
     gtsrcmaps["scfile"] = 'orbSim_scData_0000.fits'
