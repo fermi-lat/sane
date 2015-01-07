@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Jan  7 14:47:23 PST 2015
+ScienceTools-scons/sane/data
+
+Modified Files:
+	srcModel_egretdiffuse.xml 
+Log Message:
+use new gtexpcube2 interface for Pass 8
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-35-00, operation: add
 Package: sane
