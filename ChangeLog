@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Wed Jan  7 14:47:23 PST 2015
+ScienceTools-scons/sane/python/tests
+
+Modified Files:
+	BinnedLikelihood_test.py 
+Log Message:
+use new gtexpcube2 interface for Pass 8
+    *
+------------------------------------------------------------
+User: jchiang  Wed Jan  7 14:47:23 PST 2015
 ScienceTools-scons/sane/data
 
 Modified Files:
