@@ -1,6 +1,6 @@
 package sane
 
-version v3r23p0
+version v4r0p0
 
 author J. Chiang <jchiang@slac.stanford.edu>
 # $Id$
