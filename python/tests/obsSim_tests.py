@@ -48,6 +48,8 @@ def run(clean=False):
     if irfs0 == 'DSS':
         gtobssim['irfs'] = 'DC2'
 #    gtobssim['seed'] = random_int()
+    if irfs0 == 'P8R2_SOURCE_V6':
+        gtobssim['evtype'] = 'PSF'
     gtobssim['seed'] = 479153
     gtobssim['tstart'] = 86400
     gtobssim.run(infile='xmlFiles.txt', srclist='source_names.txt',

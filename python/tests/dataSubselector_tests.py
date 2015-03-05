@@ -13,6 +13,7 @@ from GtApp import GtApp
 
 gtselect = GtApp('gtselect', 'dataSubselector')
 gtmktime = GtApp('gtmktime', 'dataSubselector')
+gtvcut = GtApp('gtvcut')
 
 def run(clean=False):
     gtmktime['scfile'] = 'orbSim_scData_0000.fits'
@@ -21,8 +22,12 @@ def run(clean=False):
     gtmktime['outfile'] = 'test_events.fits'
     gtmktime.run()
 
+    gtvcut.run(infile=gtmktime['outfile'], table='EVENTS')
+
     gtselect['infile'] = 'test_events.fits'
     gtselect['outfile'] = 'filtered_events_0000.fits'
+    if irfs0 == 'P8R2_SOURCE_V6':
+        gtselect['evtype'] = 48
     gtselect['ra'] = 90
     gtselect['dec'] = 20
     gtselect['rad'] = 20.0
@@ -34,6 +39,8 @@ def run(clean=False):
     else:
         gtselect['emax'] = 200000.0
     gtselect.run()
+
+    gtvcut.run(infile=gtselect['outfile'], table='EVENTS')
 
 if __name__ == "__main__":
     run()
