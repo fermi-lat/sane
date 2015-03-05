@@ -40,6 +40,7 @@ irfs = 'DC1A'
 #irfs = 'P6_V8_DIFFUSE'
 #irfs = 'P6_V11_DIFFUSE'
 #irfs0 = 'P7REP_SOURCE_V15'
+#irfs0 = 'P8R2_SOURCE_V6'
 #irfs = 'CALDB'
 
 #srcmdl = 'srcModel.xml'

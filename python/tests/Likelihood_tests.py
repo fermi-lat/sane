@@ -19,6 +19,7 @@ gtdiffrsp = GtApp('gtdiffrsp', 'Likelihood')
 gtlike = GtApp('gtlike', 'Likelihood')
 gttsmap = GtApp('gttsmap', 'Likelihood')
 gtltsum = GtApp('gtltsum', 'Likelihood')
+gtvcut = GtApp('gtvcut')
 
 try:
     from UnbinnedAnalysis import *
@@ -38,12 +39,14 @@ def cleanUp():
 def run(clean=False):
     gtselect['tmin'] = 0. + start_time
     gtselect['tmax'] = 86400/2 + start_time
-    gtselect['infile'] = 'test_events_0000.fits'
+    gtselect['infile'] = 'test_events.fits'
     gtselect['outfile'] = 'filtered1.fits'
     gtselect['ra'] = 90
     gtselect['dec'] = 20
     gtselect['rad'] = 20
     gtselect.run()
+
+    gtvcut.run(infile=gtselect['outfile'], table='EVENTS')
     
     gtltcube['evfile'] = 'filtered1.fits'
     gtltcube['scfile'] = 'orbSim_scData_0000.fits'
@@ -58,6 +61,8 @@ def run(clean=False):
     gtselect['tmax'] = 86400 + start_time
     gtselect['outfile'] = 'filtered2.fits'
     gtselect.run()
+
+    gtvcut.run(infile=gtselect['outfile'], table='EVENTS')
    
     gtltcube['evfile'] = 'filtered2.fits'
     gtltcube['scfile'] = 'orbSim_scData_0000.fits'
@@ -82,10 +87,17 @@ def run(clean=False):
     gtexpmap['nenergies'] = 20
     gtexpmap['expcube'] = 'expcube_1_day.fits'
     gtexpmap['outfile'] = 'expMap.fits'
+    gtexpmap.run(chatter=4)
+
+    gtvcut.run(infile=gtexpmap['outfile'], table='PRIMARY')
 
     gtdiffrsp.copy(gtexpmap)
     gtdiffrsp['srcmdl'] = srcmdl
     gtdiffrsp['evfile'] = 'filtered_events_0000.fits'
+    gtdiffrsp['evtype'] = 'INDEF'
+    gtdiffrsp.run(chatter=4)
+
+    gtvcut.run(infile=gtdiffrsp['evfile'], table='EVENTS')
 
     gtlike.copy(gtltcube)
     gtlike.copy(gtdiffrsp)
@@ -95,12 +107,8 @@ def run(clean=False):
     gtlike['optimizer'] = 'MINUIT'
     if sys.platform == 'darwin':
         gtlike['optimizer'] = 'NEWMINUIT'
-    gtlike['chatter'] = 2
     gtlike['ftol'] = 1e-4
     gtlike['refit'] = 'no'
-
-    gtexpmap.run(chatter=4)
-    gtdiffrsp.run(chatter=4)
     gtlike.run(chatter=3)
 
     like = unbinnedAnalysis(mode='h', optimizer='NEWMINUIT')
@@ -112,13 +120,15 @@ def run(clean=False):
 
     print "Exercise UpperLimits.py"
     ul = UpperLimits(like)
-    for src in like.sourceNames():
+#    for src in like.sourceNames():
+    for src in like.sourceNames()[:1]:
         if like[src].src.getType() == 'Point':
             flux_ul = ul[src].compute(emin=100, emax=3e5)[0]
             print src, flux_ul
 
     print "Exercise IntegralUpperLimit.py"
-    for src in like.sourceNames():
+#    for src in like.sourceNames():
+    for src in like.sourceNames()[:1]:
         if like[src].src.getType() == 'Point':
             flux_ul = IntegralUpperLimit.calc_int(like, src)
             print src, flux_ul[0]
