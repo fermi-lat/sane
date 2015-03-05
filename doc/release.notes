@@ -6,6 +6,7 @@ $Id$
 @verbatim
  * EOH *
 
+ sane-04-00-01 05-Mar-2015 jchiang ensure GTIs are consistent for all FT1 files
  sane-04-00-00 08-Jan-2015 jchiang Pass 8-related development
  sane-03-23-00 27-Aug-2013 jchiang changes for FSSC-requested irfs handling
  sane-03-22-03 10-Aug-2013 jchiang update tests to exercize automatic irf discovery code
