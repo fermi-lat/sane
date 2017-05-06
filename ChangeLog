@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jrb  Fri May  5 17:55:38 PDT 2017
+sane
+
+Modified Files:
+	.cvsignore SConscript 
+Log Message:
+updates so that ST_User can be ROOTless
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-11-05-03, operation: add
 Package: sane
