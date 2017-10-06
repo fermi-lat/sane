@@ -9,7 +9,9 @@ progEnv = baseEnv.Clone()
 
 progEnv.Tool('dataSubselectorLib')
 progEnv.Tool('LikelihoodLib')
-progEnv.Tool('observationSimLib')
+if baseEnv.get('CONTAINERNAME','') != 'ScienceTools_User':
+    progEnv.Tool('observationSimLib')
+
 progEnv.Tool('evtbinLib')
 progEnv.Tool('rspgenLib')
 progEnv.Tool('st_appLib')
