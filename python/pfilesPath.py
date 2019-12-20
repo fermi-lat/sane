@@ -24,7 +24,7 @@ def pfilesPath(parfile=None):
         paths = re.split(pattern, os_environ('PFILES'))
         paths = [path for path in paths if path != '']
     except KeyError:
-        print "Your PFILES environment variable is not set."
+        print ("Your PFILES environment variable is not set.")
         raise KeyError
     if parfile is None:
         return paths[0]
@@ -41,4 +41,4 @@ if __name__ == "__main__":
         parfile = sys.argv[1]
     else:
         parfile = 'likelihood.par'
-    print pfilesPath(parfile)
+    print (pfilesPath(parfile))

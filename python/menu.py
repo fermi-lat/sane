@@ -12,7 +12,7 @@ class RunProgram:
         self.name = name
         self.command = command
     def __call__(self):                   #  button press callback
-        print "executing ", self.command
+        print ("executing ", self.command)
         if sys.platform[:3] == 'win':
             os.system( 'start ' + '"' + self.name
                        + '" /BELOWNORMAL cmd /k ' + self.command )

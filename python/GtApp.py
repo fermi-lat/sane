@@ -68,7 +68,7 @@ class GtApp(object):
         if catchError is not None:
             input, output = self.runWithOutput(print_command)
             for line in output:
-                print line.strip("\n")
+                print (line.strip("\n"))
                 if line.find(catchError) != -1:
                     _failed_exes.append(self.app)
                     input.close()
@@ -78,7 +78,7 @@ class GtApp(object):
             output.close()
         else:
             if print_command:
-                print self.command()
+                print (self.command())
 #            retcode = os.system(self.command(do_timing=print_command))
             retcode = subprocess.call(self.command(do_timing=print_command),
                                       shell=True)
@@ -87,7 +87,7 @@ class GtApp(object):
                 raise RuntimeError, self.appName + " execution failed"
     def runWithOutput(self, print_command=True):
         if print_command:
-            print self.command()
+            print (self.command())
         process = subprocess.Popen(self.command(print_command),
                                    shell=True, bufsize=-1,
                                    stdin=subprocess.PIPE,
@@ -111,4 +111,4 @@ if __name__ == '__main__':
     orbSim['Output_file_prefix'] = 'gtApp_test'
     input, output = orbSim.runWithOutput()
     for line in output:
-        print line.strip('\n')
+        print (line.strip('\n'))

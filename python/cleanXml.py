@@ -34,7 +34,7 @@ def cleanXml(document):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print "usage: cleanXml <xml file name>"
+        print ("usage: cleanXml <xml file name>")
         sys.exit(0)
     else:
         filename = sys.argv[1]

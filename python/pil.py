@@ -115,7 +115,7 @@ class Pil(object):
 
 if __name__ == '__main__':
     pars = Pil('likelihood.par')
-    print pars['event_file']
+    print (pars['event_file'])
     pars['event_file'] = "foo"
-    print pars()
+    print (pars())
     pars.write()
