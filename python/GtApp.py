@@ -73,7 +73,7 @@ class GtApp(object):
                     _failed_exes.append(self.app)
                     input.close()
                     output.close()
-                    raise RuntimeError, self.appName + " execution failed"
+                    raise RuntimeError (self.appName + " execution failed")
             input.close()
             output.close()
         else:
@@ -84,7 +84,7 @@ class GtApp(object):
                                       shell=True)
             if retcode != 0:
                 _failed_exes.append(self.app)
-                raise RuntimeError, self.appName + " execution failed"
+                raise RuntimeError (self.appName + " execution failed")
     def runWithOutput(self, print_command=True):
         if print_command:
             print (self.command())

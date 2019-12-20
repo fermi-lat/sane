@@ -70,7 +70,7 @@ class Pil(object):
         if name in self.names:
             self.params[name][2] = `value`
         elif self.raiseKeyErrors:
-            raise KeyError, name
+            raise KeyError(name)
     def __call__(self):
         args = ''
         for name in self.keys():
