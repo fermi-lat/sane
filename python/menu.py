@@ -2,8 +2,8 @@
 # $Header$
 
 import sys, time, os, copy
-from Tkinter import *
-from tkMessageBox import *
+from tkinter import *
+from tkinter.messagebox import *
 from facilities import py_facilities
 os_environ = py_facilities.commonUtilities_getEnvironment
 
