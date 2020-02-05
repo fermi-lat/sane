@@ -34,7 +34,7 @@ def pfilesPath(parfile=None):
                 return path
         except OSError:
             pass
-    raise ParFileError(".par file " + parfile + " not found.")
+    raise ValueError(ParFileError + ": .par file " + parfile + " not found.")
 
 if __name__ == "__main__":
     if len(sys.argv) == 2:
