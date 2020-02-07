@@ -17,9 +17,9 @@ ParFileError = 'ParFileError'
 def pfilesPath(parfile=None):
     try:
         if os.name == 'posix':
-            pattern = re.compile(";*:*")
+            pattern = re.compile("[;:]")
         else:
-            pattern = re.compile("#*;*")
+            pattern = re.compile("[#;]")
 #        paths = re.split(pattern, os.environ['PFILES'])
         paths = re.split(pattern, os_environ('PFILES'))
         paths = [path for path in paths if path != '']
