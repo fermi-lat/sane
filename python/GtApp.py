@@ -78,18 +78,18 @@ class GtApp(object):
             output.close()
         else:
             if print_command:
-                print self.command()
+                print self.command(do_timing=False)
 #            retcode = os.system(self.command(do_timing=print_command))
-            retcode = subprocess.call(self.command(do_timing=print_command),
-                                      shell=True)
+            retcode = subprocess.call(self.command(do_timing=False).replace('"', '').split(),
+                                      shell=False)
             if retcode != 0:
                 _failed_exes.append(self.app)
                 raise RuntimeError, self.appName + " execution failed"
     def runWithOutput(self, print_command=True):
         if print_command:
-            print self.command()
-        process = subprocess.Popen(self.command(print_command),
-                                   shell=True, bufsize=-1,
+            print self.command(do_timing=False)
+        process = subprocess.Popen(self.command(do_timing=False).replace('"','').split(),
+                                   shell=False, bufsize=-1,
                                    stdin=subprocess.PIPE,
                                    stdout=subprocess.PIPE,
                                    stderr=subprocess.STDOUT,
