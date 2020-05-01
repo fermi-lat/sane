@@ -9,7 +9,6 @@ Interface to .par files.
 #
 
 import os, sys
-import string
 from pfilesPath import pfilesPath
 
 def accept(line):
@@ -58,9 +57,9 @@ class Pil(object):
         if value == 'INDEF':
             return value
         if self.params[name][0] == 'r':
-            return string.atof(value)
+            return float(value)
         elif self.params[name][0] == 'i':
-            return string.atoi(value)
+            return int(value)
         else:
             if self.preserveQuotes:
                 return self.params[name][2]
