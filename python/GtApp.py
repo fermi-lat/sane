@@ -93,6 +93,7 @@ class GtApp(object):
                                    stdin=subprocess.PIPE,
                                    stdout=subprocess.PIPE,
                                    stderr=subprocess.STDOUT,
+                                   universal_newlines=True,
                                    close_fds=True)
         return (process.stdin, process.stdout)
     def command(self, do_timing=True):
