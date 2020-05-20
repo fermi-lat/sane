@@ -55,8 +55,8 @@ class GtApp(object):
             raise ValueError("for parameter %s, %s" % (key, ee.args[0]))
     def run(self, print_command=True, catchError="at the top level:", 
             dry_run=False, **kwds):
-        for item in kwds.keys():
-            if self.pars.has_key(item):
+        for item in list(kwds.keys()):
+            if item in self.pars:
                 self[item] = kwds[item]
         try:
             if self.pars['chatter'] == 0:

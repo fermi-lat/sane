@@ -51,7 +51,7 @@ class Pil(object):
     def keys(self):
         return self.names
     def has_key(self, name):
-        return self.params.has_key(name)
+        return name in self.params
     def __getitem__(self, name):
         value = (self.params[name][2]).strip('"').strip("'")
         if value == 'INDEF':
@@ -72,7 +72,7 @@ class Pil(object):
             raise KeyError(name)
     def __call__(self):
         args = ''
-        for name in self.keys():
+        for name in list(self.keys()):
             try:
                 if (self.params[name][0] == 's' or
                     self[name] == 'INDEF'):

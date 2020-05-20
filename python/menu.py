@@ -50,7 +50,7 @@ class MenuBar(Menu):
         for item in packages:
             self.add_cascade(label=item, underline=0,
                              menu=PackageMenu(root, packages[item]))
-        root.config(menu=self, width=100*len(packages.keys()))
+        root.config(menu=self, width=100*len(list(packages.keys())))
 
 class PackageMenu(Menu):
     def __init__(self, root, package):
@@ -64,7 +64,7 @@ def getTools(env):
     tools = {}
     for app_entry in applist:
         package, app, exe = parse_entry(app_entry)
-        if not tools.has_key(package):
+        if package not in tools:
             tools[package] = []
         tools[package].append((app, exe))
     return tools
