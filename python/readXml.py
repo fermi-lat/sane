@@ -5,7 +5,7 @@ A module to encapsulate a Likelihood source model xml file.
 
 $Header$
 """
-import os, sys, string
+import os, sys
 from xml.dom import minidom
 from cleanXml import cleanXml
 
@@ -25,7 +25,7 @@ class SourceModel:
         self.srcList = {}
         try:
             for src in srcs:
-                self.srcList[src.getAttribute("name").encode()] = Source(src)
+                self.srcList[src.getAttribute("name")] = Source(src)
         except ValueError:
             pass
     def setAttributes(self):
@@ -65,9 +65,9 @@ class DomElement:
                 attributes[key] = converter(node.getAttribute(key))
 # An ugly kludge here since each Parameter's "free" flag needs to be int.
             elif key == "free":
-                attributes[key] = string.atoi(node.getAttribute(key))
+                attributes[key] = int(node.getAttribute(key))
             else:
-                attributes[key] = node.getAttribute(key).encode("ascii")
+                attributes[key] = node.getAttribute(key)
         self.__dict__.update(attributes)
     def deleteChildElements(self, tagName):
         children = self.node.getElementsByTagName(tagName)
@@ -113,7 +113,7 @@ class Function(DomElement):
         self.parameters = {}
         paramElements = node.getElementsByTagName("parameter")
         for param in paramElements:
-            name = param.getAttribute("name").encode("ascii")
+            name = param.getAttribute("name")
             self.parameters[name] = Parameter(param)
         self.__dict__.update(self.parameters)
     def setAttributes(self):
@@ -123,4 +123,4 @@ class Function(DomElement):
 
 class Parameter(DomElement):
     def __init__(self, node):
-        DomElement.__init__(self, node, string.atof)
+        DomElement.__init__(self, node, float)
