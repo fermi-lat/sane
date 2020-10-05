@@ -52,6 +52,8 @@ class Pil(object):
         return self.names
     def has_key(self, name):
         return name in self.params
+    def __contains__ (self,name):
+        return name in self.names
     def __getitem__(self, name):
         value = (self.params[name][2]).strip('"').strip("'")
         if value == 'INDEF':
