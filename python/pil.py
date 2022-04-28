@@ -104,7 +104,7 @@ class Pil(object):
                              + " [" + self.params[item][2].strip('"')
                              + "]: ")
             x = sys.stdin.readline().strip()
-            if x is not '':
+            if x != '':
                 self.__setitem__(item, x)
     def copy(self, rhs):
         for name in self.names:

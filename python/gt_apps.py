@@ -24,7 +24,7 @@ gtexpcube2 = GtApp('gtexpcube2', 'Likelihood')
 #
 # observationSim
 #
-obsSim = GtApp('gtobssim', 'observationSim')
+# obsSim = GtApp('gtobssim', 'observationSim')
 #orbSim = GtApp('gtorbsim', 'observationSim')
 
 #
