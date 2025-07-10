@@ -1,5 +1,7 @@
 #### gtburst ####
 
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+
 add_executable(test_sane src/test/main.cxx)
 target_link_libraries(test_sane PRIVATE dataSubselector Likelihood evtbin rspgen st_app)
 
