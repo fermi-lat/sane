@@ -24,7 +24,7 @@ gtvcut = GtApp('gtvcut')
 try:
     from UnbinnedAnalysis import *
     pass
-except ImportError, message:
+except (ImportError, message):
     print "ImportError occurred for UnbinnedAnalysis:"
     print message
 
