@@ -69,6 +69,8 @@ class Pil(object):
                 return value
     def __setitem__(self, name, value):
         if name in self.names:
+            if hasattr(value, 'item'):
+                value = value.item()            
             self.params[name][2] = repr(value)
         elif self.raiseKeyErrors:
             raise KeyError(name)
