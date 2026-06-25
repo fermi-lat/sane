@@ -11,7 +11,7 @@ desired .par file.
 
 import os, sys, re
 from facilities import py_facilities
-os_environ = py_facilities.commonUtilities_getEnvironment
+os_environ = py_facilities.commonUtilities.getEnvironment
 
 ParFileError = 'ParFileError'
 def pfilesPath(parfile=None):
