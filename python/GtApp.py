@@ -11,7 +11,7 @@ import sys, os
 import subprocess
 from pil import Pil
 from facilities import py_facilities
-os_environ = py_facilities.commonUtilities_getEnvironment
+os_environ = py_facilities.commonUtilities.getEnvironment
 
 _failed_exes = []
 
