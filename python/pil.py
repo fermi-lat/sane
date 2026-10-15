@@ -69,6 +69,10 @@ class Pil(object):
                 return value
     def __setitem__(self, name, value):
         if name in self.names:
+            # Store path-like objects (e.g. pathlib.Path) as their file
+            # system path, not their repr (ScienceTools issue #74).
+            if isinstance(value, os.PathLike):
+                value = os.fspath(value)
             if hasattr(value, 'item'):
                 value = value.item()            
             self.params[name][2] = repr(value)
