@@ -13,7 +13,7 @@
 
 #include "st_facilities/Environment.h"
 
-int main(int iargc, char *argv[]) {
+auto main(int iargc, char *argv[]) -> int {
    std::string command;
    std::string rootPath = st_facilities::Environment::packagePath("sane");
    if (rootPath == "") {
